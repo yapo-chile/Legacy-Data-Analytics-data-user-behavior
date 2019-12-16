@@ -1,0 +1,22 @@
+
+FROM sdehaes/spark-py:v2.4.1-hadoop-2.9.2
+
+COPY . /app
+WORKDIR /app
+
+ENV APP_HOME /app
+ENV CONFIGURATION_FILE ${APP_HOME}/resources/conf.properties
+
+#Install python3-dev version
+RUN apk update && \
+    apk add --virtual build-deps gcc python3-dev musl-dev && \
+    apk add postgresql-dev
+
+#Install jars dependencies
+RUN rm $SPARK_HOME/jars/kubernetes-client-4.1.2.jar
+ADD https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/4.4.2/kubernetes-client-4.4.2.jar $SPARK_HOME/jars
+ADD https://jdbc.postgresql.org/download/postgresql-42.2.7.jar $SPARK_HOME/jars
+ENV PATH_JAR_POSTGRESQL $SPARK_HOME/jars/postgresql-42.2.7.jar
+ENV POSTGRESQL_DRIVER org.postgresql.Driver
+
+RUN python3 -m pip install --no-cache-dir -r ${APP_HOME}/requirements.txt
