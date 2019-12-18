@@ -10,7 +10,5 @@ services:
       APP_ZENDESK_SECRET: /app/zendesk-secret
       APP_DB_SECRET: /app/db-secret
     volumes:
-      - /Users/luisbarrera/Documents/secrets/bnbiuser:/app/db-secret
-      - /Users/luisbarrera/Documents/secrets/zendesk_auth:/app/zendesk-secret
-      #- /keys/bnbiuser:/app/db-secret
-      #- /keys/zendesk_auth:/app/zendesk-secret
+      - /keys/bnbiuser:/app/db-secret
+      - /keys/zendesk_auth:/app/zendesk-secret
