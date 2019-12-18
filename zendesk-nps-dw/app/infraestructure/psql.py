@@ -77,18 +77,29 @@ class Database:
             psycopg2.extras \
                 .execute_values(cursor,
                                 """ INSERT INTO """ + table_name +
-                                """ VALUES %s; """, ((
-                                    row.facil,
-                                    row.recomendarias,
-                                    row.rapidez,
-                                    row.comentarios,
-                                    row.answerid,
-                                    row.channel,
-                                    row.duration,
-                                    row.email,
-                                    row.endDate,
-                                    row.startDate,
-                                    row.state,
+                                """ ( facil,
+                                    recomendarias,
+                                    rapidez,
+                                    comentarios,
+                                    answerid,
+                                    channel,
+                                    duration,
+                                    email,
+                                    "endDate",
+                                    "startDate",
+                                    state )
+                                    VALUES %s; """, ((
+                                        row.facil,
+                                        row.recomendarias,
+                                        row.rapidez,
+                                        row.comentarios,
+                                        row.answerid,
+                                        row.channel,
+                                        row.duration,
+                                        row.email,
+                                        row.endDate,
+                                        row.startDate,
+                                        row.state,
                                     ) for row in data_dict.itertuples()),
                                 page_size=page_size)
             self.log.info('insert_nps_dw COMMIT.')
