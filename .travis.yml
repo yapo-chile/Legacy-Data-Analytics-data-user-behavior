@@ -19,7 +19,7 @@ before_script:
   - make -C zendesk-nps-dw install
   
 # script always run to completion (set +e). All of these code checks are must haves
-# in a modern Go project.
+# in a modern Python project.
 script:
   - make -C zendesk-nps-dw docker-build
   - make -C zendesk-nps-dw check-style
