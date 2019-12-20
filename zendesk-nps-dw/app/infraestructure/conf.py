@@ -1,4 +1,3 @@
-import os
 import environ
 
 
@@ -24,7 +23,7 @@ class AppConfig:
             name="survey_id", default=environ.var())
         survey_link_prefix: str = environ.var(
             "https://my.surveypal.com/api/rest/survey/")
-        survey_link_sufix : str = environ.var("/answers")
+        survey_link_sufix: str = environ.var("/answers")
 
 
     @environ.config(prefix="DB")
