@@ -19,12 +19,10 @@ if __name__ == '__main__':
     LOG_FORMAT = DATE_FORMAT + INFO_FORMAT
     logging.basicConfig(format=LOG_FORMAT, level=logging.INFO)
     PARAMS = ReadParams(sys.argv)
-    URL_GET = CONFIG.zendesk.survey_link_prefix + \
-              CONFIG.zendesk.survey_id + \
-              CONFIG.zendesk.survey_link_sufix
+    URL_GET = CONFIG.zendesk.survey_link_prefix \
+              + CONFIG.zendesk.survey_id \
+              + CONFIG.zendesk.survey_link_sufix
     DATA_NPS = get_nps(URL_GET, CONFIG.zendesk.authorization)
-    import pandas as pd
-    df = pd.DataFrame(DATA_NPS)
     DB_WRITE = Database(CONFIG.db.host,
                         CONFIG.db.port,
                         CONFIG.db.name,
@@ -33,7 +31,7 @@ if __name__ == '__main__':
     TRUNCATE_TABLE = """ truncate table """ + CONFIG.db.table
     DB_WRITE.execute_command(TRUNCATE_TABLE)
     DB_WRITE.insert_nps_dw(CONFIG.db.table,
-                           df)
+                           DATA_NPS)
     DB_WRITE.close_connection()
     TIME.get_time()
     LOGGER.info('Process ended successed.')

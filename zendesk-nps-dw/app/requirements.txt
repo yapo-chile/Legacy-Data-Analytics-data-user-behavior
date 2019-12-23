@@ -1,6 +1,7 @@
+pip-tools
 psycopg2-binary==2.8.4
 environ-config
 pylint==2.4.4
-pandas==0.24.2
+pandas==0.25.3
 requests==2.22.0
 unidecode==1.1.1

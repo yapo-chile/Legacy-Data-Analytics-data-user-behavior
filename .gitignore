@@ -1,0 +1,10 @@
+bin
+include
+etc
+lib
+share
+.Python
+*.pyc
+pgdata
+.mypy_cache
+__pycache__/

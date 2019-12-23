@@ -16,8 +16,15 @@ docker-build: build
 compose-up: docker-build
 	docker-compose up -d
 
-start: compose-up info
+## compose up and no build
+compose-up-no-build:
+	docker-compose up -d
+
+start: compose-up
 	##--scale -d pyms=4 
+
+## Only run image
+run: compose-up-no-build
 
 ## Publishes container
 docker-publish:

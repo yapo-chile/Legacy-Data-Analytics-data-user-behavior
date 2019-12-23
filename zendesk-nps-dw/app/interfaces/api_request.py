@@ -48,16 +48,15 @@ def get_nps(api: str = None, token: str = None) -> pd.DataFrame:
     field_comments = 'Por favor, déjanos tus comentarios o sugerencias aquí'
     ans_df[field_comments] = ans_df[field_comments] \
                                 .map(lambda x: (unidecode(x.lower())).strip())
-    ans_df.columns = ['facil',
-                      'recomendarias',
-                      'rapidez',
+    ans_df.columns = ['recomendarias',
                       'comentarios',
-                      'answerid',
+                      'rapidez',
+                      'facil',
                       'channel',
-                      'duration',
                       'email',
-                      'endDate',
+                      'state',
                       'startDate',
-                      'state']
-    ans_dict = ans_df.to_dict()
-    return ans_dict
+                      'endDate',
+                      'duration',
+                      'answerid']
+    return ans_df

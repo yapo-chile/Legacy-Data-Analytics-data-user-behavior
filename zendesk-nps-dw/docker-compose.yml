@@ -6,16 +6,9 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME}
     expose:
       - "5000"
-    ports:
-      - "${SERVER_EXPOSED_PORT}:${SERVER_PORT}"
     environment:
-      SOURCEDB_HOST: ${SOURCEDB_HOST}
-      SOURCEDB_PORT: ${SOURCEDB_PORT}
-      SOURCEDB_NAME: ${SOURCEDB_NAME}
-      SOURCEDB_USER: ${SOURCEDB_USER}
-      SOURCEDB_PASSWORD: ${SOURCEDB_PASSWORD}
-      ENPOINTDB_HOST: ${ENPOINTDB_HOST}
-      ENPOINTDB_PORT: ${ENPOINTDB_PORT}
-      ENPOINTDB_NAME: ${ENPOINTDB_NAME}
-      ENPOINTDB_USER: ${ENPOINTDB_USER}
-      ENPOINTDB_PASSWORD: ${ENPOINTDB_PASSWORD}
+      APP_ZENDESK_SECRET: /app/zendesk-secret
+      APP_DB_SECRET: /app/db-secret
+    volumes:
+      - /keys/bnbiuser:/app/db-secret
+      - /keys/zendesk_auth:/app/zendesk-secret
