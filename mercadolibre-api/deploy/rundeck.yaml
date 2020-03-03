@@ -4,7 +4,7 @@
                         -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                         -e APP_PULSE_SECRET=/app/pulse-secret \
                         -e APP_DB_SECRET=/app/db-secret \
-                        containers.mpi-internal.com/yapo/mercadolibre-api:latest
+                        containers.mpi-internal.com/yapo/data-user-behavior-mercadolibre-api:latest
   executionEnabled: true
   group: DOCKER/PULSE
   loglevel: DEBUG
@@ -36,7 +36,7 @@
   schedule:
     month: '*'
     time:
-      hour: '03'
+      hour: '05'
       minute: '0'
       seconds: '0'
     weekday:
@@ -50,7 +50,7 @@
                         -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                         -e APP_PULSE_SECRET=/app/pulse-secret \
                         -e APP_DB_SECRET=/app/db-secret \
-                        containers.mpi-internal.com/yapo/mercadolibre-api:latest
+                        containers.mpi-internal.com/yapo/data-user-behavior-mercadolibre-api:latest
     keepgoing: false
     strategy: node-first
   timeZone: America/Santiago

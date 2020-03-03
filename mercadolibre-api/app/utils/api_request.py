@@ -39,7 +39,6 @@ class ApiRequest:
         headers = {"Accept": "application/json",
                    "Cache-Control": "no-cache",
                    "Pragma": "no-cache"}
-        self.logger.info('Apply GET to %s', url_request)
         response = requests.get(url_request, headers=headers)
         self.logger.info('Send response GET from %s', url_request)
         if response.status_code == 200:
@@ -63,7 +62,6 @@ class ApiRequest:
         headers = {"Accept": "application/json",
                    "Cache-Control": "no-cache",
                    "Pragma": "no-cache"}
-        self.logger.info('Apply GET to %s', url_request)
         response = requests.get(url_request, headers=headers)
         self.logger.info('Send response GET from %s', url_request)
         if response.status_code == 200:
@@ -92,7 +90,6 @@ class ApiRequest:
         headers = {"Accept": "application/json",
                    "Cache-Control": "no-cache",
                    "Pragma": "no-cache"}
-        self.logger.info('Apply GET to %s', url_request)
         response = requests.get(url_request, headers=headers)
         self.logger.info('Send response GET from %s', url_request)
         if response.status_code == 200:

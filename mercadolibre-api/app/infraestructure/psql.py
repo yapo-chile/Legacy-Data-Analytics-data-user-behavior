@@ -67,23 +67,31 @@ class Database:
         return pd_result
 
     def insert_data(self, data_dict: pd.DataFrame) -> None:
-        self.log.info('INSERT INTO %s', self.conf.table)
+        self.log.info('INSERT INTO %s', self.conf.table_r)
         page_size: int = 10000
         with self.connection.cursor() as cursor:
             psycopg2.extras \
                 .execute_values(cursor,
-                                """ INSERT INTO """ + self.conf.table +
-                                """ ( timedate,
-                                      current_version
+                                """ INSERT INTO """ + self.conf.table_r +
+                                """ ( scraping_date,
+                                      category_main_name,
+                                      category_name,
+                                      category_url,
+                                      region_name,
+                                      region_ads
                                     )
                                     VALUES %s; """, ((
-                                        row.timedate,
-                                        row.current_version
+                                        row.scraping_date,
+                                        row.category_main_name,
+                                        row.category_name,
+                                        row.category_url,
+                                        row.region_name,
+                                        row.region_ads
                                     ) for row in data_dict.itertuples()),
                                 page_size=page_size)
-            self.log.info('INSERT %s COMMIT.', self.conf.table)
+            self.log.info('INSERT %s COMMIT.', self.conf.table_r)
             self.connection.commit()
-            self.log.info('CLOSE CURSOR %s', self.conf.table)
+            self.log.info('CLOSE CURSOR %s', self.conf.table_r)
             cursor.close()
 
 

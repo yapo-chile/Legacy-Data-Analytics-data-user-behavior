@@ -32,7 +32,7 @@ class AppConfig:
         name: str = INI_DB.secret(name="dbname", default=environ.var())
         user: str = INI_DB.secret(name="user", default=environ.var())
         password: str = INI_DB.secret(name="password", default=environ.var())
-        table: str = environ.var("dm_analysis.db_version")
+        table_r: str = "dm_scraping.fact_day_mercadolibre_ads_category_region"
     api = environ.group(ApiConfig)
     db = environ.group(DBConfig)
 
