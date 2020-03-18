@@ -26,7 +26,6 @@ class InfoSpider(scrapy.Spider):
 
     def parseListing(self, response):
         for automotora in response.css(".dealer-search-item.listing-item"):
-#            auto_url = 'https://www.chileautos.cl/'+automotora.css('.listing-item__header a::attr(href)').extract()[0].split('/')[3]
             auto_url = automotora.css('.listing-item__header a::attr(href)').extract()[0]
             auto_name = automotora.css('.listing-item__header a h2::text').extract()[0]
             meta = {
