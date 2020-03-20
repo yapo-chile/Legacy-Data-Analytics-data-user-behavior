@@ -82,7 +82,7 @@ class ReadParams:
         return str((self.\
                     date_from + timedelta(days=delta)).strftime('%Y-%m-%d'))
 
-    def get_inital_day(self, delta) -> datetime:
+    def get_initial_day(self, delta) -> datetime:
         tmp_date = datetime.datetime(self.date_from.year - 1, 1, 1)
         return str((tmp_date + timedelta(days=delta)).strftime('%Y-%m-%d'))
 
