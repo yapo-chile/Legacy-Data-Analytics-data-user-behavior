@@ -18,10 +18,14 @@ class PortalNewAdsVentaSpider(scrapy.Spider):
 
         total_arriendos = response.css(".quantity-results::text").extract()[0]
         total = get_value(total_arriendos)
+        projects = response.css('a[title="Proyectos"]') \
+                    .css('.filter-results-qty::text').extract()
+        total_projects = get_value(projects[0])
 
         item = NewAds()
         item['fecha'] = str(datetime.date.today())
-        item['ads'] = str(total)
+        item['new_ads'] = str(total_projects)
+        item['used_ads'] = str(total - total_projects)
         item['marca'] = 'venta'
         return item
 
