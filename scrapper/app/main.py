@@ -58,8 +58,7 @@ def transform_pi(data_pi: pd.DataFrame,
 def write_data_dwh(params: ReadParams,
                    config: getConf,
                    data_pi_venta: pd.DataFrame,
-                   data_pi_arriendo: pd.DataFrame,
-                   data_cl_autos: pd.DataFrame) -> None:
+                   data_pi_arriendo: pd.DataFrame) -> None:
     query = Query(config, params)
     DB_WRITE = Database(conf=config.db)
     #Load Portal inmo
@@ -67,9 +66,9 @@ def write_data_dwh(params: ReadParams,
     DB_WRITE.insert_data_pi(data_pi_venta)
     DB_WRITE.insert_data_pi(data_pi_arriendo)
     #Load ChileAutos
-    DB_WRITE.execute_command(query.delete_cl_autos())
-    DB_WRITE.insert_data_cl_autos(data_cl_autos)
-    DB_WRITE.close_connection()
+    #DB_WRITE.execute_command(query.delete_cl_autos())
+    #DB_WRITE.insert_data_cl_autos(data_cl_autos)
+    #DB_WRITE.close_connection()
 
 if __name__ == '__main__':
     CONFIG = getConf()
@@ -81,8 +80,8 @@ if __name__ == '__main__':
     logging.basicConfig(format=LOG_FORMAT, level=logging.INFO)
     PARAMS = ReadParams(sys.argv)
     #Extractors
-    DATA_CL_AUTOS = data_from_csv(PARAMS. \
-        get_filename_scrapper('CL_AUTO_NEW_ADS'))
+    #DATA_CL_AUTOS = data_from_csv(PARAMS. \
+    #    get_filename_scrapper('CL_AUTO_NEW_ADS'))
     DATA_PI_VENTA = data_from_csv(PARAMS. \
         get_filename_scrapper('PI_NEW_ADS_VENTA'))
     DATA_PI_ARRIENDO = data_from_csv(PARAMS. \
@@ -92,12 +91,11 @@ if __name__ == '__main__':
     DATA_PI_VENTA, DATA_PI_ARRIENDO = transform_pi(DATA_PI,
                                                    DATA_PI_VENTA,
                                                    DATA_PI_ARRIENDO)
-    DATA_CL_AUTOS = tranform_chileautos(DATA_CL_AUTOS, DATA_CLA)
+    # DATA_CL_AUTOS = tranform_chileautos(DATA_CL_AUTOS, DATA_CLA)
     #Loads
     write_data_dwh(PARAMS,
                    CONFIG,
                    DATA_PI_VENTA,
-                   DATA_PI_ARRIENDO,
-                   DATA_CL_AUTOS)
+                   DATA_PI_ARRIENDO)#, DATA_CL_AUTOS)
     TIME.get_time()
     LOGGER.info('Process ended successfully.')

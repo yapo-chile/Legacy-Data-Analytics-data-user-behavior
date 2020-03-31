@@ -31,7 +31,7 @@ FILE_EXISTS ${PORTAL_INMO_CORREDORAS}
 echo "CHANGE DIRECTORY : ${PATH_EXTRACTOR}"
 cd ${PATH_EXTRACTOR}
 
-scrapy crawl chileautos_new_ads -o ${CHILEAUTOS_NEW_ADS} -t csv
+##scrapy crawl chileautos_new_ads -o ${CHILEAUTOS_NEW_ADS} -t csv
 ##scrapy crawl chileautos_info -o ${CHILEAUTOS_INFO} -t csv
 scrapy crawl pi_new_ads_venta -o ${PORTAL_INMO_NEWS_ADS_VENTA} -t csv
 scrapy crawl pi_new_ads_arriendo -o ${PORTAL_INMO_NEWS_ADS_ARRIENDO} -t csv
@@ -39,6 +39,6 @@ scrapy crawl pi_new_ads_arriendo -o ${PORTAL_INMO_NEWS_ADS_ARRIENDO} -t csv
 ##scrapy crawl pi_corredoras -o ${PORTAL_INMO_CORREDORAS} -t csv
 
 python /app/main.py $@ \
-    -chileautos_new_ads=${CHILEAUTOS_NEW_ADS} \
     -pi_new_ads_venta=${PORTAL_INMO_NEWS_ADS_VENTA} \
     -pi_new_ads_arriendo=${PORTAL_INMO_NEWS_ADS_ARRIENDO}
+    #-chileautos_new_ads=${CHILEAUTOS_NEW_ADS} \
