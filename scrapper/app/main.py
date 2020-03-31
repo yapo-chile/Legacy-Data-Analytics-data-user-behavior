@@ -58,8 +58,7 @@ def transform_pi(data_pi: pd.DataFrame,
 def write_data_dwh(params: ReadParams,
                    config: getConf,
                    data_pi_venta: pd.DataFrame,
-                   data_pi_arriendo: pd.DataFrame,
-                   data_cl_autos: pd.DataFrame) -> None:
+                   data_pi_arriendo: pd.DataFrame) -> None:
     query = Query(config, params)
     DB_WRITE = Database(conf=config.db)
     #Load Portal inmo
