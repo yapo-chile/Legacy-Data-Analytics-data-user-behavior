@@ -23,16 +23,13 @@
     onfailure:
       email:
         recipients: data_team@adevinta.com
-        subject: ${job.execid} ${execution.status} ${job.name}
-    onstart:
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo definitivo
+    onretryablefailure:
       email:
         recipients: data_team@adevinta.com
-        subject: ${job.execid} ${execution.status} ${job.name}
-    onsuccess:
-      email:
-        recipients: data_team@adevinta.com
-        subject: ${job.execid} ${execution.status} ${job.name}
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo por reintento
   notifyAvgDurationThreshold: null
+  scheduleEnabled: true
   schedule:
     month: '*'
     time:
@@ -42,7 +39,9 @@
     weekday:
       day: '*'
     year: '*'
-  scheduleEnabled: true
+  retry:
+    retry: 3
+    delay: 20m
   sequence:
     commands:
     - script: |-
