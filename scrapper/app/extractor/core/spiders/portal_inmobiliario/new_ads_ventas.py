@@ -10,6 +10,12 @@ class PortalNewAdsVentaSpider(scrapy.Spider):
     start_urls = (
         'http://www.portalinmobiliario.com/venta/',
     )
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'core.pipelines.PsqlPipeline': 400
+        }
+    }
+    query = "INSERT INTO public.fact_portal_new_ads(fecha, ads, new, marca) values('{}',{},{},'{}')"
 
     def parse(self, response):
         def get_value(obj):
@@ -18,10 +24,15 @@ class PortalNewAdsVentaSpider(scrapy.Spider):
 
         total_arriendos = response.css(".quantity-results::text").extract()[0]
         total = get_value(total_arriendos)
+        projects = response.css('a[title="Proyectos"]') \
+                    .css('.filter-results-qty::text').extract()
+        total_projects = get_value(projects[0])
 
         item = NewAds()
         item['fecha'] = str(datetime.date.today())
-        item['ads'] = str(total)
+        item['new'] = str(total_projects)
+        item['ads'] = str(total - total_projects)
         item['marca'] = 'venta'
+        item['query'] = self.query.format(item['fecha'], item['ads'], item['new'], item['marca'])
         return item
 
