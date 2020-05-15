@@ -15,7 +15,7 @@ class PortalNewAdsVentaSpider(scrapy.Spider):
             'core.pipelines.PsqlPipeline': 400
         }
     }
-    query = "INSERT INTO public.fact_portal_new_ads(fecha, ads, new, marca) values('{}',{},{},'{}')"
+    query = "INSERT INTO ods.fact_portal_new_ads(fecha, ads, new, marca) values('{}',{},{},'{}')"
 
     def parse(self, response):
         def get_value(obj):
