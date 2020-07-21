@@ -1,0 +1,28 @@
+- defaultTab: nodes
+  description: |-
+        sudo docker run containers.mpi-internal.com/yapo/data-user-behavior-scrapper-cha:feat_cha-spider
+  executionEnabled: true
+  group: SCRAPPER
+  loglevel: DEBUG
+  name: Scrapping Chilautos - Chile Autos v2
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: dockerhost'
+  nodesSelectedByDefault: true
+  notifyAvgDurationThreshold: null
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: |-
+        sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scrapper-cha:feat_cha-spider
+
+        sudo docker run containers.mpi-internal.com/yapo/data-user-behavior-scrapper-cha:feat_cha-spider
+    keepgoing: false
+    strategy: node-first
+  timeZone: America/Santiago

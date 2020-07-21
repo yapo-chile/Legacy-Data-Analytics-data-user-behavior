@@ -18,4 +18,5 @@ if [[ "${GIT_BRANCH}" == "master" ]]; then
 else
     echo "POST to DEV"
     cat ${base_dir}/../../deploy/rundeck-dev.yaml | curl -X POST 'http://rundeck-bi01.dev.yapo.cl:4440/api/14/project/data_jobs/jobs/import?fileformat=yaml&dupeOption=update&uuidOption=preserve' -H 'Content-Type: application/yaml' -H 'X-Rundeck-Auth-Token: '${RUNDECK_TOKEN}'' --data-binary '@-'
+  
 fi
