@@ -1,0 +1,888 @@
+id,nombre,num_avisos,direccion,telefono,url
+CL-SELLER-615,CDC autos,0,Av. Francisco Bilbao 6808,981790782,https://www.chileautos.cl/cdcautos3434
+CL-SELLER-769,Indumotora One - Santa Rosa,37,Santa Rosa 455 esq. Sta. Isabel. Metro Santa Lucia,2-32550900,https://www.chileautos.cl/nexousados
+CL-SELLER-681,Automotriz Los Andes,0,Av. Las Condes 7909,523850609,https://www.chileautos.cl/automotrizlosandes
+CL-SELLER-1236,Jasa Vehiculos,0,Panamericana Norte 1702,65-2632227,https://www.chileautos.cl/jasavehiculos
+CL-SELLER-1207,Copelec Automotriz,25,LONGITUDIONAL SUR 0418,974988590,https://www.chileautos.cl/comercialcopelec
+CL-SELLER-1182,Automotora Coyanco,0,Bilbao 2447,2-22040134,https://www.chileautos.cl/qualityww
+CL-SELLER-1788,Seminuevos Gildemeister Viña del Mar,8,8 Norte 1057,982896130,https://www.chileautos.cl/gildemeistervinadelmar
+CL-SELLER-1794,Seminuevos Gildemeister Antofagasta,0,Irarrazabal 315,55-2562356,https://www.chileautos.cl/gildemeisterantofagasta
+CL-SELLER-1488,Bihermanos Automotora - Rancagua,0,FREIRE 520 ESQUINA OCARROL,72-2755668,https://www.chileautos.cl/bihermanos
+CL-SELLER-2596,Autos Brickell,0,Ciencias 8794,962743488,https://www.chileautos.cl/autosbrickell
+CL-SELLER-2428,Automotriz SubTerra,20,Av. Los Domínicos 8630,2-26047141,https://www.chileautos.cl/automotrizsubterra
+CL-SELLER-2157,Inalco Usados Gran Avenida,16,"Gran Avenida 8181, paradero 22 de Gran Avenida",961226411,https://www.chileautos.cl/inalcogranavenida
+CL-SELLER-2222,Ditalcar Vicuña Mackenna,12,Av. Vicuña Mackenna Oriente 8280,2-24808228,https://www.chileautos.cl/ditalcar2
+CL-SELLER-3151,Remates Reyco S.A,7,Las Esteras Norte 2241,992360642,https://www.chileautos.cl/rematesreyco
+CL-SELLER-2199,Mahindra Coz,26,Centro Comercial Santa Cecilia- Cruce Chicureo- ca,963526867,https://www.chileautos.cl/automotoracozstrange
+CL-SELLER-2166,Seminuevos Gildemeister La Serena,1,Balmaceda 2581 - 2595,51-2339321,https://www.chileautos.cl/gildemeisterlaserena
+CL-SELLER-3219,Maranello Ltda,4,Pedro de Valdivia 858,+56226568857,https://www.chileautos.cl/maranelloltda
+CL-SELLER-1528,Bus Service Ltda.,6,"Mendoza 2109, (esquina Hoevel) Quinta Normal",+56226568934,https://www.chileautos.cl/busservice
+CL-SELLER-3295,Mendez Gestion Automotriz,6,Pasaje la concepcion #4 poblacion Sangra,+56226568968,https://www.chileautos.cl/mendezgestionautomotriz
+CL-SELLER-3258,MACO TATTERSALL,13,"ISIDORA GOYENECHEA 3600, PISO 5",+56226568949,https://www.chileautos.cl/macotattersall
+CL-SELLER-3245,Totoral,3,Nueva Central 4336 Conchali,+56226567555,https://www.chileautos.cl/totoral
+CL-SELLER-2815,Forcenter Los Dominicos,6,Avenida Camilo Enriquez 5615,2-27403382,https://www.chileautos.cl/forcenter10
+CL-SELLER-1715,Autosorno Nissan,0,M.A. MATTA 874,64-2242019,https://www.chileautos.cl/autosorno
+CL-SELLER-3292,Salazar Israel - San Felipe,0,"Chacabuco 109, San Felipe.",+56226568965,https://www.chileautos.cl/salazarisrael21demayo
+CL-SELLER-2697,Salazar Israel Temuco Alemania,28,Dinamarca 501,958847542,https://www.chileautos.cl/salazarisraeltemuco2
+CL-SELLER-1857,Salazar Israel - Valdivia,37,Av. Picarte 2240,977254115,https://www.chileautos.cl/salazarisraelvaldivia
+CL-SELLER-2793,Costacar,10,Merced 56,978061542,https://www.chileautos.cl/costacar
+CL-SELLER-2727,Automotora Caldo y Velasco SPA,19,AV. IV CENTENARIO 596,2-24758830,https://www.chileautos.cl/caldoyvelascospa
+CL-SELLER-1110,Larrain y Valdes,10,Av. Francisco Bilbao 5997,2-22002004,https://www.chileautos.cl/larrainyvaldes
+CL-SELLER-2580,GMD Automoviles,5,Camino Lonquen 9011,975972971,https://www.chileautos.cl/gmdautomoviles
+CL-SELLER-2284,Automotora Guillermo Morales - Puerto Montt,47,Caletera Panamericana 554,600-9795000,https://www.chileautos.cl/guillermomoralespuertomontt
+CL-SELLER-964,Automotora Guillermo Morales - División Mitsubishi,118,Av. Américo Vespucio Norte 1001,2-28999070,https://www.chileautos.cl/guillermomoralesmitsubishi
+CL-SELLER-1324,Automotriz Tecnosur,46,Picarte 1443,63-2278497,https://www.chileautos.cl/tecnosur
+CL-SELLER-853,Automotora Guillermo Morales - División Ssangyong,31,Av. Francisco Bilbao 2589,600-9795000,https://www.chileautos.cl/guillermomoralesbilbaods
+CL-SELLER-2329,Benjamín Florez,9,Av. Ossa 953,2-22774208,https://www.chileautos.cl/benjaminflorez
+CL-SELLER-2516,Automotriz Olea Flaño S.A,19,"ISABEL LA CATOLICA 4050, LAS CONDES",986288816,https://www.chileautos.cl/automotrizolea
+CL-SELLER-2531,Automotora Monza,54,Américo Vespucio 2174,+56226568845,https://www.chileautos.cl/tanner
+CL-SELLER-1576,Automotora Geo Car,12,Diego de Almagro 5403 (Metro Príncipe de Gales),998697125,https://www.chileautos.cl/automotorageocar
+CL-SELLER-1394,Seminuevos Gildemeister Concepción,0,AUTOPISTA TALCAHUANO 3310-A CONCEPCIÓN,969198923,https://www.chileautos.cl/carmeisterplazaeltrebol
+CL-SELLER-725,Autos Usados Bruno Fritsch - Black Label,32,Av. Las Condes 11800,979287460,https://www.chileautos.cl/brunofritschlascondes
+CL-SELLER-1673,Comercial Labbe y Cía. Ltda.,100,Panamericana Sur KM 41 Parcela 127 A,977764727,https://www.chileautos.cl/comerciallabbe
+CL-SELLER-1607,Ducati Chile,10,Av. Las Condes 11412,2-29553061,https://www.chileautos.cl/ducatichile
+CL-SELLER-3165,Auto-Outlet Sucursal Las Condes,23,Av Las Condes 11121,974876417,https://www.chileautos.cl/b2blascondes
+CL-SELLER-2916,Auto-Outlet Sucursal Vitacura,35,Av. Vitacura 2955,974876417,https://www.chileautos.cl/b2bmotor
+CL-SELLER-2271,Inalco Parque Arauco,12,Cerro Colorado 5413,969092164,https://www.chileautos.cl/inalcoparquearauco
+CL-SELLER-3020,Transpul Ltda,13,Av. Americo Vespucio Oriente 1271,998743806,https://www.chileautos.cl/transpulltda
+CL-SELLER-2409,"Doris Quiroz, un nombre que vende",110,Gabriel González Videla 873,982300706,https://www.chileautos.cl/dorisquiroz
+CL-SELLER-2836,Forcenter - Puente Alto,28,Camilo Henriquez 5615,934249637,https://www.chileautos.cl/forcenter11
+CL-SELLER-2996,Select Car,14,Diagonal Oriente 5175,938665020,https://www.chileautos.cl/selectcar
+CL-SELLER-2795,Camion Usado,13,Lo Echevers 220,+56226568874,https://www.chileautos.cl/camionusado
+CL-SELLER-2422,Barco Chile,50,Fresia 9223,2-23641412,https://www.chileautos.cl/barcochile
+CL-SELLER-2930,GT AUTOS,61,Holanda 222 Oficina Piso -1,958969601,https://www.chileautos.cl/playchilespa
+CL-SELLER-2675,E. Kovacs Quilpue,0,Avenida los Carrera  310,32-2327127,https://www.chileautos.cl/ekovacsquilpue
+CL-SELLER-675,Hernandez Motores - Valparaíso,14,14 Norte 1058,978875106,https://www.chileautos.cl/hernandezmotores
+CL-SELLER-2297,E. Kovacs Movicenter,5,Av. A. Vespucio Norte 1155 Loc. F-10,2-26379861,https://www.chileautos.cl/ekovacsmovicenter
+CL-SELLER-2526,Salfa Usados - Calama,15,Av. Balmaceda 2150,55-2563500,https://www.chileautos.cl/salfacalama
+CL-SELLER-1547,E. Kovacs Talca,20,1 Norte 2440,2-26379861,https://www.chileautos.cl/ekovacstalca
+CL-SELLER-1898,Autotattersall Los Angeles,14,"Av. Las Industrias Km 510, Costado Diford",43-2548759,https://www.chileautos.cl/autotattersalllosangeles
+CL-SELLER-1897,Autotattersall Antofagasta,42,"Av. Pedro Aguirre Cerda 6257, Esquina Cobija",55-2578106,https://www.chileautos.cl/autotattersallantofagasta
+CL-SELLER-1186,Automotriz Bascuñan,14,Bascuñán Guerrero 1371 (Sector Club Hipico),2-29040761,https://www.chileautos.cl/automotrizbascu%C3%B1an
+CL-SELLER-649,Redecam  Camiones,44,CRUCE LO HERRERA. PANAMERICANA SUR KM. 27,2-28410234,https://www.chileautos.cl/redecam
+CL-SELLER-3277,Contiautos,10,Vicuña Mackenna 8603,954057866,https://www.chileautos.cl/contiautos
+CL-SELLER-618,Motostar,13,Lira 610,+56226568837,https://www.chileautos.cl/motostar
+CL-SELLER-690,Iberocar La Dehesa,67,Av. La Dehesa 1993,941489691,https://www.chileautos.cl/iberocarladehesa
+CL-SELLER-1344,Salazar Israel - Las Condes,22,Av. Las Condes 8106,600-8186000,https://www.chileautos.cl/salazarisraelhonda
+CL-SELLER-2601,COMERCIALIZADORA DON PEDRO,13,Américo Vespucio Sur # 2451,933035836,https://www.chileautos.cl/comercialautomotrizms
+CL-SELLER-2812,Salfa Usados - La Serena Huanhuali,5,Huanhuali 191,998173606,https://www.chileautos.cl/salfalaserena2
+CL-SELLER-3178,Comercial Beiben,13,Av Presidente Eduardo Frei Montalva 16777,998953183,https://www.chileautos.cl/beibenspa
+CL-SELLER-2618,Machinery Chile - Puerto Varas,12,Los Cantaros Parcela 3 km 1010,959160611,https://www.chileautos.cl/machinerychile2
+CL-SELLER-2253,Autosearch,15,Comandante Malbec 13.133,990511055,https://www.chileautos.cl/autosearch
+CL-SELLER-3255,Aconcagua Motors,6,Calle Navarro 840,997692614,https://www.chileautos.cl/aconcaguamotors
+CL-SELLER-914,Tecnex Automoviles,17,Av. Vitacura 5277,984186964,https://www.chileautos.cl/tecnex
+CL-SELLER-1675,Siglo XXI - Los Andes,39,Av. Argentina 1130,965764257,https://www.chileautos.cl/valenzuelaydelarzelosandes
+CL-SELLER-1961,San Juan Automoviles,8,"Av. Américo Vespucio sur  0391, locales calle E 57",998706721,https://www.chileautos.cl/sanjuanautomoviles
+CL-SELLER-2469,HH Autopark - Viña del Mar,21,"Camino Internacional 2440, Reñaca Alto",993383875,https://www.chileautos.cl/hhautopark
+CL-SELLER-2451,Vedisa Remates Vehículos Siniestrados,24,San Gerardo 913,2-27958620,https://www.chileautos.cl/vdschile2
+CL-SELLER-2382,Te Vendemos El Auto,113,Sector Oriente,991957328,https://www.chileautos.cl/tevendemoselauto
+CL-SELLER-3320,Seminuevos Rancagua,22,Av. Alberto Einstein 290 subterráneo-3 edificio Pl,+56226567882,https://www.chileautos.cl/seminuevosrancagua
+CL-SELLER-3329,DJ AUTOMOVILES,15,GRAN AVENIDA 2498,988071113,https://www.chileautos.cl/djautomoviles
+CL-SELLER-2291,Importaciones Harz Ltda.,39,Carlos Sanhueza 037,45-2226922,https://www.chileautos.cl/harzequipos
+CL-SELLER-3034,Compra Venta de Vehículos Victor Inostroza,15,Avenida Ossa 1590,994369852,https://www.chileautos.cl/victorinostroza
+CL-SELLER-1142,Automotriz Dossil,222,San Pablo 2137 - A. Vespucio 2.876 B,2-26958420,https://www.chileautos.cl/automotrizdossil
+CL-SELLER-1162,Vivipra Ltda.,38,General Velásquez 9965 (Salida Sta. Margarita),982992310,https://www.chileautos.cl/vivipra
+CL-SELLER-3173,NCAutomoviles,5,El Libano Orienté,954155367,https://www.chileautos.cl/ncautomoviles
+CL-SELLER-3333,GreenSystems Maule,0,"Longitudinal Sur KM 176, Teno.",939406722,https://www.chileautos.cl/greensystemsmaule
+CL-SELLER-1392,SB Automotriz,29,Padre Alfredo Arteaga Barros. N.1694  Lo Barnechea,984194826,https://www.chileautos.cl/sbautomotriz
+CL-SELLER-3222,Unik Cars,6,Los Dominicos,997332680,https://www.chileautos.cl/unikcars
+CL-SELLER-2802,Valenzuela Delarze - Autoshopping,49,"Departamental 4500, Zona 4 , Valenzuela Delarze.-",982954748,https://www.chileautos.cl/valenzuelaydelarzemacul
+CL-SELLER-1027,Citroen Chile,8,Bellavista 0790,225839137,https://www.chileautos.cl/citroenchile
+CL-SELLER-3275,Lion Cars,5,Camino a Melipilla 15600,982403585,https://www.chileautos.cl/lioncars
+CL-SELLER-544,Comercial Jofre,21,Serrano  20,2-28311968,https://www.chileautos.cl/comercialjofre
+CL-SELLER-3242,Automotora Fedahe,22,"Las Quilas 1455, Sector Las Quilas",994774937,https://www.chileautos.cl/automotorafedahe
+CL-SELLER-2513,Ziscar,46,"Estoril 120, Of 302",966891097,https://www.chileautos.cl/ziscar
+CL-SELLER-1677,Reyesmaq Ltda. ex - Reymaq Ltda.,37,Panamericana Norte  17200,2-27387570,https://www.chileautos.cl/reymaq
+CL-SELLER-2535,Chandia Automotriz,13,Almirante Grau 2540,981794958,https://www.chileautos.cl/chandiautomotriz
+CL-SELLER-3150,Automotora BYB SPA,10,Loquen 9011,972185482,https://www.chileautos.cl/automotorabybspa
+CL-SELLER-1991,CGR Chile,32,Cerro San Luis 9976 (Esq. Cañaveral),2-27339400,https://www.chileautos.cl/cgrchile
+CL-SELLER-708,ARG Trailers Ltda.,15,La Primavera  361,961938576,https://www.chileautos.cl/gorentrailers
+CL-SELLER-3225,Automotriz Las Hualtatas,16,Las Hualtatas 5895,992322015,https://www.chileautos.cl/automotrizlashualtatas
+CL-SELLER-931,Mitsubishi Gracia - Las Condes,10,Av. Las Condes 8127,993223367,https://www.chileautos.cl/mitsubishigracialascondes
+CL-SELLER-3270,JMG,2,FRANCISCO COOK   751,979772395,https://www.chileautos.cl/jmg
+CL-SELLER-2312,Portillo Movicenter 2,50,Americo Vespucio 1155 Local B03,2-27505555,https://www.chileautos.cl/portillomovicenter2
+CL-SELLER-1484,Portillo Padre Hurtado,62,Av. Padre Hurtado,999117834,https://www.chileautos.cl/portillopadrehurtado
+CL-SELLER-1461,Portillo Vitacura,107,"Av. Vitacura 5555, Vitacura (Esquina Luis Carrera)",963961988,https://www.chileautos.cl/portillovitacura5555
+CL-SELLER-509,Patricio Hidalgo,16,Gladys Marin 6716 ex Pajarito P6,2-27402600,https://www.chileautos.cl/patriciohidalgo1
+CL-SELLER-2425,G2 Automóviles,84,"Valle del Monasterio 3199, esq. Av. Los Trapenses",992189115,https://www.chileautos.cl/g2automoviles
+CL-SELLER-2867,Enco Autos2,8,direccion,+56226568863,https://www.chileautos.cl/encoautos3
+CL-SELLER-2633,Autoscordova,12,Camino Melipilla 15600,991859359,https://www.chileautos.cl/hectorcordova
+CL-SELLER-3282,Kaufmann Pajaritos,3,Gladys Marin 5830,+56226568962,https://www.chileautos.cl/kaufmannpajaritos
+CL-SELLER-2974,Kaufmann Bilbao,10,Av Francisco Bilbao 3907,966064834,https://www.chileautos.cl/kaufmannbilbao
+CL-SELLER-3214,OpenSky Concierge,0,Las Condes,992225045,https://www.chileautos.cl/openskyconcierge
+CL-SELLER-635,Automotriz Santiago Norte,0,Américo Vespucio Norte 1055,000000000,https://www.chileautos.cl/santiagonorte
+CL-SELLER-1453,Laucirica Automotriz,0,AV DEPARTAMENTAL 4500 OF 1,964076190,https://www.chileautos.cl/vizcayaautomotriz
+CL-SELLER-2343,Automoviles Pelayo Ltda,16,"Av. Ossa 315, Plaza Egaña",2-27232940,https://www.chileautos.cl/pelayo
+CL-SELLER-1566,Rosselot Viña del Mar - Casa Matriz Usados Premium,276,"Calle Limache 3865, El Salto",+56226566254,https://www.chileautos.cl/rosselotvina2
+CL-SELLER-551,C Canepa Automoviles,0,Tomás Moro 578,2-28400651,https://www.chileautos.cl/canepaautomoviles
+CL-SELLER-1995,Automotriz Farellones - Temuco,93,Avda. San Martín 0693,45-2335858,https://www.chileautos.cl/automotrizfarellones2
+CL-SELLER-2041,Daniel Frene,15,Luxemburgo 9877,977077126,https://www.chileautos.cl/danielfrene
+CL-SELLER-2565,Automotora Transcar,7,"Av. Irarrazaval 3695 - Plaza Ñuñoa, Ñuñoa",2-29441789,https://www.chileautos.cl/automotoratranscar
+CL-SELLER-3005,Petersen Vitacura,46,Av. Vitacura 4877,944436444,https://www.chileautos.cl/apetersenvitacura
+CL-SELLER-1719,Camionero,46,www.camionero.cl,2-28430457,https://www.chileautos.cl/camionero
+CL-SELLER-1399,CarHouse,48,Curico Esquina Carmen,2-26657420,https://www.chileautos.cl/carhouse
+CL-SELLER-2879,Automotriz Miranda,57,Av. Pérez Zujovic 4534,997415479,https://www.chileautos.cl/automotrizmiranda
+CL-SELLER-2846,Paramaribo,9,Avenida Las Condes 12.145 Cantagallo,992765287,https://www.chileautos.cl/paramaribo
+CL-SELLER-1326,Aca Autos,48,"Cantagallo, Las Condes.",998717364,https://www.chileautos.cl/acaautos
+CL-SELLER-1358,Difor Chile S.A. - Puerto Montt,29,Panamericana 161,956080032,https://www.chileautos.cl/diforchile4
+CL-SELLER-2968,Peugeot Chile II,55,Av. Américo Vespucio 785 - Huechuraba,997081010,https://www.chileautos.cl/peugeotchileii
+CL-SELLER-1816,Tattersall Remates,63,BUZETA 3764,800-123990,https://www.chileautos.cl/tattersall2
+CL-SELLER-2824,Autosok.cl,11,"AVENIDA VITACURA 9164, VITACURA.",971410000,https://www.chileautos.cl/autosokcl
+CL-SELLER-402,Automotriz Julio Infante.com,69,Avenida Vitacura 9477,992361973,https://www.chileautos.cl/infante
+CL-SELLER-2273,Salazar Israel - Colon,66,Colón 8961,600-8186000,https://www.chileautos.cl/salazarisrael4
+CL-SELLER-2742,Irribarra bilbao,14,Av. Francisco Bilbao 2474,999189278,https://www.chileautos.cl/irribarrabilbao
+CL-SELLER-2237,Difor - Dissan - San Pedro de la Paz,26,"Dalcahue 1160, Andalué - Camino al Venado Local NI",966273563,https://www.chileautos.cl/diforchile7
+CL-SELLER-2617,Inversiones Pilot EIRL,10,"Americo Vespucio 1001, of 1",982338087,https://www.chileautos.cl/inversionespilot
+CL-SELLER-1907,Motoaventura - Osorno,7,Argomedo 739,64-2249124,https://www.chileautos.cl/motoaventura
+CL-SELLER-1930,Seminuevos Gildemeister Los Angeles,15,Longitudinal Sur Km. 508,43-2536107,https://www.chileautos.cl/gildemeisterlosangeles
+CL-SELLER-1773,Autos Yusic - Antofagasta,25,JUMBO NORTE,55-2717781,https://www.chileautos.cl/yusic
+CL-SELLER-1948,Seminuevos Gildemeister Pudahuel,14,Américo Vespucio 570,2-25965414,https://www.chileautos.cl/carmeisterpudahuel
+CL-SELLER-2158,Inalco Usados Puente Alto,16,Av. Concha y Toro 1120,2-28349164,https://www.chileautos.cl/inalcopuentealto
+CL-SELLER-2515,Automotriz Vitacura,3,A Convenir,984233897,https://www.chileautos.cl/automotrizvitacura
+CL-SELLER-2219,Owlcars,18,Vitacura 10018,2-28405758,https://www.chileautos.cl/owlcars
+CL-SELLER-3220,Automotora Armas,15,AV. Balmaceda 3398,51-2234510,https://www.chileautos.cl/automotoraarmas
+CL-SELLER-2642,Automotora Campos,12,Pedro Aguirre Cerda 4700 - Metro los Cerrillos,981761908,https://www.chileautos.cl/automotoracampos
+CL-SELLER-1346,Automotora Bilbao Club Hípico,29,Club Hípico 2446 esq. Autopista del Sol,985487703,https://www.chileautos.cl/automotorabilbao3
+CL-SELLER-1397,Autosummit,0,Av. Vicuña Mackenna 5495 METRO PEDRERO,2-23323260,https://www.chileautos.cl/autosummitvicunamackenna
+CL-SELLER-3368,Salazar Israel Pablo Neruda,19,Máximo Reyes 1210,930146953,https://www.chileautos.cl/salazarisraelpabloneruda
+CL-SELLER-691,Automotriz Las Condes,31,Av. Las Condes  8024,2-22291919,https://www.chileautos.cl/automotrizlascondes8024
+CL-SELLER-2374,Nice Car Chile SpA,49,San Martin 159,2-28241947,https://www.chileautos.cl/nicecarchile
+CL-SELLER-2536,Bruzzone Autos,12,Camino a Lonquen Norte Par. 7.5 Interior Petrobras,932908750,https://www.chileautos.cl/bruzzoneautos
+CL-SELLER-749,Yamaimport,8,Av. Las Condes 8326,2-22991018,https://www.chileautos.cl/yamaimport
+CL-SELLER-3085,Automotora Guillermo Morales - Bilbao Usados,21,Av. Francisco Bilbao 1127,2-28999070,https://www.chileautos.cl/guillermomoralesbilbao
+CL-SELLER-854,Automotora Guillermo Morales - División Fiat,38,Av. Francisco Bilbao 2557,600-9795000,https://www.chileautos.cl/guillermomorales2557
+CL-SELLER-3223,FrankCar,1,Aviadores 1367,111111111,https://www.chileautos.cl/frankcar
+CL-SELLER-1094,José Ergas Automoviles,2,Las Malvas 370  Dpto. 181,996892908,https://www.chileautos.cl/joseergas
+CL-SELLER-864,Tattersall Gestion de Activos,81,Buzeta 3764,2-23623100,https://www.chileautos.cl/tattersall
+CL-SELLER-912,Comercial Rupanco Ltda. - Rancagua,31,Membrillar 199,72-2233530,https://www.chileautos.cl/comercialrupanco
+CL-SELLER-2655,Manuel Contreras,19,MANUEL MONTT 490 TEMUCO,995594848,https://www.chileautos.cl/manuelcontreras
+CL-SELLER-782,Automotora Miguel Jacob Helo - Bilbao,14,Av. Francisco Bilbao 2626,2-25698070,https://www.chileautos.cl/migueljacobhelobilbao
+CL-SELLER-1351,Cristiancar,7,"avenida pedro aguirre cerda 4798, pasaje ñ",92347957,https://www.chileautos.cl/cristiancar
+CL-SELLER-2871,Luxus Automotora,17,"Vitacura 3201, vitacura",+56226568866,https://www.chileautos.cl/luxusautomotora
+CL-SELLER-3023,Lambus Automotriz,26,Ejercito 36,992560385,https://www.chileautos.cl/lambusautomotriz
+CL-SELLER-3159,WCAR,20,Av Presidente Kennedy 8076,72-2776394,https://www.chileautos.cl/wcar
+CL-SELLER-3052,GP MOTORS,21,"Americo Vespucio Express 2451, Cerrillos costado m",962074670,https://www.chileautos.cl/gpmotors
+CL-SELLER-540,Mach,16,Viana 45,32-3148126,https://www.chileautos.cl/mach
+CL-SELLER-1899,Automotriz Guerrero,42,Vidal 370 - Buen Pastor 150,75-2558722,https://www.chileautos.cl/automotrizguerrero
+CL-SELLER-2435,Automotora Gaut,7,Av. Chicureo 2900,932413429,https://www.chileautos.cl/citroengaut
+CL-SELLER-2043,Infiniti Motors Chile,23,Jose Alcalde Délano 10371,+56226567562,https://www.chileautos.cl/infinitimotors
+CL-SELLER-2229,E. Kovacs 0 Km.,11,Seminario 385,2-26379861,https://www.chileautos.cl/kovacs
+CL-SELLER-1548,E. Kovacs Linares,11,Av. León Bustos 0132,2-26379861,https://www.chileautos.cl/ekovacslinares
+CL-SELLER-3115,Market Autos,17,Eucebio Lillo 440,976657266,https://www.chileautos.cl/marketautos
+CL-SELLER-3084,BlackMotors,9,Kennedy 7440,954928131,https://www.chileautos.cl/blackmotors
+CL-SELLER-3285,Autos Rafael Monardes,6,Camino Lonquen Norte P 4 Sitio 8,985273184,https://www.chileautos.cl/autosrafaelmonardes
+CL-SELLER-3286,GV AUTOMOTRIZ,20,Avenida Americo vespucio 2451,977488154,https://www.chileautos.cl/gvautomotriz
+CL-SELLER-2208,Chanes,12,Brasilia 750,998834630,https://www.chileautos.cl/chanes
+CL-SELLER-2028,Automotora Salvadores,76,Seminario 110,950074956,https://www.chileautos.cl/salvadores
+CL-SELLER-2440,Cueto Automotriz,5,LUZ 2978,978542585,https://www.chileautos.cl/cuetoautomotriz
+CL-SELLER-640,Automotriz Vespucio,0,Av. Ossa 1590 - Américo Vespucio 1465-1595,548 2725 - 547 1439,https://www.chileautos.cl/parquesanramon
+CL-SELLER-1869,Automotriz Arauco Ltda. - Osorno,6,BULNES 760,966478335,https://www.chileautos.cl/automotrizaraucoltda
+CL-SELLER-1278,Automóviles el Golf,42,Francisco Bilbao 2881 - 2915   ( METRO BILBAO ),950091475,https://www.chileautos.cl/automovileselgolf
+CL-SELLER-2928,Inalco Usados Quilicura,45,Avenida Presidente Eduardo Frei Montalva 9590,996291738,https://www.chileautos.cl/inalcoquilicura
+CL-SELLER-1384,Coseche Usados Rancagua,26,BERNARDO OHIGGINS 27,940093877,https://www.chileautos.cl/cosecherancagua
+CL-SELLER-2431,Yutong Buses,15,Américo Vespucio 582,2-25964723,https://www.chileautos.cl/carmeisterpudahuel2
+CL-SELLER-2368,Forcenter Mall Plaza Alameda,21,"Auto Plaza, Av.Libertador Bernardo OHiggins 3470",950005792,https://www.chileautos.cl/forcenter4
+CL-SELLER-982,Automotriz Panamericana - San Fernando,12,Av Bernardo OHiggins 410,72-2711393,https://www.chileautos.cl/panamericana
+CL-SELLER-2466,Autotal,14,Av. Manquehue Sur 520,+56226568849,https://www.chileautos.cl/autotal
+CL-SELLER-3014,Zeta-car Los Angeles,8,Avenida Gabriela Mistral 1255,936267364,https://www.chileautos.cl/zeta-car
+CL-SELLER-1885,Soc. Comercial Ossa Ltda.,0,San Luis 1669,999932929,https://www.chileautos.cl/ossarentacar
+CL-SELLER-2607,Jose Garces Automoviles,8,FREIRE 824  BELLOTO,990500293,https://www.chileautos.cl/josegarcesautomoviles
+CL-SELLER-2882,Easy Rider Motorshop,13,Av. Vitacura 9083,999998649,https://www.chileautos.cl/easyridermotorshop
+CL-SELLER-873,Raimundo Baudet,12,Cristóbal Colón 3993,95494545,https://www.chileautos.cl/raimundobaudet
+CL-SELLER-2613,Automotora Sercar,18,AVENIDA VALPARAISO 1851,949749314,https://www.chileautos.cl/sercar
+CL-SELLER-2740,AutotattersalL Chillan,14,Panamericana Norte Km2,4-22524180,https://www.chileautos.cl/autotattersallchillan
+CL-SELLER-2645,Soissa,69,Francisco Bilbao 6375,990645476,https://www.chileautos.cl/soissamotors
+CL-SELLER-3224,Carbula,70,"La Capitanía 80, Ofic. 108",971417008,https://www.chileautos.cl/carbula
+CL-SELLER-2238,Car Choice,6,Llamar para agendar visita en Sector Oriente de St,995335449,https://www.chileautos.cl/carchoice
+CL-SELLER-623,Servimaq S.A. - Osorno,33,Mackenna 1659,950058063,https://www.chileautos.cl/servimaq
+CL-SELLER-2433,Automotriz Ogaz,32,"Av. Departamental 4500, Metro Macul, local 3",933894149,https://www.chileautos.cl/automotrizogaz
+CL-SELLER-3253,Marco Abdala,0,PASAJE LA SUERTE 0142,+56226568945,https://www.chileautos.cl/marcoabdala
+CL-SELLER-2462,NWAUTOS,46,Comandante Malbec 13.133,993301825,https://www.chileautos.cl/nwautos
+CL-SELLER-2782,Automotora Don Danilo,13,Brasilia 2444,996194710,https://www.chileautos.cl/dondanilo
+CL-SELLER-1147,Larruy - Las Condes,78,"Av. Manquehue Sur 898, esquina Martín de Zamora",988373075,https://www.chileautos.cl/larruy
+CL-SELLER-2605,Lunaautos,21,Camino Melipilla 15600,941393385,https://www.chileautos.cl/lunaautos
+CL-SELLER-3234,Automotora Platinum Cars 2,11,Ohiggins 0191,964430376,https://www.chileautos.cl/platinumcars2
+CL-SELLER-3319,MONTEMAR AUTOS SPA,20,"AVDA. BLANCA ESTELA 1927, LOCAL 24",978470211,https://www.chileautos.cl/montemarautos
+CL-SELLER-1506,Vehiculos Chile,14,"Paillao, psje. Peuma 35",63-2215411,https://www.chileautos.cl/chilevehiculo
+CL-SELLER-3262,TOPCAR Automotora Vitacura,10,"Avenida La Dehesa 181, Lo Barnechea",962366786,https://www.chileautos.cl/vitacuratopcar
+CL-SELLER-1305,Automotriz Toesca,10,FRANKLIN 298,979523244,https://www.chileautos.cl/automotriztoesca
+CL-SELLER-3271,2Cars 3,8,Camino a melipilla 15.600,+56226568935,https://www.chileautos.cl/2cars3
+CL-SELLER-1191,Kar Motors,17,Buin 677,65-2435845,https://www.chileautos.cl/karmotors
+CL-SELLER-3228,2CARS,10,CAMINO A MELIPILLA 15600,951591385,https://www.chileautos.cl/2cars1
+CL-SELLER-3184,Autoespecialista,16,Avenida Los Pajaritos 713,986560621,https://www.chileautos.cl/autoespecialista
+CL-SELLER-2372,Melhuish - Vitacura 7587,79,Av. Vitacura 7587,2-27064400,https://www.chileautos.cl/melhuish10
+CL-SELLER-3341,Cristian Reyes,12,Mar Rojo 8362,997832013,https://www.chileautos.cl/cristianreyes
+CL-SELLER-3297,Autoriente,24,Av. Kennedy 6800 Torre A of 611,+56226568969,https://www.chileautos.cl/orienteautomotora
+CL-SELLER-856,Alport,44,Av. Francisco Bilbao  4230,2-22069899,https://www.chileautos.cl/alportbilbao
+CL-SELLER-1233,Cristobal Irarrazabal Delano,85,Las Condes Sector Canta Gallo,994790254,https://www.chileautos.cl/cristobalirarrazabal
+CL-SELLER-2400,JyR Autos,32,Francisco Bilbao 5833,933797411,https://www.chileautos.cl/jyrautos
+CL-SELLER-1814,Automoviles Jaime Verdugo,7,8 Oriente Esquina 9 Sur 302  TALCA,71-2639662,https://www.chileautos.cl/automovilesjaimeverdugo
+CL-SELLER-1478,Automobile,47,Uruguay 1110 esquina Leon Gallo,45-2260505,https://www.chileautos.cl/automobile
+CL-SELLER-2465,Hernandez Motores - La Calera,13,Caupolicán 897,962225436,https://www.chileautos.cl/hernandezmotoreslacalera
+CL-SELLER-2558,Scania,9,Panamericana Norte 9850,963082525,https://www.chileautos.cl/scania
+CL-SELLER-1732,Ruy Barbosa SPA,2,Seminario 502,2-26342321,https://www.chileautos.cl/ruybarbosa
+CL-SELLER-3024,Eduardo Tapia E.I.R.L,11,MACHALI SECTOR LIDER DE SAN JUAN,978961572,https://www.chileautos.cl/eduardotapia
+CL-SELLER-3296,Automotriz Subterra Chicureo,7,Av. Chicureo 847,982326055,https://www.chileautos.cl/subterrachicureo
+CL-SELLER-1578,Comercializadora Reyes Y Villegas  Ltda,17,Primera Transversal 2256,977678679,https://www.chileautos.cl/reyesyvillegasltda
+CL-SELLER-2443,Autoital Automotriz,22,"Avenida Chicureo Km 2,8 Colina",976597178,https://www.chileautos.cl/autoital
+CL-SELLER-3249,CP Auto Group,14,Pasaje Sendero 2,+56226568940,https://www.chileautos.cl/cpautogroup
+CL-SELLER-1429,Brasil Buses,25,Panamericana Norte Km. 16.200,2-24999446,https://www.chileautos.cl/brasilbuses
+CL-SELLER-1621,Automotora APSA - Quillota,29,Av. Valparaíso 2040,998467967,https://www.chileautos.cl/automotoraapsa
+CL-SELLER-1070,Ratti Ltda. - Rancagua,16,AV SAN JUAN 0216 MACHALI,950210822,https://www.chileautos.cl/rattiltda
+CL-SELLER-1368,Automotora Alameda- San Fernando,25,Manso de Velasco 912,983474304,https://www.chileautos.cl/automotoralameda
+CL-SELLER-2074,Automotriz MG Autos,28,Av. Ramon Picarte 3165,63-2230464,https://www.chileautos.cl/automotrizmg
+CL-SELLER-2056,Autosummit Bilbao,17,Av. Francisco Bilbao 3959,982192679,https://www.chileautos.cl/autosummitbilbao
+CL-SELLER-1225,Harley Davidson,15,Padre Hurtado Norte 1454 (entre Vitacura y Hualtat,2-22248103,https://www.chileautos.cl/harleydavidson
+CL-SELLER-2908,Automotriz la Florida,71,Gerónimo de Alderete 414 con calle Perú,931091019,https://www.chileautos.cl/automotrizlaflorida
+CL-SELLER-3179,Encoautos2771,1,americo vespucio 2771,+56226568864,https://www.chileautos.cl/encoautos2771
+CL-SELLER-3302,Tattersall Automotriz,3,Av. Pedro Aguirre Cerda 5037,+56226568971,https://www.chileautos.cl/tattersallcerrillos
+CL-SELLER-1313,Comercial Lomas Ltda.,34,"Kilometro 15,5 Escuadron Interior",995994116,https://www.chileautos.cl/comerciallomas
+CL-SELLER-701,Piamonte S.A. - Irarrazaval 3400,0,Irarrázaval 3401,2-27510231,https://www.chileautos.cl/piamonte
+CL-SELLER-2386,Alrautos,25,"av. Américo Vespucio 340, la Cisterna",951002297,https://www.chileautos.cl/alrautos
+CL-SELLER-2432,Autousados,10,"Comunas del sector oriente, coordinar visita.",984409174,https://www.chileautos.cl/autousadosvd
+CL-SELLER-2561,Sociedad Automotriz Los Andes,0,KENNEDY 8100,952385060,https://www.chileautos.cl/automotrizlosandesvitacura
+CL-SELLER-2413,"Aspillaga y Hornauer - Coquimbo, Ovalle",7,"Videla 335, Coquimbo - Av. Laura Pizarro 1500 Oval",985825825,https://www.chileautos.cl/aspillagahornauer
+CL-SELLER-2434,HD Motors,0,Av. Jose Alcalde Delano 10581 of. 521  Subterr. -5,944626746,https://www.chileautos.cl/hdmotors
+CL-SELLER-2316,Global Bus,0,Puerto Vespucio 9703 - Pudahuel,2-29049993,https://www.chileautos.cl/globalbus
+CL-SELLER-2634,DNAutos,11,Raúl Labbé 12613,964923928,https://www.chileautos.cl/dnautos
+CL-SELLER-2840,Portillo Sur Seminuevos OHiggins,42,OHiggins 0970,971384444,https://www.chileautos.cl/portillotemuco3
+CL-SELLER-2620,Automec,19,"Padre Alfredo Arteaga Barros 1694, Lo Barnechea",972158796,https://www.chileautos.cl/automec
+CL-SELLER-2235,Irribarra Automotriz,16,Manuel Montt 1704,995145723,https://www.chileautos.cl/irribarraautomotriz
+CL-SELLER-3366,MARCAM BOATS,7,El Arroyo 601-B,+56226568888,https://www.chileautos.cl/marcamboats
+CL-SELLER-2987,Casi Nuevos Online,9,"Américo Vespucio 1307, esquina Isabel la Catolica",939491821,https://www.chileautos.cl/casinuevosonline
+CL-SELLER-2497,CITY MOTOR SpA,50,Avda Vitacura 6427,2-32450161,https://www.chileautos.cl/citymotor
+CL-SELLER-2959,Comercializadora de Automoviles Viña Autos,33,"Viña, Reñaca y Concón.",993336660,https://www.chileautos.cl/vinaautos
+CL-SELLER-3227,Mat Co,14,El Bosque 556,+56226568842,https://www.chileautos.cl/matco
+CL-SELLER-3300,Automotora Candia,0,Av Pedro Aguirre Cerda 4700,949846286,https://www.chileautos.cl/automotoracandia
+CL-SELLER-3031,WV Autos,0,Yelcho 566,990432865,https://www.chileautos.cl/wvautos
+CL-SELLER-3137,Autos La Torina,0,"Av. Los Pajaritos 713, Maipu",986498873,https://www.chileautos.cl/autoslatorina
+CL-SELLER-637,Automotora Colon,60,Quillota 550 (Entre 6 y 7 Norte),32-2685600,https://www.chileautos.cl/automecanicacolon
+CL-SELLER-2991,Valenzuela Delarze - Padre Hurtado Norte 1404,20,Padre Hurtado Norte 1404,977744054,https://www.chileautos.cl/valenzuelaydelarzehurtado2
+CL-SELLER-2152,Autograz,19,"Av. Kennedy 6800 Of. 601A, Vitacura",2-32451210,https://www.chileautos.cl/autograz
+CL-SELLER-2590,Newtrac SPA,21,Av. Del Valle Sur 524 Of. 201,976976288,https://www.chileautos.cl/newtracspa
+CL-SELLER-3279,San Marino Motors Vitacura SPA,19,Vitacura 7081,983366821,https://www.chileautos.cl/sanmarinomotorsvitacura
+CL-SELLER-2502,Wili,15,"Los Abedules 3085, Piso 3",992784628,https://www.chileautos.cl/wili
+CL-SELLER-1859,Portillo Sur Seminuevos San Martín,49,San Martín 334,981884699,https://www.chileautos.cl/portillotemuco
+CL-SELLER-3240,AutoGestion,21,av. Bilbao 4864,974359071,https://www.chileautos.cl/autogestion
+CL-SELLER-1639,Autofip,10,Av. Santa Teresa 1527,+56226568876,https://www.chileautos.cl/autofip
+CL-SELLER-3370,Automotora Los Lago,15,"Av cardonal N° 15, Puerto Montt",+56226568884,https://www.chileautos.cl/automotoraloslago2
+CL-SELLER-2130,Salazar Israel - La Dehesa,27,El Rodeo 13376,+56226568936,https://www.chileautos.cl/salazarisraelladehesa
+CL-SELLER-3260,Ram Motors,33,Leon gallo 0993,968981751,https://www.chileautos.cl/rammotors
+CL-SELLER-1738,Ramos Automotriz,11,Calle Vergara 056 esquina Los Carreras P 30 y medi,949623402,https://www.chileautos.cl/automotoraloscarreras
+CL-SELLER-3346,Automotriz TuAuto,13,B. Ohiggins 01017,954091130,https://www.chileautos.cl/automotriztuauto
+CL-SELLER-2801,Agusavi,26,Av. Padre Hurtado Norte 1321,998710734,https://www.chileautos.cl/agusavi
+CL-SELLER-1282,Difor Chile S.A. - Los Angeles,25,Av. Alemania 951,979644094,https://www.chileautos.cl/diforchile2
+CL-SELLER-1809,Difor Chile S.A. - Quilicura,7,"Américo Vespucio  1397, Quilicura",2-28414406,https://www.chileautos.cl/diforchile6
+CL-SELLER-3317,Difor Usados Paicaví - Nissan,21,"Avda. Paicaví 1730, esq. Brasil, Concepción",995990721,https://www.chileautos.cl/diforchile10
+CL-SELLER-3201,Difor Chile San Pedro De La Paz,19,Camino a Coronel 3455,984795320,https://www.chileautos.cl/diforchile8
+CL-SELLER-1425,Autos Usados Bruno Fritsch - Gran Avenida,31,"Gran Avenida 7711, costado local Hyundai",600-6262886,https://www.chileautos.cl/brunofritschlacisterna
+CL-SELLER-830,Nuevos S.A.,15,Mall Plaza Sur,942303468,https://www.chileautos.cl/nuevossa
+CL-SELLER-2410,Seminuevos Gildemeister Autoshopping,4,Av. Departamental 4500,956789910,https://www.chileautos.cl/gildemeisterautoshopping
+CL-SELLER-3107,Raicar,15,Pedro Aguirre Cerda 4.700,995992353,https://www.chileautos.cl/raicar
+CL-SELLER-2953,Castex Automotriz,0,Concepción,992111247,https://www.chileautos.cl/castex
+CL-SELLER-1734,Seminuevos Gildemeister MINI NEXT La Dehesa,20,Av. La Dehesa 1845,976683266,https://www.chileautos.cl/gildemeister
+CL-SELLER-1892,Autolink,0,Camino Del Cielo 2996,971384013,https://www.chileautos.cl/autolink-inactiva
+CL-SELLER-1973,Dante Rovegno,0,Rogelio Ugarte 1572,985776357,https://www.chileautos.cl/danterovegno
+CL-SELLER-1516,B-Motto,33,Paicaví 2201 -  Ventus 1261,992331628,https://www.chileautos.cl/b-motto
+CL-SELLER-2086,SKC Transporte,10,Ruta 5 norte 15.800,992801496,https://www.chileautos.cl/skctransporte
+CL-SELLER-1265,Motorsports Viña del Mar,13,San Antonio 961,+56226568839,https://www.chileautos.cl/motorsports
+CL-SELLER-2772,SGR Autos,25,Pedro Aguirre Cerda 4700,983380573,https://www.chileautos.cl/sgrautos
+CL-SELLER-2698,Salazar Israel Temuco Caupolican,29,Caupolicán 536,977124069,https://www.chileautos.cl/salazarisraeltemuco3
+CL-SELLER-2081,Salazar Israel - Chillán Ecuador 2,17,Ecuador 330,600-8186000,https://www.chileautos.cl/salazarisraelcollin
+CL-SELLER-1626,Salazar Israel - Temuco,51,Hochstetter 976,977122264,https://www.chileautos.cl/salazarisraeltemuco
+CL-SELLER-2349,Automóviles Luis Jara,25,AVENIDA DEPARTAMENTAL 4500,987452214,https://www.chileautos.cl/alejaramansilla
+CL-SELLER-3303,Biker Machine,12,Av. Vitacura 10042,+56226569922,https://www.chileautos.cl/bikermachine
+CL-SELLER-3177,Call 2,2,Av Vitacura 2771,+56226566251,https://www.chileautos.cl/call2
+CL-SELLER-1247,BusMarket Buses Usados Epysa,16,Av. Padre Alberto Hurtado 1280,2-27762020,https://www.chileautos.cl/busmarket
+CL-SELLER-535,Automoviles DMC,20,Camino Lonquén 9011 Plaza Oeste,997791157,https://www.chileautos.cl/dmcautomoviles
+CL-SELLER-2800,Eduardo Basulto,1,Vitacura,998930544,https://www.chileautos.cl/eduardobasulto
+CL-SELLER-1544,Royal Car,22,TABANCURA 1450,2-29543230,https://www.chileautos.cl/royalcar
+CL-SELLER-3123,Motors Advice,7,Sector oriente se coordina  horario y dirección,984288892,https://www.chileautos.cl/motorsadvice
+CL-SELLER-3273,CIDEF S.A,0,"Bellavista 0251, Providencia, Santiago.",+56226568960,https://www.chileautos.cl/cidefsa
+CL-SELLER-997,Grass y Arueste - Irarrázaval,67,Av. Irarrázaval 323,2-24853110,https://www.chileautos.cl/grassyaruesteirarrazaval
+CL-SELLER-3004,Mallgaravito - Sucursal Virtual,26,"Vitacura, Comunicar 934179103",934179103,https://www.chileautos.cl/mallgaravito
+CL-SELLER-2897,Comercial Barrera,9,Lumbreras parcela6,994807448,https://www.chileautos.cl/comercialbarrera
+CL-SELLER-1448,Nissan Carlos Verdugo,6,Av. Italia 1442,2-22230480,https://www.chileautos.cl/verdugo
+CL-SELLER-3331,AUSTRAL AUTOMOTRIZ,16,Calle Septimo de Linea # 468,997791498,https://www.chileautos.cl/australpuertomontt
+CL-SELLER-3205,Autos Chile,65,DEPARTAMENTAL 4500 MACUL,+56226568853,https://www.chileautos.cl/autoschilespa
+CL-SELLER-716,E. Kovacs Viña del Mar,34,Quillota 315,32-2327127,https://www.chileautos.cl/ekovacsvina
+CL-SELLER-2124,Autos RPM,404,"Reñaca 85, Concón",32-3170251,https://www.chileautos.cl/rpmspa
+CL-SELLER-1026,Citroen Chile - San Damián,22,Av. Las Condes 11.150,2-25839204,https://www.chileautos.cl/citroenchilesandamian
+CL-SELLER-2033,Automotriz Coronet,7,Américo Vespucio 1055,995348289,https://www.chileautos.cl/coronet
+CL-SELLER-1261,Automotora Continental,16,Av. Irarrázaval 513,2-22045065,https://www.chileautos.cl/automotoracontinental
+CL-SELLER-1549,Comercial Tortora - Rancagua,25,"Ruta 5 Sur Km.92, lado poniente, Gultro",72-2224325,https://www.chileautos.cl/comercialtortoraycia
+CL-SELLER-3141,RM Camiones Usados,10,Av. Principe Gales 7501,933075195,https://www.chileautos.cl/rmcamionesusados
+CL-SELLER-1164,Agrocampo Negocios Agricolas - Talca,24,"AVDA. LEON BUSTOS, SITIO 16",968781744,https://www.chileautos.cl/agrocamponegocios
+CL-SELLER-1886,Automotora JP.,37,Villasana 1622 panamericana norte 8600 noviciado p,94486108,https://www.chileautos.cl/jprietocabrie
+CL-SELLER-3210,Forcenter Las Condes,29,Las Condes 8300,997893604,https://www.chileautos.cl/forcenterlascondes
+CL-SELLER-1102,SALFA,10,Salfa Américo Vespucio 3270 Maipu,979977095,https://www.chileautos.cl/salfarent
+CL-SELLER-3011,MY - CAR,15,avda los carrera 0811 paradero 30,974762889,https://www.chileautos.cl/my-car
+CL-SELLER-727,Lira Larrain,4,Seminario 604,987296089,https://www.chileautos.cl/liralarrain
+CL-SELLER-1691,Salfa Camiones,20,Americo Vespucio 3270,934337610,https://www.chileautos.cl/salfacamiones
+CL-SELLER-3144,Aspillaga Hornauer Belloto,8,Freire 2050,985831530,https://www.chileautos.cl/aspillagahornauerbelloto
+CL-SELLER-1084,Autozava Ltda.,5,San Isidro 970,2-26342472,https://www.chileautos.cl/autozava
+CL-SELLER-2990,Autos Golden Car,7,Departamental 4360,997768144,https://www.chileautos.cl/autosgoldencar
+CL-SELLER-2944,Salfa  Puerto Montt,0,"Ruta 5 Sur Km. 1024, Sector Alto Bonito",958166977,https://www.chileautos.cl/salfaptomontt
+CL-SELLER-2732,VEGA ARTUS SEMINUEVOS,0,AVENIDA MIGUEL RAMIREZ 191,995385531,https://www.chileautos.cl/vegaartuseminuevos
+CL-SELLER-2029,Autos y Autos,12,Camino El Alba 8760 Of. 304 Metro Los Dominicos.,998280425,https://www.chileautos.cl/autosyautos
+CL-SELLER-527,Autocorp Ltda.,0,Autocorp,954219681,https://www.chileautos.cl/autocorp
+CL-SELLER-1051,Cabrera y Puente - Valparaíso,19,Independencia 2420,32-2595617,https://www.chileautos.cl/cabreraypuenteautomoviles
+CL-SELLER-2459,Portal Motors - Concepcion,20,"Jorge Alessandri 4211, Camino al Aeropuerto(Carrie",940465393,https://www.chileautos.cl/portalmotors
+CL-SELLER-1260,Carmotors,14,Balmaceda 2912,956380880,https://www.chileautos.cl/carmotors
+CL-SELLER-1725,Jorge Doren,5,EMILIO VAISSE 748,993327077,https://www.chileautos.cl/jorgedoren
+CL-SELLER-2694,Zona Automotriz Ltda,0,Calle San Juan 4666,981975117,https://www.chileautos.cl/zonaautomotriz
+CL-SELLER-2023,Autotattersall Puerto Montt,9,"Ruta 5 Sur Km 1022, camino a Pargua",65-2368212,https://www.chileautos.cl/autotattersallpuertomontt
+CL-SELLER-2962,The Super Garage,41,Alcalde Delano 10.581 of 522,+56226567566,https://www.chileautos.cl/supergarage
+CL-SELLER-2525,Lavinclasicos,38,www.lavinclasicos.cl,995188669,https://www.chileautos.cl/lavinclasicos
+CL-SELLER-2290,Comercial Marchant - Puerto Varas,50,Ruta 5 Sur km 1006 - Pto Varas.,968436129,https://www.chileautos.cl/myr
+CL-SELLER-2511,Automotriz AMP,21,Luis Barros Borgoño 610,979801523,https://www.chileautos.cl/automotrizamp
+CL-SELLER-1493,Automotora Klein - Puerto Montt,4,Buin 745 costado 7a Cia. de bomberos,2-28954524,https://www.chileautos.cl/automotrizklein
+CL-SELLER-3129,RSD Automotriz,14,Av. Las Condes 9765,987744532,https://www.chileautos.cl/rsdautomotriz
+CL-SELLER-684,Automotriz Villalobos Ltda.,19,Antofagasta 3034 Santiago,2-32520314,https://www.chileautos.cl/automotrizvillalobos
+CL-SELLER-2808,Automotora Soil Motors,41,Ohiggins   0191,942610117,https://www.chileautos.cl/soilmotors
+CL-SELLER-3081,Auto-Outlet Sucursal La Reina,20,Av. Ossa 1990,985956023,https://www.chileautos.cl/b2blareina
+CL-SELLER-3088,Automotriz Cars 18,0,avenida el descanso 1736 maipu,968535040,https://www.chileautos.cl/automotrizcars18
+CL-SELLER-3226,Terral Spa,0,AVENIDA PAJARITOS 4155,968119981,https://www.chileautos.cl/terralautomotriz
+CL-SELLER-3187,RLS,0,Americo Vespucio 2901,963107504,https://www.chileautos.cl/rlsautomotriz
+CL-SELLER-3045,Gestiones Automotrices,0,calle carmen luisa correa 214,949034963,https://www.chileautos.cl/gestionesautomotrices
+CL-SELLER-2332,TeBuscoTuAuto,0,VITACURA,990473416,https://www.chileautos.cl/klausrudloffg
+CL-SELLER-3243,Autotattersall Concepcion,30,Paicavi 1997,+56226568898,https://www.chileautos.cl/autotattersallconcepcion
+CL-SELLER-2471,Mundo Motors,15,Av. Ossa 2218,998241899,https://www.chileautos.cl/mundomotors
+CL-SELLER-3233,Automotora Platinum Cars,14,Ohiggins 0415b,964430376,https://www.chileautos.cl/platinumcars1
+CL-SELLER-2717,Punto Auto Ltda,7,Los Carrera 0877,956285904,https://www.chileautos.cl/puntoauto
+CL-SELLER-2945,Autolink.cl,45,Av Kennedy 6800 oficina 610B,2-32486727,https://www.chileautos.cl/autolinkcl
+CL-SELLER-2019,Autotattersall Francisco Bilbao,34,Av. Francisco Bilbao 3000,944331881,https://www.chileautos.cl/autotattersallbilbao
+CL-SELLER-454,Citroen Lander Leguina,20,Av. Egaña 206 Metro Plaza Egaña,2-22777136,https://www.chileautos.cl/landerleguina
+CL-SELLER-3208,Summit Motors,13,Avda. Libertador Bernardo O Higgins 959,+56226568870,https://www.chileautos.cl/summitmotors
+CL-SELLER-2541,Comercial Abrigo SpA,28,"Longitudinal Sur Parcela 113 ,Paine a un costado d",979575974,https://www.chileautos.cl/comercialabrigo
+CL-SELLER-3336,One Automotriz,6,Padre Hurtado  Norte 2166,987772669,https://www.chileautos.cl/oneautomotriz
+CL-SELLER-697,Casa de Remates PRYG,74,SALVADOR ALLENDE 159,2-25539358,https://www.chileautos.cl/recuperosrabay
+CL-SELLER-1395,Autosummit Movicenter,24,Americo Vespucio Norte 1155 Loc. 06,2-26184518,https://www.chileautos.cl/autosummitmovicenter
+CL-SELLER-3335,Greensystems Coquimbo,0,Sucursal Virtual,957780108,https://www.chileautos.cl/greensystemscoquimbo
+CL-SELLER-2980,Automotora CNR,6,Américo Vespucio sur 0391,998379044,https://www.chileautos.cl/automotoracnr
+CL-SELLER-2038,Derco Comercial Errazuriz Ltda,28,"Ruta 5 Sur Km 37, Cruce Linderos, Caletera Oriente",2-28221182,https://www.chileautos.cl/comercialerrazuriz
+CL-SELLER-2470,Automotora DachsCar,24,Av. Irarrázaval 2401  Of. 1320,965771012,https://www.chileautos.cl/dachscar
+CL-SELLER-1672,Valenzuela Delarze - Manuel Montt 1275,41,Bilbao 1275,954108049,https://www.chileautos.cl/valenzuelaydelarzebilbao2
+CL-SELLER-706,Valenzuela Delarze - Irarrázaval 370,25,Irarrázaval 370,2-28404522,https://www.chileautos.cl/valenzuelaydelarzeirarrazaval2
+CL-SELLER-599,Automotora Santa Isabel,40,Santa Isabel 625,937711523,https://www.chileautos.cl/santaisabel
+CL-SELLER-799,Automotora Mardones - Rancagua,23,Av. San Martín 718,72-2231841,https://www.chileautos.cl/automotoramardones
+CL-SELLER-1659,Janssen S.A.,28,Panamericana Norte 5353,2-23399635,https://www.chileautos.cl/janssen
+CL-SELLER-923,OK Car - La Serena,26,"Balmaceda 2948, 2954 Y 2960",968415352,https://www.chileautos.cl/okcar
+CL-SELLER-3310,Automotora Cardeal,18,El Nogal 1765,+56228691065,https://www.chileautos.cl/cardeal
+CL-SELLER-3301,Alfredo Robles,0,Eusebio Lillo 440-446,+56226568973,https://www.chileautos.cl/alfredorobles
+CL-SELLER-3213,Patricio Solis Autos,8,Avenida Gabriela #03211,930644535,https://www.chileautos.cl/patriciosolisautos
+CL-SELLER-2315,Automotriz Vitacar,19,Francisco Bilbao 6100,990024875,https://www.chileautos.cl/vitacar
+CL-SELLER-1215,Suzuval - Valparaíso,12,Independencia 2563,990436562,https://www.chileautos.cl/suzuval2
+CL-SELLER-2612,Pompeyo Carrasco Gran Avenida 6771,13,"Gran Avenida 6771, La Cisterna",979897266,https://www.chileautos.cl/pompeyo5
+CL-SELLER-1872,MYM Rojas,17,El Bollenar,964217914,https://www.chileautos.cl/mymrojas
+CL-SELLER-3204,Pompeyo Carrasco Autoshopping,18,"Av departamental 4500, Macul",+56226568869,https://www.chileautos.cl/pompeyomacul
+CL-SELLER-2668,Carrera Pro,13,Carrera 1510,987305514,https://www.chileautos.cl/carrerapro
+CL-SELLER-1779,Automax,45,Av. San Martín 01018 PLAZA LAS BANDERAS,45-2980005,https://www.chileautos.cl/automax
+CL-SELLER-2774,Automotriz Pedro Avendaño,14,Almagro 914,981983540,https://www.chileautos.cl/automotorapedroavendano
+CL-SELLER-2811,San Cristóbal Spa,31,Av. Ossa 2119,944608548,https://www.chileautos.cl/sancristobalspa
+CL-SELLER-2482,Salazar Israel - Linares,26,Av. Leon Bustos 0239,973468040,https://www.chileautos.cl/salazarisraellinares
+CL-SELLER-3356,PROMOTORS,14,Canto del valle 1777 dpto 107,995077407,https://www.chileautos.cl/promotorsspa
+CL-SELLER-622,"Aspillaga y Hornauer - Viña del Mar, Quillota",16,"Av. Quillota 795,Viña del Mar - Freire 1070, Quill",964977126,https://www.chileautos.cl/aspillagayhornauer
+CL-SELLER-2534,Piamonte La Cisterna,0,"El Parron 57 (Paradero 21, metro el Parron)",2-28855751,https://www.chileautos.cl/piamontelacisterna
+CL-SELLER-857,Queirolo - Bilbao,0,Av. Francisco Bilbao 3791,961573340,https://www.chileautos.cl/queirolobilbao
+CL-SELLER-831,Piamonte S.A. - Vitacura,0,Av. Vitacura 9951,2-22115236,https://www.chileautos.cl/piamontevitacura
+CL-SELLER-1436,Maritano Ebensperger,49,PAICAVI 2340 - LIDER BIO BIO - CHILLAN,940239647,https://www.chileautos.cl/maritanoebensperger
+CL-SELLER-2129,Equipoauto Limitada,4,Padre Faustino Gazziero 2620,2-28086733,https://www.chileautos.cl/equipoauto
+CL-SELLER-3351,XRACING,2,CHICUREO 2900,+56226564779,https://www.chileautos.cl/xracing
+CL-SELLER-2773,Apoquindo Corretaje,23,Tomas moro 646,950431381,https://www.chileautos.cl/apoquindocorretaje
+CL-SELLER-3327,The Car Store Chile,5,Av las condes 10445 oficina 25,976678955,https://www.chileautos.cl/thecarstorechile
+CL-SELLER-3323,Autos Icta,1,Avenida los Huertos 1073,983481179,https://www.chileautos.cl/autosicta
+CL-SELLER-2461,Tatocars,26,Coordinar visita,993117745,https://www.chileautos.cl/tatocars
+CL-SELLER-3289,JAFA,0,Camino Villarrica Pucon km12 molco km3 casilla 257,+56226568860,https://www.chileautos.cl/jafa
+CL-SELLER-2961,Automoviles Cumbres,0,Vitacura 9020,998827654,https://www.chileautos.cl/cumbres
+CL-SELLER-3256,Rodrigo Patricio Lagos Molina,0,"Calle La Laguna 18 947, casa 1032, Condominio La P",+56226568947,https://www.chileautos.cl/rodrigolagosmolina
+CL-SELLER-3138,Kaizen Garantizados,0,San Francisco 1433,962036077,https://www.chileautos.cl/kaizengarantizados
+CL-SELLER-3136,Six Motors,0,Av. Manquehue Sur 1795,956586659,https://www.chileautos.cl/themonkey
+CL-SELLER-2738,Automotriz Sexta Region,20,Avenida Manuel Rodriguez 308,998832743,https://www.chileautos.cl/sextaregion
+CL-SELLER-521,Massu Car Boutique - Viña del Mar,58,7 Norte esquina calle Quillota,32-2685400,https://www.chileautos.cl/massucar
+CL-SELLER-1200,Mecanix Automotriz,59,Av.Cuarto Centenario 599,2-29812786,https://www.chileautos.cl/mecanixautomotriz
+CL-SELLER-2845,Grupo Renueva Car SpA,52,"Av. MANQUEHUE SUR 1555, LAS CONDES",999983572,https://www.chileautos.cl/gruporenueva
+CL-SELLER-2144,Masautos,31,Vía Celeste 9967,984036173,https://www.chileautos.cl/masautos
+CL-SELLER-746,Automoviles Caldoysanti,51,Manquehue sur 1695,2-27237747,https://www.chileautos.cl/caldoysanti
+CL-SELLER-2653,Juan Schmidt,3,Duqueco 1965 torre 4 Depto 23,982950495,https://www.chileautos.cl/juanschmidt
+CL-SELLER-1523,Gonzalez Cassis Automoviles - Viña del Mar,38,Calle Once 2475,32-2684808,https://www.chileautos.cl/gonzalezcassis
+CL-SELLER-2905,Automotora Moorea Puerto Montt,15,Regimiento 1207,976868621,https://www.chileautos.cl/mooreapuertomontt
+CL-SELLER-3371,Forcenter - Marcas Chinas,0,Irarrazaval 1445 ñuñoa,+56226568836,https://www.chileautos.cl/forcentermarcaschinas
+CL-SELLER-586,Automotriz Daniel Achondo,35,Av. Francisco Bilbao 5759 - esq. Vespucio,2-28162030,https://www.chileautos.cl/danielachondo
+CL-SELLER-3369,AUTOMOTRIZ MIERES MOTORS,32,Carmen Luisa Correa #214,+56226566229,https://www.chileautos.cl/automotrizmieresmotors
+CL-SELLER-2600,Quiroz Automotriz,23,"Viña del Mar, Reñaca, Concón",32-3183356,https://www.chileautos.cl/quirozautomotriz
+CL-SELLER-3355,San Benito Autos,8,LA MACARENA 31,998810175,https://www.chileautos.cl/sanbenito
+CL-SELLER-2438,Autos Usados Bruno Fritsch - Talcahuano,43,Colón 3309,41-2668000,https://www.chileautos.cl/brunofritschtalcahuano
+CL-SELLER-978,Autos Usados Bruno Fritsch - Chacabuco,62,Chacabuco 183,41-2668000,https://www.chileautos.cl/autofrancechacabuco
+CL-SELLER-2161,Autos Usados Bruno Fritsch - Av. La Florida,102,"Av. La Florida 8954, Costado Local Nissan",600-6262886,https://www.chileautos.cl/brunofritschlaflorida2
+CL-SELLER-3375,Sold Chile,0,"IV centenario 1879, depto102",+56226564768,https://www.chileautos.cl/soldchile
+CL-SELLER-1883,Anfruns Motors Maipu,19,Camino a Melipilla 11611,2-24051500,https://www.chileautos.cl/promotors2
+CL-SELLER-1204,Anfruns Motors - DercoCenter Rancagua,20,Av. Baquedano 12,2-24051600,https://www.chileautos.cl/anfrunsmotors
+CL-SELLER-2013,Salazar Israel - Concepción Vega Monumental,72,Av. 21 de Mayo 3225,976361387,https://www.chileautos.cl/salazarisrael2
+CL-SELLER-1041,Salazar Israel - Concepción Paicaví,115,Paicaví 2592,+56226568938,https://www.chileautos.cl/salazarisrael
+CL-SELLER-2037,Automotriz JMD Limitada,49,Av. Vitacura 9667,2-22023066,https://www.chileautos.cl/jmdautos
+CL-SELLER-2365,Automotora Del Valle,87,Av. Kennedy 8484,964690892,https://www.chileautos.cl/automotoradelvalle
+CL-SELLER-1972,Automotora Rojas Multicar - Puerto Montt,38,Av. Santa Inés 595,65-2716428,https://www.chileautos.cl/rojasmulticar
+CL-SELLER-2351,Salazar Israel Talca - Usados San Miguel,60,Av. San Miguel 2790,977228375,https://www.chileautos.cl/salazarisraeltalcausados2
+CL-SELLER-1489,Autos Usados Bruno Fritsch - San Damian,25,Av. Las Condes 11568,600-6262886,https://www.chileautos.cl/brunofritschlascondes2
+CL-SELLER-2015,Salazar Israel - Los Angeles,69,Ex Ruta 5 Sur Km. 508,942477366,https://www.chileautos.cl/salazarisraellosangeles
+CL-SELLER-2014,Salazar Israel - Concepción Prat,30,Av. Prat 1099,600-8186000,https://www.chileautos.cl/salazarisrael3
+CL-SELLER-3318,Difor Usados Puerto Montt Peugeot,16,"Pilpilco 103, Puerto Montt",998240593,https://www.chileautos.cl/difor11
+CL-SELLER-2969,Peugeot Chile III,53,Av. Américo Vespucio 785,992149828,https://www.chileautos.cl/peugeotchileiii
+CL-SELLER-1025,Difor Chile S.A. - Concepción,38,PAICAVI 1436,978816832,https://www.chileautos.cl/diforchile
+CL-SELLER-1283,Difor Chile S.A.- Las Condes,31,LAS CONDES 8694,968469453,https://www.chileautos.cl/diforchile3
+CL-SELLER-976,Autos Usados Bruno Fritsch - Prat,22,"Av. Arturo Prat 320, costado local Toyota",41-2668000,https://www.chileautos.cl/autofrancecasamatriz
+CL-SELLER-2460,Autos Usados Bruno Fritsch - La Dehesa,0,"José Alcalde Délano 11255, costado local Toyota",600-6262886,https://www.chileautos.cl/brunofritschladehesa
+CL-SELLER-1982,Aravena Motors - Talca,0,AVENIDA SAN MIGUEL 3488 ESQUINA 32 ORIENTE,961468989,https://www.chileautos.cl/aravenamotors
+CL-SELLER-2702,Automotriz Cartoni - Camiones y Vehiculos Comerciales,79,"Limache 4335, El Salto",32-2383818,https://www.chileautos.cl/cartoni4
+CL-SELLER-3075,San Marino Motors - Concepcion,23,Paicavi 2121,+56226568953,https://www.chileautos.cl/sanmarinomotorsconcepcion
+CL-SELLER-817,Automotora Briones - Temuco,9,Carrera 551 esquina Caupolican,984035496,https://www.chileautos.cl/automotoradanielbriones
+CL-SELLER-639,Medina  Ballart S.A. - Temuco,8,Av. Bernardo Ohiggins 0459,45-2961050,https://www.chileautos.cl/medinayballart
+CL-SELLER-2049,Effa Motors,31,"AVENIDA VITACURA 9164, VITACURA.",992759119,https://www.chileautos.cl/effamotors
+CL-SELLER-2064,Usados Talca - Circulo Autos,53,Av. San Miguel 2890,961932964,https://www.chileautos.cl/circuloautostalca
+CL-SELLER-1103,Usados Linares - Circulo Autos,23,Av. León Bustos 1300,961560051,https://www.chileautos.cl/circulotoyotalinares
+CL-SELLER-3309,Auxilia Club,35,Las Urbinas 68,+56226569930,https://www.chileautos.cl/auxiliaclub
+CL-SELLER-819,Nallar Autos - Osorno,29,www.nallarautos.cl,998831206,https://www.chileautos.cl/nallarautos
+CL-SELLER-2564,Chicureo Speed Shop,32,Alva III Parcela 21,979575906,https://www.chileautos.cl/chicureospeedshop
+CL-SELLER-1093,Ditec Automóviles División Usados - Ciudad Empresarial,14,Av. Del Parque 4002 Ciudad Empresarial,2-25447115,https://www.chileautos.cl/ditecusadosciudadempresarial
+CL-SELLER-1921,Ditec Automóviles División Usados - Luis Carrera,12,Av. Vitacura 5540 esquina Luis Carrera,2-25447357,https://www.chileautos.cl/ditecusadosvitacura5540
+CL-SELLER-3010,GiftCar.cl,17,Avenida las condes 9765,982690600,https://www.chileautos.cl/giftcarcl
+CL-SELLER-2741,TALCARS,14,11 Oriente 863 entre 3 y 4 sur,997781492,https://www.chileautos.cl/talcars
+CL-SELLER-2293,Automoviles RS,36,Vitacura 7145,2-22191376,https://www.chileautos.cl/automovilesrs
+CL-SELLER-766,Vega Artus - Rancagua,34,Av. Miguel Ramírez 525,947715159,https://www.chileautos.cl/vegaartus
+CL-SELLER-3364,AUTOMOTORA VEGAARTUS,11,Yumbel 890,947715159,https://www.chileautos.cl/vegaartusrancagua
+CL-SELLER-3125,Santiago Motors,37,Avenida Vitacura 9450,998246571,https://www.chileautos.cl/santiagomotors
+CL-SELLER-2588,Autovir,48,Avda. Kennedy 6800 of 819 Torre B,950863665,https://www.chileautos.cl/autovir
+CL-SELLER-3058,Malbec Automotriz,128,Comandante Malbec 13495,2-29556601,https://www.chileautos.cl/malbecautomotriz
+CL-SELLER-3251,RODELCAR,24,AV VITACURA 9524,+56226568943,https://www.chileautos.cl/rodelcarvitacura
+CL-SELLER-3269,Fronza,10,PARQUE INDUSTRIAL CURAUMA OJOS DEL SALADO 3210,933104323,https://www.chileautos.cl/fronzavalparaiso
+CL-SELLER-2250,Automotora Irarrazaval,0,COMANDANTE MALBEC 13133  LO BARNECHEA,997330156,https://www.chileautos.cl/automotorairarrazaval
+CL-SELLER-1703,Comercial Romanini,0,Serrano 25,2-28316716,https://www.chileautos.cl/comercialromanini
+CL-SELLER-1180,AutoMark Ltda.,0,Pedro Rico 6353,998333749,https://www.chileautos.cl/automark
+CL-SELLER-3237,ARROYO y CATALDO automotriz,0,"Calle Carrera 1190, La Calera",983567959,https://www.chileautos.cl/cataldoyarroyo
+CL-SELLER-2915,D Y S Autos,0,Vitacura,992184001,https://www.chileautos.cl/dysautos
+CL-SELLER-534,Kennedy Automoviles,45,AV. VITACURA 9220,2-24536561,https://www.chileautos.cl/kennedyautomoviles
+CL-SELLER-2931,Raico S.A.,7,Panamericana Norte 18900,966450655,https://www.chileautos.cl/raico
+CL-SELLER-2842,Portillo Usados Vicuña Mackenna,45,"Av, Vicuña Mackenna 2361",2-27505555,https://www.chileautos.cl/portillovicunamackenna
+CL-SELLER-2652,Portillo La Florida,109,"Av. Departamental 4500, Metro Macul",961590935,https://www.chileautos.cl/portillolaflorida
+CL-SELLER-1831,Portillo Movicenter,80,Américo Vespucio 1155 Local B07,2-27505555,https://www.chileautos.cl/portillomovicenter
+CL-SELLER-1463,Portillo Bilbao,49,Francisco Bilbao 2669,997796440,https://www.chileautos.cl/portillobilbaoautomotriz
+CL-SELLER-3236,Automotora HD Spa,14,San Martin 01191,+56226568889,https://www.chileautos.cl/automotorahdspa
+CL-SELLER-24,Autocentro,11,Irarrázaval 4650,2-22770945,https://www.chileautos.cl/autocentro
+CL-SELLER-3338,DECAR NUEVOS,41,ohiggins 302,952083046,https://www.chileautos.cl/decarnuevostemuco
+CL-SELLER-2894,Automotriz Mauricio Jaure,11,Av. Américo Vespucio 391,992514498,https://www.chileautos.cl/automotrizmauriciojaure
+CL-SELLER-880,Nikicar - Villa Alemana,10,Av. Valparaíso  1602,920581333,https://www.chileautos.cl/nikicar
+CL-SELLER-3345,Lazzcar Vitacura,1,LAS CONDES 11510,+56226564785,https://www.chileautos.cl/lazzcarvitacura
+CL-SELLER-2073,Carpoint,36,RAMON FREIRE 2411 CENTRO COMERCIAL EL BELLOTO,974970483,https://www.chileautos.cl/carpoint
+CL-SELLER-533,Seminuevos Gildemeister Movicenter,45,"Av. Américo Vespucio Norte 1155 Loc. 4, Movicenter",2-25965470,https://www.chileautos.cl/carmeistermovicenter
+CL-SELLER-3247,V8 Autos,27,VITACURA 9982,990372776,https://www.chileautos.cl/v8autos
+CL-SELLER-1126,Auto Speed,35,Av. Francisco Bilbao 308,2-26353939,https://www.chileautos.cl/autospeed
+CL-SELLER-1201,Serviautos,7,La Reina,997111775,https://www.chileautos.cl/serviautos
+CL-SELLER-3344,REMATES JUDICIALES ONLINE,0,MONEDA 2552,+56226564786,https://www.chileautos.cl/rematesjudicialesonline
+CL-SELLER-2636,MotoTravel JMD,19,Av. Vitacura 9667,34-2315503,https://www.chileautos.cl/mototravel
+CL-SELLER-813,Greenhill Automoviles - Concepcion,74,Serrano 50,41-2254550,https://www.chileautos.cl/automotoragreenhill50
+CL-SELLER-1452,Campos Automotriz,24,General San Martin KM 8.3  caletera oriente,998884501,https://www.chileautos.cl/camposautomotriz
+CL-SELLER-1254,Vivipra Ltda. - Talca,22,21 Oriente 450 Calle de servicio,990782362,https://www.chileautos.cl/vivipratalca
+CL-SELLER-2949,Iscar,20,Avenida Vitacura 9020,998732012,https://www.chileautos.cl/iscar
+CL-SELLER-663,AyR Automotriz,93,Arlegui 102,968780099,https://www.chileautos.cl/arteagayrebolledo
+CL-SELLER-629,Mitsubishi Gracia - Bilbao,34,Av. Fco. Bilbao 5100 esquina Sebastián Elcano,992386117,https://www.chileautos.cl/mitsubishigracia
+CL-SELLER-3305,Automotriz PYJ,6,Aníbal Pinto #258 Oficina 2,+56226568958,https://www.chileautos.cl/automotrizpyj
+CL-SELLER-3263,TOPCAR Automotora Vespucio,26,Americo Vespucio #0447 La Cisterna,987598645,https://www.chileautos.cl/vitacuratopcar2
+CL-SELLER-2562,Prestige Motors,31,Av. el tranque 12797 lo Barnechea,998875872,https://www.chileautos.cl/prestigemotors
+CL-SELLER-928,Pemarco,21,Carretera El Cobre 400,982195893,https://www.chileautos.cl/automotrizpemarco
+CL-SELLER-1411,Automotriz Online,13,AMERICO VESPUCIO 1960,948401596,https://www.chileautos.cl/joaquinmujica
+CL-SELLER-3330,AUTOMOTORA SANTA CRUZ,16,Pacifico Marin 67,982345273,https://www.chileautos.cl/joaquinandresmujicaecheverria
+CL-SELLER-3290,Silver Car,20,Av. Ossa 2180,+56226568957,https://www.chileautos.cl/silvercar
+CL-SELLER-2009,Williamson Balfour Motors - La Dehesa,221,Av.La Dehesa 265,2-26428870,https://www.chileautos.cl/universalmotors3
+CL-SELLER-3002,Automotora Oriente,46,Av Las Condes 7700 Of. 501,229431364,https://www.chileautos.cl/automotoraoriente
+CL-SELLER-1268,Macal Remates,0,"El Totoral 951, Buenaventura Quilicura",600-3600422,https://www.chileautos.cl/macal
+CL-SELLER-3098,Carsco,17,Av. FRANCISCO BILBAO 4240,982756653,https://www.chileautos.cl/carsco
+CL-SELLER-1012,Automotora Pereira y Rivera,21,Pedro aguirre cerda 4700,2-27344776,https://www.chileautos.cl/automotorapereirayrivera
+CL-SELLER-1136,Automoviles Chamy Hnos. y Cia. Ltda.,15,Av. Irarrazával 2223,2-22236540,https://www.chileautos.cl/chamyhnos
+CL-SELLER-1356,Servimaq S.A. - Puerto Montt,23,Regimiento 861 (Division Usados) Local Citroen,997441335,https://www.chileautos.cl/servimaq2
+CL-SELLER-2584,Salfa Usados Agrícola,0,Ruta 5 Sur Kilómetro 42 Parcela 165 Hijuela Larga,957683857,https://www.chileautos.cl/salfausadosagricola
+CL-SELLER-2556,Larruy - La Reina,35,Av. Larrain 6688,988373075,https://www.chileautos.cl/larruy2
+CL-SELLER-3274,Indumotora One - Kia Motors,32,Av La Dehesa 545,+56226568952,https://www.chileautos.cl/indumotoraonekiamotors
+CL-SELLER-2651,Summit  Motors Vespucio,17,Americo Vespucio Sur 1051. Metro Colón,971355118,https://www.chileautos.cl/autosummitvespucio
+CL-SELLER-2529,Vivipra Ltda - Puerto Montt,5,"Panamericana Sur sn , sector Cardonal",65-2511409,https://www.chileautos.cl/vivipraptomontt
+CL-SELLER-2445,Mi Nuevo Camión,4,Av. La Cantera 225,962371323,https://www.chileautos.cl/minuevocamion
+CL-SELLER-3051,Karcal,35,Abate Molina 77,2-24880950,https://www.chileautos.cl/karcalspa
+CL-SELLER-798,MARWEG,20,Los Carrera 1617,41-2215388,https://www.chileautos.cl/automotrizccl
+CL-SELLER-947,Williamson Balfour Motors - Bilbao,78,Av.Francisco Bilbao 5318,978516999,https://www.chileautos.cl/universalmotors2
+CL-SELLER-3339,Coseche Vitacura,6,Vitacura 6937,+56226564736,https://www.chileautos.cl/cosechevitacura6937
+CL-SELLER-2994,Quality,20,Av. Bilbao 2447,996592000,https://www.chileautos.cl/quality
+CL-SELLER-1359,BGL,62,Panamericana Norte 16.700,2-23772910,https://www.chileautos.cl/bgl
+CL-SELLER-2421,Forcenter Irarrázaval 1473,29,"Av. Irarrazaval 1473, Ñuñoa, Metro Monseñor Eysagu",934249634,https://www.chileautos.cl/forcenter6
+CL-SELLER-2960,Coseche Usados Autoshopping,43,Av Departamental 4500,600490300,https://www.chileautos.cl/cosecheautoshopping
+CL-SELLER-760,Laguna Autos,95,Av. Américo Vespucio Sur 01280,940294899,https://www.chileautos.cl/lagunaautos
+CL-SELLER-3016,Flashwash Automotora,46,Av. Presidente Kennedy 6800 Of 407 Torre B,987490362,https://www.chileautos.cl/flashwash
+CL-SELLER-2644,Eugenio Garces,9,Av. Las Condes 14171,981371622,https://www.chileautos.cl/eugeniogarces
+CL-SELLER-674,Automoviles Patricio Mejias,11,AV Ossa 1925,998282485,https://www.chileautos.cl/patriciomejias
+CL-SELLER-1933,Automotora Delanoe,0,"Jose Joaquin Prieto 3679, Pedro Aguirre Cerda",942272400,https://www.chileautos.cl/automotoradelanoe
+CL-SELLER-1791,LS Motors Importaciones,0,Camino a Lonquén paradero 7,994377231,https://www.chileautos.cl/lsmotors
+CL-SELLER-983,Automotora Rivercar,0,Av. Macul 3758,2-23193660,https://www.chileautos.cl/rivercar
+CL-SELLER-2246,DKS Autos,174,Las Tranqueras 1395,2-32468670,https://www.chileautos.cl/dksautos
+CL-SELLER-1302,Comercial MX S.A.,0,AV KENNEDY LATERAL 8292 A PASOS DE MALL ALTO LAS C,2-22010784,https://www.chileautos.cl/mx
+CL-SELLER-1063,Rene Barra y Cía. Ltda.,0,Vitacura 9118,998449053,https://www.chileautos.cl/renebarra
+CL-SELLER-1682,AutoTattersall,26,"Rio Itata 9679, Parque Enea",2-25983308,https://www.chileautos.cl/autotattersall
+CL-SELLER-1705,Autotattersall La Serena,16,"Av. Francisco de Aguirre 02, Estacionamiento Mall",51-2566151,https://www.chileautos.cl/autotattersalllaserena
+CL-SELLER-3142,Coseche Usados Temuco,22,Caupolican 693,600490300,https://www.chileautos.cl/cosechetemuco
+CL-SELLER-3311,VMF Motors,2,Los pimientos 2080,+56228691066,https://www.chileautos.cl/vmfmotors
+CL-SELLER-2518,Car Dealer Motors Spa,15,Av. Vitacura.,966759274,https://www.chileautos.cl/eugenioelgart
+CL-SELLER-1936,Del Real Autos - Rancagua,45,Alameda 0198,942215396,https://www.chileautos.cl/delrealautos
+CL-SELLER-1887,Ross,24,Vitacura 9590,934434757,https://www.chileautos.cl/rosschile
+CL-SELLER-2988,Salazar Israel - Bellavista,21,Bellavista 0313,934844823,https://www.chileautos.cl/salazarisraelbellavista
+CL-SELLER-1173,JPN Autos,37,Av. Vitacura 9566,967697273,https://www.chileautos.cl/jpnautos2
+CL-SELLER-3209,Salazar Israel - Seminuevos de lujo DITEC,53,Alessandri 1885,+56226568871,https://www.chileautos.cl/salazarisraelconcepcion
+CL-SELLER-2379,Besalco Maquinarias S.A,49,Jose Joaquín Prieto 9660,981597184,https://www.chileautos.cl/besalco
+CL-SELLER-1968,Automotora Guillermo Morales - División Froilán Roa,9,Froilán Roa 610,2-28999070,https://www.chileautos.cl/guillermomoralesfroilanroa
+CL-SELLER-984,Aste Peugeot Viña del Mar,10,Av.Libertad 1313 Vina - Ojos del Salado 3255 Curau,32-2384110,https://www.chileautos.cl/astepeugeot
+CL-SELLER-1211,Suzuval - Viña del Mar,17,5 Oriente 204,32-2574331,https://www.chileautos.cl/suzuval
+CL-SELLER-1838,Ese 4 Automotores,10,Av. Las Condes 14607,2-22171297,https://www.chileautos.cl/ese4automotores
+CL-SELLER-1841,Inchcape Vitacura,7,Av. Vitacura 5410,962083385,https://www.chileautos.cl/inchcapevitacura
+CL-SELLER-3186,Automotora Rivera,5,Camino el Tepual Lote 3,652255577,https://www.chileautos.cl/automotorarivera2
+CL-SELLER-1954,Indian Motorcycle Chile,12,Av. Apoquindo 6480,+56226568835,https://www.chileautos.cl/motostar2
+CL-SELLER-3079,Hmotores - 15 Norte,9,14 norte 1058 esquina 3 1 2 oriente,973350702,https://www.chileautos.cl/hernandezmotores15norte
+CL-SELLER-1744,Hmotores S.A.,8,14 norte 1058 entre 3 y 4 oriente,973350702,https://www.chileautos.cl/hernadezmotoresvina
+CL-SELLER-1168,Pompeyo Carrasco Irarrázaval 965,16,Av. Irarrázaval 965 esq. Salvador,2-24106733,https://www.chileautos.cl/pompeyocarrasco
+CL-SELLER-887,E. Kovacs San Felipe,21,Av. Bernardo OHiggins 62,32-2327127,https://www.chileautos.cl/ekovacssanfelipe
+CL-SELLER-884,E. Kovacs Quillota,35,Freire 1130,32-2327127,https://www.chileautos.cl/ekovacsquillota
+CL-SELLER-2941,Salfa Quilpue,16,David Bear 181,999058491,https://www.chileautos.cl/salfaquilpue
+CL-SELLER-870,Automoviles Bicentenario,13,Independencia 2412,32-2234103,https://www.chileautos.cl/automovilesbicentenario
+CL-SELLER-2989,Truckstar,64,Av. Las Parcelas 5048,2-27202898,https://www.chileautos.cl/truckstarspa
+CL-SELLER-3143,Coseche Usados Los Angeles,42,Avda. Las Industrias 7545,600490300,https://www.chileautos.cl/cosechelosangeles
+CL-SELLER-3244,Accionautos,7,Av Laura Barros 205,+56226568899,https://www.chileautos.cl/accionautos
+CL-SELLER-1116,Invercar Ltda.,12,Alameda 4159,977279576,https://www.chileautos.cl/invercar
+CL-SELLER-1882,Automotriz LS,11,Av. Américo Vespucio Sur 0391,940469997,https://www.chileautos.cl/autoserena
+CL-SELLER-2283,Quantum-Group,29,Av. Padre Hurtado Norte 1651,984288079,https://www.chileautos.cl/quantumgroup
+CL-SELLER-773,Oyaneder Automotora M.O.N.,32,Av. Manuel Montt 1403 Providencia,2-22740999,https://www.chileautos.cl/automotrizoyaneder
+CL-SELLER-2574,Salfa Usados - Autoshopping,31,Departamental 4500 Macul,974232332,https://www.chileautos.cl/salfaautoshopping
+CL-SELLER-2718,SMT Automoviles,21,Pablo Neruda 01115,977976405,https://www.chileautos.cl/smtautomoviles
+CL-SELLER-638,Automotora Guillermo Morales - División Hyundai,36,Vitacura 5373,2-28999070,https://www.chileautos.cl/guillermomorales
+CL-SELLER-1072,Comercial Antivero,19,Longitudinal Sur Km. 135,968451353,https://www.chileautos.cl/comercialantivero
+CL-SELLER-1212,Automotora Los Colonos - Puerto Montt,9,Benavente 857,65-2258456,https://www.chileautos.cl/loscolonos
+CL-SELLER-2537,Maqsale Spa,46,Panamericana Norte 19.501,984199559,https://www.chileautos.cl/maqsale
+CL-SELLER-2981,Marina Republic,12,www.marinarepublic.cl,994896449,https://www.chileautos.cl/marinarepublic
+CL-SELLER-3332,MATIAS,12,AVDA. CALERA DE TANGO 8-3 PARADERO 12,993996363,https://www.chileautos.cl/ampocar
+CL-SELLER-3284,SIGLO XXI  Valparaiso,18,Av. Francia 340,+56226568852,https://www.chileautos.cl/siglo21valparaiso
+CL-SELLER-722,Seminuevos Gildemeister Bilbao,0,Av. Francisco Bilbao 4076,965196088,https://www.chileautos.cl/gildemeisterbilbao
+CL-SELLER-2828,Argomedo Premium,4,Maria Eugenia 3454,2-23039270,https://www.chileautos.cl/argomedopremium
+CL-SELLER-3308,CB TRUCKS SPA,5,Cerro San Luis # 9880,965875623,https://www.chileautos.cl/cbtrucks
+CL-SELLER-2320,Seminuevos Gildemeister Autoshopping La Serena,0,Av Francisco de Aguirre 2,51-2473005,https://www.chileautos.cl/gildemeisterlaserena2
+CL-SELLER-2223,Ditalcar Tobalaba,14,"Av. Camilo Henríquez 3296, Mall Plaza Tobalaba",2-25860642,https://www.chileautos.cl/ditalcar3
+CL-SELLER-3083,Citroen Bilbao,13,Av Americo Vespucio Sur 1908,994428321,https://www.chileautos.cl/citroenbilbao
+CL-SELLER-2763,Seminuevos Gildemeister Las Condes,14,Av Las Condes 11.000,959290574,https://www.chileautos.cl/gildemeisterlascondes
+CL-SELLER-2747,Vicencio Motors,51,Avenida Presidente Kennedy 5600 OF.1016,2-32344876,https://www.chileautos.cl/vicenciomotors
+CL-SELLER-2493,Comercial Autotrack Ltda.,6,Catedral 5044,229070954,https://www.chileautos.cl/comercialautotrack
+CL-SELLER-1499,Nattino Motors,54,"AMERICO VESPUCIO 2901, PLANET CAR",993306890,https://www.chileautos.cl/enattino
+CL-SELLER-1239,Coquelet,50,"Av. Ecuador 5028, Metro Las Rejas Norte",2-27763215,https://www.chileautos.cl/coquelet
+CL-SELLER-1213,Superbid Chile,29,Santiago,2-29363000,https://www.chileautos.cl/superbidchile
+CL-SELLER-910,Comercial Del Real - Rancagua,57,Freire 471 (esquina German Riesco),722320370,https://www.chileautos.cl/comercialdelreal
+CL-SELLER-1010,Carlos Dumay,25,Miguel Claro 1099,2-27991259,https://www.chileautos.cl/carlosdumay
+CL-SELLER-973,MotorTrade,54,LAS AMÉRICAS 375,942258434,https://www.chileautos.cl/motortrade
+CL-SELLER-2366,Forcenter Casa Matriz Irarrázaval 1445,15,IRARRAZAVAL1445,2-27403328,https://www.chileautos.cl/forcenter2
+CL-SELLER-816,Max Autos - Osorno,90,J. Mackenna 1985 - pag.web.www.maxautos.cl,64-2204250,https://www.chileautos.cl/maxautos
+CL-SELLER-647,Automall,379,AV.AMERICO VESPUCIO SUR 0391 LA GRANJA,111111111,https://www.chileautos.cl/automall
+CL-SELLER-576,Inalco Irarrázaval 1535,24,Av. Irarrázaval 1535,2-28349012,https://www.chileautos.cl/inalcoirarrazaval
+CL-SELLER-3367,Automotriz Portillo Sur Limitada,22,SAN MARTIN 01050 PLAZA LAS BANDERAS,+56226566248,https://www.chileautos.cl/portillosur2
+CL-SELLER-3288,Automotora Luan,9,"Copayapu 5750, Punta Negra",+56226568963,https://www.chileautos.cl/luanautomotora
+CL-SELLER-3365,Toro Motors,2,Ancacomoe SN Panguipulli,953450936,https://www.chileautos.cl/toromotros
+CL-SELLER-2567,Salazar Israel - Concepción Chacabuco,32,Chacabuco 330,600-8186000,https://www.chileautos.cl/salazarisraelaudivw
+CL-SELLER-979,Autos Usados Bruno Fritsch - Paicavi,58,"Paicaví 2222, esquina Ventus",41-2668000,https://www.chileautos.cl/autofranceconcepcion
+CL-SELLER-1940,Mr Car,220,"Sector Oriente, coordinar visita.",988046599,https://www.chileautos.cl/mrcar
+CL-SELLER-3372,PAULDAYS MOTORS,8,Presidente  EDUARDO FREI MONTALVA 9040,+56226566267,https://www.chileautos.cl/pauldaysmotors
+CL-SELLER-3059,Automotriz Musalem,9,Avenida Francisco de Aguirre 070.,941810129,https://www.chileautos.cl/automotrizmusalem
+CL-SELLER-3359,AUTOMOTORA CARS,15,Avenida Ossa 1590,934137395,https://www.chileautos.cl/automotoracars
+CL-SELLER-927,Automotriz Carmona - La Serena,102,Balmaceda 3570,954756145,https://www.chileautos.cl/automotrizcarmona
+CL-SELLER-3373,AUTOMOTORA JRC,2,"PJE LAUTARO 1330, ANTOFAGASTA",+56226568856,https://www.chileautos.cl/automotorajrc
+CL-SELLER-3374,Roberto Luco Holuigue,0,Av Rinconada del salto 955,+56226568896,https://www.chileautos.cl/robertolucoholuigue
+CL-SELLER-687,La Foresta - Tabancura,50,Tabancura 1404,991380208,https://www.chileautos.cl/laforesta
+CL-SELLER-2509,Cristobal Harseim,8,LA DEHESA,981291108,https://www.chileautos.cl/cristobalharseim
+CL-SELLER-2885,Automotriz Guerrero Ortiz,14,Av. Américo Vespucio 0391 La Granja,931300867,https://www.chileautos.cl/automotrizguerreroortiz
+CL-SELLER-3357,Automotriz Dos Hermanos,1,"Avenida Francisco de Aguirre 02, frente al Lider,",+56226564773,https://www.chileautos.cl/automotrizdoshermanos
+CL-SELLER-3352,RENTALEQUIP SPA,6,"BAQUEDANO # 239, DEPARTAMENTO 316.",+56226564778,https://www.chileautos.cl/rentalequip
+CL-SELLER-3354,RR MOTORS,21,Trancura 1344 oficina 2,+56226564776,https://www.chileautos.cl/rrmotors
+CL-SELLER-971,Okautos,46,Manuel Rodriguez 1456,64-2273325,https://www.chileautos.cl/okautos
+CL-SELLER-1441,Automoviles Jose Luis Jara - Talca,54,1 Sur 18 Ote. 2480 - 1 Sur 17 Ote. 2400,71-2244516,https://www.chileautos.cl/automovilesjlj
+CL-SELLER-2174,Automotora Correa e Hijo,25,O Higgins N #1180,991583358,https://www.chileautos.cl/automotoracorreaehijo
+CL-SELLER-2937,Nijomasa,24,"Panamericana Km 18,5",992334633,https://www.chileautos.cl/nijomasa
+CL-SELLER-3276,Blue Car,9,San Pablo 4326,948558971,https://www.chileautos.cl/bluecar
+CL-SELLER-3041,911 Cars,7,Jose Alcalde Delano 10851,958736590,https://www.chileautos.cl/911cars
+CL-SELLER-2954,Avis Budget,7,Av. Boulevard Aeropuerto Sur 9632,998277834,https://www.chileautos.cl/avisbudget
+CL-SELLER-3264,Rolando Sovino,0,Las Verbenas,+56226568894,https://www.chileautos.cl/sovinorolando
+CL-SELLER-3259,Piamonte Vitacura Sur,0,Vitacura 5314,+56226568954,https://www.chileautos.cl/vitacurasurpiamonte
+CL-SELLER-3362,OHMYCAR,12,"Camino Puertas de Fierro, Parcela 11-B, Sitio 1",975416388,https://www.chileautos.cl/ohmycar!
+CL-SELLER-3156,AS Autos RT,0,Av. Americo Vespucio Express #2451,957222798,https://www.chileautos.cl/asautos
+CL-SELLER-3130,PartnersCars,0,Orella 2825,982885705,https://www.chileautos.cl/partnerscars
+CL-SELLER-3022,Automotriz Medel,0,Americo Vespucio 2901,942214593,https://www.chileautos.cl/automotrizmedel
+CL-SELLER-1531,Usados Premium,73,Martin de zamora 4891,963090904,https://www.chileautos.cl/vendoautocl
+CL-SELLER-1980,Etchegaray Autos,21,Calle Blanco Encalada 985,959220197,https://www.chileautos.cl/etchegarayautos
+CL-SELLER-1293,Jet Boat,0,Av. Américo Vespucio 1260,992280366,https://www.chileautos.cl/jetboat
+CL-SELLER-1627,Autotech,17,AV. KENNEDY 7440 Oficina 422,994353256,https://www.chileautos.cl/bgarcia
+CL-SELLER-1386,Giaccomo Vitali Autos - Quillota,24,"Ariztía 530 Loc. 11-12, costado Easy",993212338,https://www.chileautos.cl/giaccomovitali
+CL-SELLER-1194,Tecnocid,40,Ramón Freire 314,966274466,https://www.chileautos.cl/tecnocid
+CL-SELLER-1089,Triumph Motos,37,Av. Las Condes 7725,+56226568834,https://www.chileautos.cl/triumphmotos
+CL-SELLER-3328,NC Autos,34,Morande 580,990894935,https://www.chileautos.cl/ncautos
+CL-SELLER-3325,Battaglia automoviles,9,Av Tomas moro 1180,998249452,https://www.chileautos.cl/battagliaautomoviles
+CL-SELLER-3324,Automotriz Farellones Puerto Montt,10,Calle de Servicio 1431,951786585,https://www.chileautos.cl/automotrizfarellonesmontt
+CL-SELLER-3322,Comercial Carmax SPA,3,Doctor Manuel Barros Borgoño 71 OF 601,974991369,https://www.chileautos.cl/carmax
+CL-SELLER-1054,Hernandez Motores - Santiago,68,Camino Lonquén 8981,950196258,https://www.chileautos.cl/hernandezmotoressantiago
+CL-SELLER-1428,Portillo La Dehesa,45,Av. José Alcalde Délano 11.021,990180897,https://www.chileautos.cl/portilloladehesa
+CL-SELLER-2155,Automotriz Bizama,0,Caupolican esquina león gallo Temuco,45-2210117,https://www.chileautos.cl/automotrizbizama
+CL-SELLER-2317,Automotora Rosval,20,Av. Cristobal Colón 4202,987783960,https://www.chileautos.cl/rosval
+CL-SELLER-1966,Automotriz Henriquez,20,Pedro Aguirre Cerda 4798,996892194,https://www.chileautos.cl/automotrizhenriquez
+CL-SELLER-1369,Automotriz Farellones,65,"Vicuña Mackenna 2355, San Joaquín",2-23605700,https://www.chileautos.cl/automotrizfarellones
+CL-SELLER-3163,Pompeyo Camino Melipilla 11585,79,"Camino Melipilla 11585, Maipu",979897266,https://www.chileautos.cl/pompeyokonfidence
+CL-SELLER-2950,Car Broker,7,Av La Gloria,984192989,https://www.chileautos.cl/carbroker
+CL-SELLER-628,Pompeyo Carrasco Irarrázaval 1330,77,Av. Irarrázaval 1330,979897266,https://www.chileautos.cl/pompeyo
+CL-SELLER-1979,"Pompeyo Carrasco Gran Avenida 5819, San Miguel",54,Gran Avenida 5819,979897266,https://www.chileautos.cl/pompeyo3
+CL-SELLER-3358,Automoval Ltda,8,Las Condes,998169464,https://www.chileautos.cl/automoval
+CL-SELLER-1057,Andrade Automotriz - Quilpué,14,AV. FREIRE 1351 RECINTO HIPER LIDER EL BELLOTO,944360525,https://www.chileautos.cl/andradeautomotriz
+CL-SELLER-3347,Automotora Andalue SpA,6,"Lemu 1175, Andalué",+56226564783,https://www.chileautos.cl/andaluespa
+CL-SELLER-1431,Nomade  Service,20,Pedro Aguirre Cerda 410,63-2204404,https://www.chileautos.cl/nomadeautos
+CL-SELLER-1873,Mas que un auto,15,Suecia 3580 of. 403,965055086,https://www.chileautos.cl/masqueunauto
+CL-SELLER-2911,Comercializadora Dos Ruedas Ltda.,8,EXEQUIEL FERNANDEZ 3685-A,996825721,https://www.chileautos.cl/dosruedas
+CL-SELLER-1559,Salazar Israel - Movicenter,131,Av. Américo Vespucio Norte 1155 Loc. C5 Y C6,979839203,https://www.chileautos.cl/salazarisraelmovicenter
+CL-SELLER-2761,Liderautos,8,"- Camino Melipilla #15.600 Maipú ,PARQUE AUTOMOTRI",974764928,https://www.chileautos.cl/robertohernandez
+CL-SELLER-3294,San Marino Motors Temuco,26,"Prieto Sur 990, Temuco",+56226568967,https://www.chileautos.cl/sanmarinotemuco
+CL-SELLER-963,Automotora Lopez E.I.R.L.,12,Santiago Concha 1867 (Referencia Ñuble al llegar a,2-25440452,https://www.chileautos.cl/lopezyabdala
+CL-SELLER-2557,Preisler Automoviles SPA,19,www.preisler.cl,991293173,https://www.chileautos.cl/alfonsopreisler
+CL-SELLER-3096,TT Automoviles Crovetto Selection,19,Avenida Las Condes 7495,949708812,https://www.chileautos.cl/ttautomoviles
+CL-SELLER-1536,Patricio Valderrama Tiznado,7,"AMERICO VESPUCIO SUR 1465,GRAN AVENIDA PDO. 25",98414082,https://www.chileautos.cl/patriciovalderrama
+CL-SELLER-579,Automotriz Rodriguez,16,Av. Vicuña Mackenna 5295 esquina calle  Llico,997442241,https://www.chileautos.cl/automotrizrodriguez
+CL-SELLER-3089,Autobuy1,25,Alacalufes 1026,+56226568944,https://www.chileautos.cl/autobuy1
+CL-SELLER-2296,Automotora CAEF - Villa Alemana,33,Av. Valparaíso 407 Esquina Patricio Lynch,950505729,https://www.chileautos.cl/automotoracaef2
+CL-SELLER-2310,Servimaq S.A. - Chiloe,10,Gabriela Mistral  425 (División Usados),958118743,https://www.chileautos.cl/servimaq3
+CL-SELLER-1497,Jorge Cofre Molinet,14,"WHATSAPP, LLAMAR O ENVIAR E-MAIL",973328546,https://www.chileautos.cl/jorgecofremolinet
+CL-SELLER-2241,VG Automoviles,30,Av. Francisco Bilbao 6808,965981227,https://www.chileautos.cl/vgautomoviles
+CL-SELLER-595,Automotriz Barry y Cía. Ltda.,85,Av. Presidente Eduardo Frei Montalva # 3999,56988758609,https://www.chileautos.cl/barry
+CL-SELLER-2919,JDM Autos,12,"Av. Ossa 1590,san ramon",974783670,https://www.chileautos.cl/jdmautos
+CL-SELLER-809,Comercial Alvo - Temuco,13,Claro Solar 302,45-2238951,https://www.chileautos.cl/comercialalvo
+CL-SELLER-2407,Sánchez Automóviles - Rancagua,31,RUTA 5 SUR KILOMETRO 90 CARRETERA ANTIGUA,954143471,https://www.chileautos.cl/sanchezysanchezautomoviles
+CL-SELLER-702,Autos Los Dominicos,62,Padre Hurtado Central 1295,954159299,https://www.chileautos.cl/autoslosdominicos
+CL-SELLER-1019,Cuneo Autos,15,valparaiso  109    villa olimpica  quilpue.,32-2923116,https://www.chileautos.cl/cuneoautos
+CL-SELLER-1038,Automotora Urssa - Chillán,47,Gamero 1198,956880091,https://www.chileautos.cl/automotoraurssa
+CL-SELLER-3067,WebCars,89,Avda del Valle Norte 945 Ciudad Empresarial,975299792,https://www.chileautos.cl/webcars
+CL-SELLER-3140,RODLAN SPA,14,Alcalde Chadwick 2171,997510168,https://www.chileautos.cl/rodlanspa
+CL-SELLER-2722,Larra,0,Metro Manquehue,993332050,https://www.chileautos.cl/larraspa
+CL-SELLER-3117,CSL Automoviles,0,"AV Americo Vespucio Sur 2500, Cerrillos, Región Me",992284643,https://www.chileautos.cl/cslautomoviles
+CL-SELLER-3257,Castillo Motors,0,Sucursal Los Militares,+56226568948,https://www.chileautos.cl/castillomotors
+CL-SELLER-3199,Leyni Autos,0,Americo Vespucio Sur 420,2-22558141,https://www.chileautos.cl/leyniautos
+CL-SELLER-3120,Autos Oriente,0,Los Militares 5125,998441887,https://www.chileautos.cl/autosoriente
+CL-SELLER-2510,BGO Autos,0,Av. Pajaritos 713,998218266,https://www.chileautos.cl/bgoautos
+CL-SELLER-2259,Autocorp Ltda. Sucursal Virtual,0,Av. Manuel Montt 1305,963036224,https://www.chileautos.cl/autocorp2
+CL-SELLER-1098,Renault - Bilbao,0,Av. FRANCISCO BILBAO 6640,2-22204875,https://www.chileautos.cl/renaultbilbao
+CL-SELLER-1059,Meneses y Díaz Ltda.,0,Independencia 2588,32-2543360,https://www.chileautos.cl/menesesydiaz
+CL-SELLER-1753,Conauto,0,SANTA MARGARITA 1061,944056278,https://www.chileautos.cl/accionvehiculos
+CL-SELLER-455,Damax  Automotriz,20,"Av. Américo Vespucio 0591, La Cisterna",2-25274725,https://www.chileautos.cl/damax
+CL-SELLER-2688,Automundo,4,"Camino Lonquen 9011, costado mall Plaza Oeste",972077923,https://www.chileautos.cl/automundo
+CL-SELLER-751,Automotriz Valdivia y Wulf Ltda.,12,Egaña 398,65-2262187,https://www.chileautos.cl/automotoravaldivia
+CL-SELLER-2873,Greensystems S.A.,8,"Carretera General San Martín 16500 Sitio 30, Los L",957780108,https://www.chileautos.cl/greensystemsa
+CL-SELLER-3313,Alcala Automóviles,9,Caupolican 334,984035496,https://www.chileautos.cl/alcalaautomoviles
+CL-SELLER-2821,Hernandez Motores Movicenter,50,Av. Américo Vespucio Norte 1155 ( Movicenter),950196258,https://www.chileautos.cl/hernandezmotoresmovicenter
+CL-SELLER-3157,Car Time,17,CarTime.cl - Venta de Autos Usados y Asesoría Auto,997291005,https://www.chileautos.cl/cartime2
+CL-SELLER-767,E. Kovacs Valparaíso,40,Av. Argentina 890,32-2327127,https://www.chileautos.cl/kovacsvalparaiso
+CL-SELLER-2967,E Kovacs Vitacura,31,Avenida Padre Hurtado 1392,2-26379861,https://www.chileautos.cl/kovacsvitacura
+CL-SELLER-1498,Bremi Motors,45,"AV. LAS CONDES 7236, LAS CONDES",932512719,https://www.chileautos.cl/bremimotors
+CL-SELLER-3312,CAR ROSAS AUTOMOTRIZ,5,"Mar rojo 8295,  Peñalolen",+56228691067,https://www.chileautos.cl/rosascarautomotroz
+CL-SELLER-2361,Miguel Torres Troncoso,1,Almirante Acevedo 4593.,974976390,https://www.chileautos.cl/mtt
+CL-SELLER-748,Melhuish - Tomás Moro 769,39,Tomás Moro 769,2-27064400,https://www.chileautos.cl/melhuish
+CL-SELLER-2943,Salfa Chillan,14,"Ruta 5 Sur Km. 408,",934035259,https://www.chileautos.cl/salfachillan
+CL-SELLER-3032,Inrecar,5,Lago Villarrica 0267,984186091,https://www.chileautos.cl/inrecar
+CL-SELLER-3176,Call 1,2,Av Vitacura 2771,+56226567563,https://www.chileautos.cl/call1
+CL-SELLER-2619,Automotora Full-Car SPA,30,Ohiggins 525,954116916,https://www.chileautos.cl/fullcarspa
+CL-SELLER-2939,Simpli Cars,0,Las Condes,982303059,https://www.chileautos.cl/simplicars
+CL-SELLER-1560,Autum Dercocenter,2,Av. Ossa 2345,2-29150000,https://www.chileautos.cl/autum
+CL-SELLER-2401,Automotora del Maule - Curicó,35,Av. Manso de Velasco 368,+56226568883,https://www.chileautos.cl/automotoradelmaule
+CL-SELLER-3306,JH Autos,17,SANTA ISABEL 332,+56226568972,https://www.chileautos.cl/jhautossantiago
+CL-SELLER-2609,Cinemotor Picture Cars,13,Mapocho 2502,985950256,https://www.chileautos.cl/cinemotor
+CL-SELLER-2827,FM Motors,23,Nueva Sucursal Tomas Moro 640 - Av apoquindo 6750,981446834,https://www.chileautos.cl/fmmotors
+CL-SELLER-1221,RT Autos - Las Condes,15,Sector Estadio Español-Metro Manquehue-Apumanque-,999697745,https://www.chileautos.cl/rodrigotellez
+CL-SELLER-1580,Automoviles Raul Pereira,25,Av. Pedro Aguirre Cerda  4700,997265926,https://www.chileautos.cl/pyl
+CL-SELLER-3337,Tomas Figueroa,7,Barbastro 11.040,966610530,https://www.chileautos.cl/tomasfigueroa
+CL-SELLER-2057,Autosummit Antofagasta,20,"Onix 051, Barrio Industrial",988429490,https://www.chileautos.cl/autosummitantofagasta
+CL-SELLER-2674,Nicolas Automotriz,13,Patricio Lynch  1000,64-2341011,https://www.chileautos.cl/nicolasautomotriz
+CL-SELLER-709,Tobar Autos,32,Vespucio Sur Express 2451,942391853,https://www.chileautos.cl/tobarautos
+CL-SELLER-2863,Automotive Consulting,25,www.automotiveconsulting.cl,976225094,https://www.chileautos.cl/automotiveconsulting
+CL-SELLER-2746,Autoquinta - Quilpue,15,Los Carrera 301,976746111,https://www.chileautos.cl/autoquinta2
+CL-SELLER-2918,Guillermo Morales Usados Fiat 1001,146,Americo Vespucio 1001,2-28999070,https://www.chileautos.cl/guillermomoralesfiat
+CL-SELLER-581,Autoparque,280,Camino Lonquen 9011 (costado mall Plaza Oeste),0000000000000000,https://www.chileautos.cl/autoparque
+CL-SELLER-3040,Tio Mario Automotriz,6,Av Américo Vespucio 03460,993027436,https://www.chileautos.cl/tiomarioautomotriz
+CL-SELLER-2104,Salazar Israel Talca - Usados,36,11 oriente 1180,946190611,https://www.chileautos.cl/salazarisraeltalcausados
+CL-SELLER-3250,Motor Pro Chile Ltda,7,Variante Carlos Ibañez del Campo 125,+56226568880,https://www.chileautos.cl/motorproltda
+CL-SELLER-732,Siglo XXI - San Felipe O Higgins,12,O Higgins 961,2-28404556,https://www.chileautos.cl/sigloxxi2
+CL-SELLER-2847,xtrem Cars,1,av vitacura,+56226568847,https://www.chileautos.cl/encoautos2
+CL-SELLER-2699,Salazar Israel - Autoshopping,51,Departamental 4500,600-8186000,https://www.chileautos.cl/salazarisraelautoshopping
+CL-SELLER-3190,Pruebas Chileautos,4,Vitacura,+56226568838,https://www.chileautos.cl/pruebaca
+CL-SELLER-3307,Maq - Aridos,7,Camino a Melipilla N° 2004,+56226569923,https://www.chileautos.cl/maqaridos
+CL-SELLER-774,Automotora Bilbao Bilbao 2285,21,Av. Francisco Bilbao 2285,2-24134875,https://www.chileautos.cl/automotorabilbao
+CL-SELLER-2598,Graciamaq,20,AVDA EDUARDO FREI MONTALVA  24020,987696153,https://www.chileautos.cl/graciamaq
+CL-SELLER-2572,Seminuevos Gildemeister Temuco,15,Av. San Martin 656 Esq. V. Mackenna,974990577,https://www.chileautos.cl/gildemeistertemuco
+CL-SELLER-2830,Comercial Polloni y Cia Ltda,0,Diagonal Oriente 1355,977089128,https://www.chileautos.cl/comercialpolloni
+CL-SELLER-2825,Seminuevos Gildemeister Iquique,1,Obispo Labbe 151,57-2366950,https://www.chileautos.cl/gildemeisteriquique
+CL-SELLER-2402,Parque Automotriz Km. 15600,0,Camino a Melipilla 15600,2-00000000,https://www.chileautos.cl/parque15600
+CL-SELLER-2369,Forcenter Gran Avenida,9,Gran Avenida  8240 Paradero 22 y medio,2-27403370,https://www.chileautos.cl/forcenter5
+CL-SELLER-2367,Forcenter Mall Plaza Tobalaba,16,"Auto Plaza, Camilo Henríquez  3296",2-25860644,https://www.chileautos.cl/forcenter3
+CL-SELLER-2350,Seminuevos Gildemeister Osorno,8,los Carreras 547,966066675,https://www.chileautos.cl/carmeisterosorno
+CL-SELLER-2345,Seminuevos Gildemeister Puerto Montt,8,Rengifo n°474 esquina Guillermo Gallardo,990894696,https://www.chileautos.cl/carmeisterpuertomontt
+CL-SELLER-2295,Automotriz Barros Arana SpA.,9,Barros Arana 1350 Local 10,64-2211211,https://www.chileautos.cl/autobar
+CL-SELLER-2276,Unión Técnica Automotriz,0,Ruta 5 Sur Km. 40 Parcela 80,951489933,https://www.chileautos.cl/uniontecnica
+CL-SELLER-2156,Gama Leasing,44,Americo Vespucio Norte 1300,2-27574411,https://www.chileautos.cl/gamaleasing
+CL-SELLER-1450,Ditalcar - Las Condes,6,Av Las Condes 8127,2-23701206,https://www.chileautos.cl/ditalcar
+CL-SELLER-1432,Inverpou,0,La Piramide 152,992354209,https://www.chileautos.cl/inverpou
+CL-SELLER-1534,Pronautica,12,Avda las Condes 13.451 Local 135 Mall Sport,2-24293054,https://www.chileautos.cl/pronautica
+CL-SELLER-996,Grass y Arueste - Irarrázaval Cidef,20,Irarrázaval 3290,2-22741449,https://www.chileautos.cl/grassyarueste
+CL-SELLER-740,FPH Servicios Automotrices EIRL,0,DIVISION  VENTA DE VEHICULOS,2-22773319,https://www.chileautos.cl/fphservicios
+CL-SELLER-613,Inalco Usados Irarrazaval 590,52,IRARRAZAVAL N 590 ESQUINA CONDELL,993091704,https://www.chileautos.cl/inalcousados
+CL-SELLER-2676,Makina Autos Spa,92,"JOSE ALCALDE DELANO 10581, EXHIBICIÓN -5, OF 533",958240428,https://www.chileautos.cl/makinaautos
+CL-SELLER-3376,Salazar Israel Ditec,0,"Av. Pdte. Jorge Alessandri Rodriguez, 1885",+56226564735,https://www.chileautos.cl/salazarisraelditec
+CL-SELLER-3182,Salazar Israel - Concepcion Clinica,64,Av. Jorge Alessandri 2121,997334620,https://www.chileautos.cl/salazarisrael11
+CL-SELLER-1625,Salazar Israel - Chillán Ecuador 1,57,Av. Ecuador 742,600-8186000,https://www.chileautos.cl/salazarisraelchillan
+CL-SELLER-3283,Automotora Bal,74,Av Las Condes 7700 Oficina 602 A,232533848,https://www.chileautos.cl/bal
+CL-SELLER-2552,Forcenter Vicuña Mackenna,45,VICUÑA MACKENNA 10.101 P.22,932524414,https://www.chileautos.cl/forcenter7
+CL-SELLER-3211,SelectCars,11,Av. Las Condes,+56226568873,https://www.chileautos.cl/selectcarslascondes
+CL-SELLER-2481,Salazar Israel - Cerrillos,49,Av. Pedro Aguirre Cerda 6697,600-8186000,https://www.chileautos.cl/salazarisrael7
+CL-SELLER-1382,Cardemil Autos - Los Angeles,25,Av. Alemania 368,43-2315614,https://www.chileautos.cl/cardemilautos
+CL-SELLER-672,Queirolo Mundo 4x4,78,Av. Vitacura 6875,961573340,https://www.chileautos.cl/queirolo
+CL-SELLER-729,Autos Usados Bruno Fritsch - Vicuña Mackenna Poniente,46,"Av. Vicuña Mackenna 7781, costado local Toyota",600-6262886,https://www.chileautos.cl/brunofritschlaflorida
+CL-SELLER-726,Autos Usados Bruno Fritsch - Maipu,73,"Camino a Melipilla 9160, costado local Toyota",600-6262886,https://www.chileautos.cl/brunofritschmelipilla
+CL-SELLER-693,Aventura Motors - División Usados Vitacura,23,AV VITACURA 7466,942409032,https://www.chileautos.cl/aventuramotors1
+CL-SELLER-2920,Autos Usados Bruno Fritsch - Estoril,45,Las Condes 10498,600-6262886,https://www.chileautos.cl/brunofritschestoril
+CL-SELLER-3360,Automotora Cruz,18,Av. Manuel Labra Lillo 385,75-2318257,https://www.chileautos.cl/automotoracruz
+CL-SELLER-839,Autos Usados Bruno Fritsch - Vicuña Mackenna,33,"Av. Vicuña Mackenna 1157, costado local Peugeot",600-6262886,https://www.chileautos.cl/brunofritschpeugeot
+CL-SELLER-3363,Autocentro Nicolas,0,Chacabuco 725,+56226568893,https://www.chileautos.cl/autocentronicolas
+CL-SELLER-1532,E. Berrios,16,Balmaceda 150,967434136,https://www.chileautos.cl/berrios
+CL-SELLER-903,Salfa Usados - Temuco,33,Ruta Sur 2680 Esq. Cruce aeropuerto.,45-2204025,https://www.chileautos.cl/salfatemuco
+CL-SELLER-1700,Automotora Arauco - División Usados,27,Av. San Miguel 3370,973350039,https://www.chileautos.cl/automotoraarauco
+CL-SELLER-1263,Lionel Kovacs Viña del Mar,13,8 Norte 730,32-2699986,https://www.chileautos.cl/lkovacsvinadelmar
+CL-SELLER-563,Parque Automotriz Cerrillos,383,Pedro Aguirre Cerda 4798,LLAMAR A VENDEDORES DEL PARQUE,https://www.chileautos.cl/parquecerrillos
+CL-SELLER-2904,Auto Advice,94,Av. Francisco Bilbao 6794,936923100,https://www.chileautos.cl/autoadvicebilbao
+CL-SELLER-3267,Circulo Autos Usados Barcelona,33,Calle  Barcelona 2077,947711582,https://www.chileautos.cl/circulobarcelona
+CL-SELLER-2621,GSC Motores,5,Beethoven 5498,968789581,https://www.chileautos.cl/gscmotores
+CL-SELLER-2326,Buses y Camiones Chile,24,Nicasio Retamales 041,997430786,https://www.chileautos.cl/hyhspa
+CL-SELLER-2449,Ditec Automóviles - Porsche Center,42,Av. José Alcalde Délano 10461,2-25447306,https://www.chileautos.cl/ditecporschecenter
+CL-SELLER-1362,Ditec Automóviles División Usados - Raul Labbe,95,Raúl Labbé 12981,2-25447150,https://www.chileautos.cl/ditecusadosraullabbe
+CL-SELLER-788,Enco Autos.,15,Raul Labbe......,+56226567558,https://www.chileautos.cl/encoautos
+CL-SELLER-3198,MetroAuto,8,Av Eliodoro Yañez 2979 Of 105,+56226568862,https://www.chileautos.cl/metroauto
+CL-SELLER-511,Automotora Valp,6,DARDIGNAC 147,2-23323028,https://www.chileautos.cl/automotoravalp
+CL-SELLER-1605,Larrain Vergara - Santiago,13,Vicuña Mackenna Poniente 5895,965948319,https://www.chileautos.cl/larrainvergara
+CL-SELLER-2257,CP Autos,14,Lo Barnechea,981513367,https://www.chileautos.cl/benchcar
+CL-SELLER-2932,Chilean Rent a Car,11,Gran Avenida 5428,965948319,https://www.chileautos.cl/chileanrentacar
+CL-SELLER-2689,Chilean Rent a Car  Puerto Montt,10,Puerto Montt,965948319,https://www.chileautos.cl/chileanrentacarpm
+CL-SELLER-3152,Carlos Cabello Autos,2,Av Jorge Washington 540,982819078,https://www.chileautos.cl/carloscabello
+CL-SELLER-3039,Automotora Los Mares,6,Los mares 7293,991770578,https://www.chileautos.cl/automotoralosmares
+CL-SELLER-2592,Mastercar Stgo,16,Comandante Malbec 13.133,993221859,https://www.chileautos.cl/mastercarstgo
+CL-SELLER-1241,Gestion Automotriz Ltda.,6,Rengifo 810,65-2586942,https://www.chileautos.cl/gestionautomotriz
+CL-SELLER-3036,Chilean Rent A Car,12,San Martín Poniente 37,965948319,https://www.chileautos.cl/chileanrentacarconcepcion
+CL-SELLER-796,Fernando Gomez y Cía. Ltda.,11,Víctor Lamas 121,997003832,https://www.chileautos.cl/fernandogomez
+CL-SELLER-2026,Automotriz el Rodeo,122,Av. el Rodeo 13.012,973903922,https://www.chileautos.cl/marcopinto
+CL-SELLER-488,Automoviles Claudio Mardones,15,Av. Francisco Bilbao 7390,2-22291464,https://www.chileautos.cl/claudiomardones
+CL-SELLER-3239,PortalCars,22,Tabancura 1091 of 015,+56226568933,https://www.chileautos.cl/portalcars
+CL-SELLER-2966,Parque Automotriz Cabrera,0,Av Gabriela 03211,949096534,https://www.chileautos.cl/parqueautomotrizcabrera
+CL-SELLER-3268,Cea Automotriz,0,Americo Vespucio Sur 0391,987768113,https://www.chileautos.cl/ceaautomotriz
+CL-SELLER-3350,Seminuevos Premium Temuco,10,TEMUCO,950976983,https://www.chileautos.cl/seminuevospremiumtemuco
+CL-SELLER-3197,World Autos,14,Américo Vespucio Sur  2451,+56226568861,https://www.chileautos.cl/worldautos
+CL-SELLER-2389,Mr Motors,0,Vitacura (llamar y confirmar stock en sucursal),992006128,https://www.chileautos.cl/mrmotors
+CL-SELLER-1169,ARM Automotriz SpA,26,Av. Freire 2411 Local 20 Centro el Belloto,958648801,https://www.chileautos.cl/armautomotrizspa
+CL-SELLER-3353,Salfa Sur Automotriz Puerto Montt,8,Pilpilco 800,+56226564777,https://www.chileautos.cl/salfasurpuertomontt2
+CL-SELLER-770,PABLO DE LA MAZAautomoviles,26,"Duble Almeyda 5631, esquina Vespucio Sur, Ñuñoa",2-22779741,https://www.chileautos.cl/automovilespablodelamaza
+CL-SELLER-3349,TRADECARS AUTOMOTORES,5,Calera de tango,+56226564781,https://www.chileautos.cl/tradecarsautomotores
+CL-SELLER-3315,Tepu Autos,13,Ruta 225 km 1.5 Centro Comercial Doña Ema,995995873,https://www.chileautos.cl/tepuautos
+CL-SELLER-3326,Excedindus Comercial e Industrial,3,"Parcela #11, Lo Pinto - Lampa",984792805,https://www.chileautos.cl/excedindus
+CL-SELLER-1170,A. SERVIFAST-VICTOR HUGO MORALES,11,"Barrio Italia, Ñuñoa",978563393,https://www.chileautos.cl/victorhugomorales
+CL-SELLER-3361,VEHICULO DE TRABAJO,4,HANS CHRISTIAN ANDERSEN 7850,998533896,https://www.chileautos.cl/vehiculodetrabajo
+CL-SELLER-3109,Siwalk SpA,3,"El Arroyo 601 B, Parque Industrial Valle Grande",982396689,https://www.chileautos.cl/siwalkspa
+CL-SELLER-2405,Portillo Estoril,109,Av. Las Condes 10440,944250770,https://www.chileautos.cl/portilloestoril
+CL-SELLER-2816,Portillo Usados Cerrillos,76,Americo Vespucio  2451,2-27505555,https://www.chileautos.cl/portillocerrillos
+CL-SELLER-942,Kaufmann,86,Av. Las Condes 12260,2-27201106,https://www.chileautos.cl/kaufmann
+CL-SELLER-2791,Dossil Portal Automotriz,16,"Americo Vespucio 1445, Comuna Quilicura",976496012,https://www.chileautos.cl/automotrizdossilquilicura
+CL-SELLER-2805,SKBerge Luxury,11,"José Alcalde Délano  #10.389, lo Barnechea.",228371640,https://www.chileautos.cl/skbergeluxury
+CL-SELLER-3074,San Marino Motors,24,Pedro Aguirre Cerda 5037,+56226568890,https://www.chileautos.cl/sanmarinomotors
+CL-SELLER-3348,Comercial Cerrillos,11,Avda Americo Vespucio Express 2451,+56226564782,https://www.chileautos.cl/comercialcerrillos
+CL-SELLER-2581,Autofren Las Condes 8155,28,Av. Las Condes 8155,940902371,https://www.chileautos.cl/autofren2
+CL-SELLER-3134,Automotora Los Pablos Limitada,0,"Inez de suarez 1685 , FRENTE JUMBO LOS PABLOS",974258703,https://www.chileautos.cl/automotoralospablos
+CL-SELLER-3069,Los Carros,5,Los Militares con Rosario norte,990894620,https://www.chileautos.cl/loscarros
+CL-SELLER-1757,Seminuevos Zentrum,144,Raúl Labbé 12.509,958194669,https://www.chileautos.cl/seminuevoszentrum
+CL-SELLER-3314,Automotora Machado,15,Agua Santa 402,+56226569928,https://www.chileautos.cl/automotoramachado
+CL-SELLER-3287,Automotora Mauricio Oyarzun,44,Av carronal 20 Puerto Montt,978472903,https://www.chileautos.cl/oyarzunautomotora
+CL-SELLER-680,Vial Besa Automoviles,18,Av. Vitacura 9016,+56226567564,https://www.chileautos.cl/vialbesa
+CL-SELLER-2857,Portillo Usados Gran Avenida,51,Av Gran Avenida 6197,951786809,https://www.chileautos.cl/portillogranavenida
+CL-SELLER-3266,Japre Automoviles,5,Longitudinal Norte 5946,+56226568956,https://www.chileautos.cl/japreautomoviles
+CL-SELLER-3299,Garage Motors,31,"Monseñor Escriva de Balaguer 99, Sector Sanchina",931950989,https://www.chileautos.cl/garagemotors
+CL-SELLER-3015,Autonomotor,6,Las Condes,950147655,https://www.chileautos.cl/autonomotor
+CL-SELLER-3122,MW Autos,14,Av. El Ventisquero 1225 bodega 116,945610619,https://www.chileautos.cl/mwautos
+CL-SELLER-3229,2CARS 2,9,CAMINO A MELIPILLA 15600,951591385,https://www.chileautos.cl/2cars2
+CL-SELLER-1067,Bimota Chile,15,Av. Vitacura 8641,+56226566202,https://www.chileautos.cl/bimotachile
+CL-SELLER-2608,Modena Autos,0,Alonso de Cordova 5870 (Solo ofi. Administrativa),988192706,https://www.chileautos.cl/modenaautos
+CL-SELLER-3334,Greensystems Araucania,1,Sucursal Virtual,995496051,https://www.chileautos.cl/greensystemsaraucania
+CL-SELLER-2679,Automotora Maraton,10,MARATÓN 3940,997458892,https://www.chileautos.cl/lasvizcachas
+CL-SELLER-2354,Valenzuela Delarze - Padre Hurtado,27,Padre Hurtado Norte 1580,961846478,https://www.chileautos.cl/valenzuelaydelarzevitacura2
+CL-SELLER-1393,Marubeni - Vicuña Mackenna,86,Av. VICUÑA MACKENNA 3.300 -  MACUL,998453327,https://www.chileautos.cl/marubenivicunamackenna
+CL-SELLER-1387,Valenzuela Delarze - Bellavista,58,"Bellavista 0170, Providencia",998225141,https://www.chileautos.cl/valenzuelaydelarzebellavista
+CL-SELLER-776,Valenzuela Delarze - Bilbao 1415,17,Avda Bilbao 1415,966399020,https://www.chileautos.cl/valenzuelaydelarzebilbao
+CL-SELLER-666,Piretta Automobile,37,Av. Vitacura 9518,998375895,https://www.chileautos.cl/piretta
+CL-SELLER-3216,MPAutomotriz,12,"Av. Américo Vespucio Express 2451, comuna de Cerri",968489049,https://www.chileautos.cl/mpautomotriz
+CL-SELLER-2025,A y F Automotriz,14,Av. 21 de Mayo 115 frente lider de Quillota,995426696,https://www.chileautos.cl/ayf
+CL-SELLER-3000,Transportes Chilefrio,1,Manuel Rodriguez 0333,996313567,https://www.chileautos.cl/transportechilefrio
+CL-SELLER-3272,Checkeados.cl,20,Lo Fontecilla 101 - Of. 1005A,972698000,https://www.chileautos.cl/chekeados
+CL-SELLER-3112,Automotriz Plusscars,0,"Avenida Gabriela 03211, Al lado Autopista Acceso S",990756205,https://www.chileautos.cl/automotrizplusscars
+CL-SELLER-685,Patricio Reyes Hertz,0,"Av. Fco Bilbao 3411, esquina Amapolas vereda sur",995341875,https://www.chileautos.cl/patricioreyeshertz
+CL-SELLER-2123,Automotriz Movitrack,18,Membrillar 386 esquina Argomedo,75-2316765,https://www.chileautos.cl/movitrack
+CL-SELLER-1817,Camping Sobre Ruedas,11,"Ruta 5 sur, km 45,6 Paine, Santiago",931862685,https://www.chileautos.cl/campingsobreruedas
+CL-SELLER-1002,Indumotora One - Vitacura,27,Av. Vitacura 7649,600-6005200,https://www.chileautos.cl/kiaindumotora
+CL-SELLER-546,Peugeot Chile S.A.,51,Av. Américo Vespucio 785,992149828,https://www.chileautos.cl/peugeotchile
+CL-SELLER-1803,BMW Motorrad,22,Av. La Dehesa 265,+56226566239,https://www.chileautos.cl/bmwmotorrad
+CL-SELLER-1208,Comercial Noack,16,El Aguilucho 3396,2-26162604,https://www.chileautos.cl/comercialnoack
+CL-SELLER-1464,Automesa Ltda.,3,Av. Zenteno 963,64-2235295,https://www.chileautos.cl/automesa
+CL-SELLER-2790,Williamson Balfour Motors - Concepcion,8,Paicavi 1200,958390985,https://www.chileautos.cl/bmwconcepcion
+CL-SELLER-1250,Kawasaki MasterBikes,48,Av. Presidente Kennedy 8548,2-22018154,https://www.chileautos.cl/kawasaki
+CL-SELLER-2851,Jose Camus,12,Talagante,965853607,https://www.chileautos.cl/josecamus
+CL-SELLER-3196,Autos y Camiones Sanz,15,La Piramide 152,992354209,https://www.chileautos.cl/autosycamionessanz
+CL-SELLER-2696,Correa Autos SPA,24,Paicavi 1185,41-2797472,https://www.chileautos.cl/correaautosspa
+CL-SELLER-490,Csillag.cl,20,AV. LAS CONDES 14.495,2-22478321,https://www.chileautos.cl/csillagautomotriz
+CL-SELLER-2539,Siglo XXI - 10 Norte,51,10 Norte Esq. San Antonio,954066677,https://www.chileautos.cl/valenzuelaydelarzevinadelmar2
+CL-SELLER-3171,BGO Autos - Pajaritos 4155,0,AV PAJARITOS 4155,940090944,https://www.chileautos.cl/bgocerrillos
+CL-SELLER-3215,Autos Curico Center,0,Camilo Henriquez 226         Membrillar 648,965974157,https://www.chileautos.cl/autoscurico
+CL-SELLER-2733,DepelliAutos - Macul,0,Av. Departamental 4500,2-29521713,https://www.chileautos.cl/depelliautosmacul
+CL-SELLER-3265,AUTOMOTORA  M Y C  SPA,0,Los Carrera 980,+56226568955,https://www.chileautos.cl/automotoramyc
+CL-SELLER-3261,Black Cars,0,"Avenida La Dehesa 1822, oficina 504",965099554,https://www.chileautos.cl/blackcarslobarnechea
+CL-SELLER-2478,Target Autos,0,PADRE ALFREDO ARTEAGA 1873,2-27555951,https://www.chileautos.cl/fschomburgk
+CL-SELLER-1849,New Rent a Car,0,AV OSSA 2127,2-22775584,https://www.chileautos.cl/newrentacar
+CL-SELLER-1792,Automoviles Patricio Godoy,33,Concepcion,978780902,https://www.chileautos.cl/patriciogodoy
+CL-SELLER-874,Klassik Car,22,Av. Vitacura 8028,942898027,https://www.chileautos.cl/klassikcar
+CL-SELLER-2917,Autotattersall Puerto Varas,15,"Gramados SN,",933812399,https://www.chileautos.cl/autotattersallptovaras
+CL-SELLER-925,Autocredit - La Serena,14,Balmaceda 4299- 4295,51-2282480,https://www.chileautos.cl/autocredit
+CL-SELLER-2021,Autotattersall Santa Cruz,11,Av. Ramón San Furgo 648,72-2958730,https://www.chileautos.cl/autotattersallsantacruz
+CL-SELLER-2429,Autokas Usados La Dehesa,30,José Alcalde Delano 10501,2-28569482,https://www.chileautos.cl/autokas2
+CL-SELLER-2477,Grass y Arueste - Vicuña Mackenna 7654,20,Vicuña Mackenna 7654,2-24853185,https://www.chileautos.cl/grassyarueste3
+CL-SELLER-1042,Salfa Usados - Copiapo,33,Ramón Freire 0330,52-2200400,https://www.chileautos.cl/salfacopiapo
+CL-SELLER-1292,Salfa Usados - Antofagasta,35,Av. Pedro Aguirre Cerda 7022,55-2590923,https://www.chileautos.cl/salfaantofagasta
+CL-SELLER-1030,Salfa Usados - Concepción,31,Américo Vespucio 869 - Talcahuano,961707858,https://www.chileautos.cl/salfaconcepcion
+CL-SELLER-1380,Automotora Guillermo Morales - División Irarrázaval 1061 Chrysler,0,Av. Irarrazaval 1031,2-28999070,https://www.chileautos.cl/guillermomoralesirarrazaval
+CL-SELLER-3145,Prosal,12,Moneda 2387,2-26337160,https://www.chileautos.cl/prosal
+CL-SELLER-2788,Car Trading,6,Providencia,997441009,https://www.chileautos.cl/cartrading1
+CL-SELLER-3304,PREMIUM CAR SALE,6,VITACURA 328,971390170,https://www.chileautos.cl/premiumcarvirtual
+CL-SELLER-523,E. Kovacs Santiago,45,Seminario 385,2-26379861,https://www.chileautos.cl/kovacsseminario
+CL-SELLER-2890,Car Outlet,51,"San Vicente de lo Arcaya 3, sitio 9",934024670,https://www.chileautos.cl/caroutlet
+CL-SELLER-1445,Coseche Usados Concepción,32,Paicavi 2937,600490300,https://www.chileautos.cl/cosecheconcepcion
+CL-SELLER-559,Decar S.A.,30,Hochstetter 1070,45-2974081,https://www.chileautos.cl/decar
+CL-SELLER-1318,Car Concept,28,Av. Charles Hamilton 115,2-29516495,https://www.chileautos.cl/carhunters
+CL-SELLER-1706,CGAutos,12,Av. Colon 2429 Valparaiso,32-2748880,https://www.chileautos.cl/cgautos
+CL-SELLER-1314,Autokarino - La Serena,25,Balmaceda 1325,51-2213758,https://www.chileautos.cl/autokarino
+CL-SELLER-1710,Automotora Ortuzar,17,Francisco Bilbao 4780,985775766,https://www.chileautos.cl/fos
+CL-SELLER-1195,World Cars,12,Av. Vitacura 8621 esq. Las Tranqueras,2-22013387,https://www.chileautos.cl/worldcars
+CL-SELLER-3172,Ladel Automoviles,18,Camino a Lonquen 9011,993307290,https://www.chileautos.cl/ladelautomoviles
+CL-SELLER-2334,Cambiatuauto,37,LO BARNECHEA,998268097,https://www.chileautos.cl/cambiatuauto
+CL-SELLER-2787,Salfa Los Ángeles,5,Av. Las Industrias Pedro Stark Troncoso 8920,43-2545910,https://www.chileautos.cl/salfalosangeles
+CL-SELLER-1843,Melhuish - Opel,11,Av. Las Condes 7784,2-27064400,https://www.chileautos.cl/melhuish5
+CL-SELLER-750,Clasic - Vitacura 9164,28,Av. Vitacura  9164,958145346,https://www.chileautos.cl/clasic
+CL-SELLER-2956,Automóviles Twiters,14,Lo echevers 101,981707948,https://www.chileautos.cl/twiters
+CL-SELLER-3343,ChileCamiones SPA,21,Kilometro 41 Ruta 5 Sur Paine,+56226564787,https://www.chileautos.cl/chilecamionespa
+CL-SELLER-1031,Salfa Usados - La Serena Huanhuali,13,Autoshopping Puertas del Mar,998979127,https://www.chileautos.cl/salfalaserena
+CL-SELLER-3342,Coseche Temuco 2,13,"O`Higgins 0498, Temuco",+56226564727,https://www.chileautos.cl/cosechetemuco2
+CL-SELLER-3118,Vemostuauto,9,Bajadoz 100 of 502,976177078,https://www.chileautos.cl/vemostuauto
+CL-SELLER-651,Asturias Automotora,18,Los Dominicos 8630 piso -3  Las Condes,2-22246923,https://www.chileautos.cl/asturiasautomotora
+CL-SELLER-717,Automotora Florencia,10,Av. TOMAS MORO 494 LAS. CONDES,993322479,https://www.chileautos.cl/automotoraflorencia
+CL-SELLER-2924,Salazar Israel - Car Shopping,30,Americo Vespucio Express 2451,+56226568937,https://www.chileautos.cl/salazarisraelcerrrillos2
+CL-SELLER-1836,Comercial JMS,23,Mapocho  3644,2-27869761,https://www.chileautos.cl/automotrizjair
+CL-SELLER-2813,Auto OK,12,"Vicuña Mackenna 10057 Paradero 22 , Metro Trinidad",995410439,https://www.chileautos.cl/autook
