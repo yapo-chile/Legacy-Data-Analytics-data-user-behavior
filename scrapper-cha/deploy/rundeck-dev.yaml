@@ -4,7 +4,7 @@
   executionEnabled: true
   group: SCRAPPER
   loglevel: DEBUG
-  name: Scrapping Chilautos - Chile Autos v2
+  name: Scrapping Chilautos - Chile Autos v3
   nodeFilterEditable: false
   nodefilters:
     dispatch:

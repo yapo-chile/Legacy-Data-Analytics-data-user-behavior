@@ -1,35 +1,61 @@
 # -*- coding: utf-8 -*-
 import psycopg2
-from scrapy.exporters import CsvItemExporter
+from datetime import datetime
+from .conf import getConf
 from core.items.chileauto.dealers import CarItem, DealerItem
 
+CARS_TABLE = "ods.cha_cars"
+DEALERS_TABLE = "ods.cha_dealers"
 
-class CorePipeline(object):
-    def process_item(self, item, spider):
-        return item
-
-
-class ExtractorPipeline(object):
+class PsqlPipeline(object):
     def open_spider(self, spider):
-        dealersFile = open('cha_dealers.csv', 'wb')
-        self.dealersExporter = CsvItemExporter(dealersFile)
-        self.dealersExporter.fields_to_export = ['id', 'nombre', 'num_avisos', 'direccion', 'telefono', 'url']
-        self.dealersExporter.start_exporting()
-
-        carsFile = open('cha_cars.csv', 'wb')
-        self.carsExporter = CsvItemExporter(carsFile)
-        self.carsExporter.fields_to_export = ['id_seller', 'id', 'patente', 'titulo', 'precio', 'kilometros', 'url']
-        self.carsExporter.start_exporting()
+        db = getConf().db
+        db_config = {"host": db.host,
+                     "port": db.port,
+                     "user": db.user,
+                     "password": db.password,
+                     "database": db.name}
+        self.connection = psycopg2.connect(**db_config)
+        self.cur = self.connection.cursor()
+        self.cur.execute("TRUNCATE {}".format(CARS_TABLE))
+        self.cur.execute("TRUNCATE {}".format(DEALERS_TABLE))
 
     def close_spider(self, spider):
-        self.dealersExporter.finish_exporting()
-        self.carsExporter.finish_exporting()
+        self.cur.close()
+        self.connection.close()
+
+    def dealer_query(self, item):
+        return """INSERT INTO {}
+            (id, dealer_name, phone, adress, ads, url)
+            VALUES('{}', '{}', '{}', '{}', {}, '{}');
+        """.format(DEALERS_TABLE,
+                   item['id'],
+                   item['nombre'],
+                   item['telefono'],
+                   item['direccion'],
+                   item['num_avisos'],
+                   item['url'])
+    
+    def cars_query(self, item):
+        return """INSERT INTO {}
+            (id, id_seller, plate, url, title, price, kilometers)
+            VALUES('{}', '{}', '{}', '{}', '{}', {}, {});
+            ;
+        """.format(CARS_TABLE,
+                   item['id'],
+                   item['id_seller'],
+                   '',
+                   item['url'],
+                   item['titulo'],
+                   item['precio'],
+                   item['kilometros'])
 
     def process_item(self, item, spider):
         if isinstance(item, DealerItem):
-            self.dealersExporter.export_item(item)
-        
-        if isinstance(item, CarItem):
-            self.carsExporter.export_item(item)
+            self.cur.execute(self.dealer_query(item))
+            self.connection.commit()
 
+        if isinstance(item, CarItem):
+            self.cur.execute(self.cars_query(item))
+            self.connection.commit()
         return item

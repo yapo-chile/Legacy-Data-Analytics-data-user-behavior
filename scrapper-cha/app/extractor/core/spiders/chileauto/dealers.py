@@ -17,7 +17,7 @@ class ChileAutosDealerSpider(scrapy.Spider):
     scrap_patentes = False
     custom_settings = {
         'ITEM_PIPELINES': {
-            'core.pipelines.ExtractorPipeline': 400
+            'core.pipelines.PsqlPipeline': 400
         }
     }
 

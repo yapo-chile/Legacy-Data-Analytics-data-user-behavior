@@ -2,8 +2,6 @@
 import psycopg2
 from datetime import datetime
 from .conf import getConf
-from scrapy.exporters import CsvItemExporter
-from core.items.chileauto.dealers import CarItem, DealerItem
 
 
 class CorePipeline(object):
