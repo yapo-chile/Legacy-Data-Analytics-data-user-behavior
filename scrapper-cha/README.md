@@ -1,6 +1,22 @@
 # scrapper-cha pipeline 
 
-This micro services is base micro services. 
+# Description
+
+Scrapper-cha is a pipeline that would be extracting data from Chileautos website.
+We would be looking for two info structures:
+- Dealers
+- Cars
+
+## Pipeline Implementation Details
+
+|   Field           | Description                                         |
+|-------------------|-----------------------------------------------------|
+| Input Source      | Chileautos website                                  |
+| Output Source     | ods.cha_cars; ods.cha_dealers                       |
+| Schedule          | Every friday                                        |
+| Rundeck Access    |                                                     |
+| Associated Report | *soon*                                              |
+|-------------------|-----------------------------------------------------|
 
 ### Build
 ```
@@ -39,3 +55,15 @@ htttp://<travis server>/<registry>/<project>/settings
 ```
 And add the environment variable RUNDECK_TOKEN, with value equal
 to the copied token
+
+### General changes
+
+- Rename [project-name](https://github.mpi-internal.com/Yapo/data-pipeline-base/tree/master/project-name) folder for you develop name. For example **bounce-rate**.
+- Rename [APPNAME](https://github.mpi-internal.com/Yapo/data-pipeline-base/blob/d330a8c59c6dff28339d44df57d575abfe145d2c/project-name/scripts/commands/vars.mk#L19) environment variable with new nombre of micro services. For each one the repositories from data, we can use the following prefixs.
+
+| Repository    | Prefix docker image |
+| ------------- |-------------|
+| [data-content](https://github.mpi-internal.com/Yapo/data-content)      | data-content-**pipelineName** |
+| [data-pulse](https://github.mpi-internal.com/Yapo/data-pulse)      | data-pulse-**pipelineName**      |
+| [data-user-behavior](https://github.mpi-internal.com/Yapo/data-user-behavior) | data-user-behavior-**pipelineName**      |
+
