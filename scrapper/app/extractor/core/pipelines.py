@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import psycopg2
+from datetime import datetime
 from .conf import getConf
 
 

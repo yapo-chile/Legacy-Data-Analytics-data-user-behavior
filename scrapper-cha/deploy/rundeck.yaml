@@ -1,0 +1,53 @@
+- defaultTab: nodes
+  description: |-
+        sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                        -e APP_DB_SECRET=/app/db-secret \
+                        containers.mpi-internal.com/yapo/data-user-behavior-scrapper-cha:latest
+  executionEnabled: true
+  group: SCRAPPER
+  loglevel: DEBUG
+  name: Scrapping Chilautos - Dealers
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: dockerhost'
+  nodesSelectedByDefault: true
+  notification:
+    onfailure:
+      email:
+        recipients: data_team@adevinta.com
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo definitivo
+    onretryablefailure:
+      email:
+        recipients: data_team@adevinta.com
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo por reintento
+  notifyAvgDurationThreshold: null
+  scheduleEnabled: true
+  schedule:
+    month: '*'
+    time:
+      hour: '08'
+      minute: '0'
+      seconds: '0'
+    weekday:
+      day: '*'
+    year: '*'
+  retry:
+    retry: 3
+    delay: 20m
+  sequence:
+    commands:
+    - script: |-
+        sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scrapper-cha:latest 
+
+        sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                        -e APP_DB_SECRET=/app/db-secret \
+                        containers.mpi-internal.com/yapo/data-user-behavior-scrapper-cha:latest
+    keepgoing: false
+    strategy: node-first
+  timeZone: America/Santiago
