@@ -4,8 +4,8 @@ from datetime import datetime
 from .conf import getConf
 from core.items.chileauto.dealers import CarItem, DealerItem
 
-CARS_TABLE = "public.cha_cars"
-DEALERS_TABLE = "public.cha_dealers"
+CARS_TABLE = "ods.cha_cars"
+DEALERS_TABLE = "ods.cha_dealers"
 DATE = datetime.now().date()
 
 
