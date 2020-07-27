@@ -19,18 +19,18 @@ class PsqlPipeline(object):
                      "database": db.name}
         self.connection = psycopg2.connect(**db_config)
         self.cur = self.connection.cursor()
+        self.cur.execute("Delete from {} where \"date\"='{}'".format(CARS_TABLE, DATE))
+        self.cur.execute("Delete from {} where \"date\"='{}'".format(DEALERS_TABLE, DATE))
+        self.connection.commit()
 
     def close_spider(self, spider):
         self.cur.close()
         self.connection.close()
 
-    def if_exists(self, var):
-        retu
     def dealer_query(self, item):
         return """INSERT INTO {}
             (id, dealer_name, phone, adress, ads, url, "date")
-            VALUES('{}', '{}', '{}', '{}', {}, '{}', '{}')
-            ON CONFLICT (id, "date") DO NOTHING;
+            VALUES('{}', '{}', '{}', '{}', {}, '{}', '{}');
         """.format(DEALERS_TABLE,
                    item['id'],
                    item['nombre'],
@@ -43,8 +43,7 @@ class PsqlPipeline(object):
     def cars_query(self, item):
         return """INSERT INTO {}
             (id, id_seller, plate, url, title, price, kilometers, "date")
-            VALUES('{}', '{}', '{}', '{}', '{}', {}, {}, '{}')
-            ON CONFLICT (id, "date") DO NOTHING;
+            VALUES('{}', '{}', '{}', '{}', '{}', {}, {}, '{}');
         """.format(CARS_TABLE,
                    item['id'],
                    item['id_seller'],
