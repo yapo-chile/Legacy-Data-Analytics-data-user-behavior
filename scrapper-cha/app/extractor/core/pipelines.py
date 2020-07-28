@@ -50,8 +50,8 @@ class PsqlPipeline(object):
                    '',
                    item['url'],
                    item['titulo'],
-                    0 if not hasattr(item, 'precio') else item['precio'],
-                   0 if not hasattr(item, 'kilometros') else item['kilometros'],
+                   item['precio'],
+                   item['kilometros'],
                    DATE)
 
     def process_item(self, item, spider):
