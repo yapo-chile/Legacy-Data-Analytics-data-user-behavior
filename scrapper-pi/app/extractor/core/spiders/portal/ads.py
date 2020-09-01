@@ -194,8 +194,9 @@ class PISpider(scrapy.Spider):
                 return " ".join(string.split())
             
             def get_price(value):
-                if value:
-                    value = int(value.replace(".", ""))
+                if value is not None:
+                    value = float(value.replace(".", "").replace(",", "."))
+                    return value
                 return 0
             
             def set_default(value, default):
