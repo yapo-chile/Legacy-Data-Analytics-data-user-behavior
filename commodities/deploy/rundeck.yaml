@@ -1,0 +1,55 @@
+- defaultTab: nodes
+  description: |-
+        Commodities ETL extract USD, EUR and UF values \
+        sudo docker run --rm -v /home/bnbiuser/secrets/blocket_db:/app/db-blocket \
+                        -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                        -e APP_DB_SECRET=/app/db-secret \
+                        containers.mpi-internal.com/yapo/commodities:latest
+  executionEnabled: true
+  group: DOCKER/GENERAL
+  loglevel: DEBUG
+  name: COMMODITIES 
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: dockerhost'
+  nodesSelectedByDefault: true
+  notification:
+    onfailure:
+      email:
+        recipients: data_team@adevinta.com
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo definitivo
+    onretryablefailure:
+      email:
+        recipients: data_team@adevinta.com
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo por reintento
+  notifyAvgDurationThreshold: null
+  schedule:
+    month: '*'
+    time:
+      hour: '09'
+      minute: '0'
+      seconds: '0'
+    weekday:
+      day: '*'
+    year: '*'
+  retry:
+    retry: 3
+    delay: 20m
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: |-
+        sudo docker pull containers.mpi-internal.com/yapo/commodities:latest
+        sudo docker run --rm -v /home/bnbiuser/secrets/blocket_db:/app/db-blocket \
+                        -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                        -e APP_DB_SECRET=/app/db-secret \
+                        containers.mpi-internal.com/yapo/commodities:latest
+    keepgoing: false
+    strategy: node-first
+  timeZone: America/Santiago
