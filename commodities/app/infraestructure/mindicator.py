@@ -25,7 +25,10 @@ class Mindicator():
             url = "{}/{}/{}".format(ENDPOINT, commodity, humanize_date(date))
             resp = requests.get(url)
             if resp.status_code == 200:
-                resp = resp.json()['serie'][0]
+                try:
+                    resp = resp.json()['serie'][0]
+                except IndexError:
+                    return [{}]
                 if resp['valor'] != []:
                     if commodity == 'dolar':
                         code = 'USD'
