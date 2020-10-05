@@ -29,7 +29,8 @@ class Commodities(CommoditiesRetrival, CommoditiesQuery):
 
     def get_commodities(self):
         self.commodities_data = ['dolar', 'euro', 'uf']
-        self.insert_to_table()
+        if bool(self.commodities_data):
+            self.insert_to_table()
         return True
 
             
