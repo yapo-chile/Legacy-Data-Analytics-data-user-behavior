@@ -21,13 +21,12 @@
   nodesSelectedByDefault: true
   notification:
     onfailure:
-      email:
-        recipients: data_team@adevinta.com
-        subject: ${job.execid} ${execution.status} ${job.name} - Fallo definitivo
-    onretryablefailure:
-      email:
-        recipients: data_team@adevinta.com
-        subject: ${job.execid} ${execution.status} ${job.name} - Fallo por reintento
+      plugin:
+        configuration:
+          slack_channel: ''
+          webhook_base_url: https://hooks.slack.com/services
+          webhook_token: T017F9KHA1Y/B01BL7C1CSY/Ai9NzdCrBUA5Ru5sa8JHYrjR
+        type: SlackNotification
   notifyAvgDurationThreshold: null
   schedule:
     month: '*'
