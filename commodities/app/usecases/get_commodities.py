@@ -22,7 +22,7 @@ class Commodities(CommoditiesRetrival, CommoditiesQuery):
         dwh.execute_command(self.clean_commodities(self.params.get_date()))
         dwh.execute_command(self.clean_dollar(self.params.get_date()))
         for data in self.__commodities_data:
-            if data['code'] == 'USD':
+            if data.get('code') == 'USD':
                 dwh.execute_command(self.insert_dollar(data['date'], data['value']))
             dwh.execute_command(self.insert_commodities(data['date'], data['value'], data['code']))
         dwh.close_connection()
