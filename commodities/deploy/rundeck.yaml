@@ -21,6 +21,9 @@
   nodesSelectedByDefault: true
   notification:
     onfailure:
+      email:
+        recipients: data_team@adevinta.com
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo definitivo
       plugin:
         configuration:
           slack_channel: ''
