@@ -4,11 +4,11 @@
       sudo docker run --rm -v /home/bnbiuser/secrets/blocket_db:/app/db-blocket \
                       -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                       -e APP_DB_SECRET=/app/db-secret \
-                         containers.mpi-internal.com/yapo/commodities:feat_commodities
+                         containers.mpi-internal.com/yapo/commodities:fix_empty-calls
   executionEnabled: true
-  group: DOCKER/CONTENT
+  group: DOCKER/GENERAL
   loglevel: DEBUG
-  name: CONTENT - Rev Params
+  name: COMMODITIES
   nodeFilterEditable: false
   nodefilters:
     dispatch:
@@ -24,11 +24,11 @@
   sequence:
     commands:
     - script: |-
-        sudo docker pull containers.mpi-internal.com/yapo/commodities:feat_commodities
+        sudo docker pull containers.mpi-internal.com/yapo/commodities:fix_empty-calls
         sudo docker run --rm -v /home/bnbiuser/secrets/blocket_db:/app/db-blocket \
                             -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                             -e APP_DB_SECRET=/app/db-secret \
-                              containers.mpi-internal.com/yapo/commodities:feat_commodities
+                              containers.mpi-internal.com/yapo/commodities:fix_empty-calls
     keepgoing: false
     strategy: node-first
   timeZone: America/Santiago
