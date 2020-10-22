@@ -12,6 +12,14 @@ uppercase_text = (lambda x: x.upper())
 removepoint_text = (lambda x: x.replace(".", ""))
 
 
+def clean_km(value):
+    if isinstance(value, list):
+        if value:
+            if value[0] != 'NULL':
+                value = int(str(value[0]).replace(".", ''))
+                return value
+    return 'NULL'
+
 class DealerItem(scrapy.Item):
     id = scrapy.Field(output_processor=clean_text)
     nombre = scrapy.Field(output_processor=clean_text)
@@ -28,4 +36,4 @@ class CarItem(scrapy.Item):
     url = scrapy.Field(output_processor=clean_text)
     titulo = scrapy.Field(output_processor=clean_text)
     precio = scrapy.Field(output_processor=Compose(clean_text, removepoint_text))
-    kilometros = scrapy.Field(output_processor=Compose(clean_text, removepoint_text))
+    kilometros = scrapy.Field(output_processor=clean_km)
