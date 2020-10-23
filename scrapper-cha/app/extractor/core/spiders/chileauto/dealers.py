@@ -77,7 +77,7 @@ class ChileAutosDealerSpider(scrapy.Spider):
                 l.add_value('precio', 0)
             l.add_xpath('kilometros', './/ul[has-class("listing-item__features")]/li[span/text()="Kilómetros"]/text()', re='([0-9.]+) kms')
             if not l.get_output_value('kilometros'):
-                l.add_value('kilometros', 0)
+                l.add_value('kilometros', 'NULL')
             carItem = l.load_item()
 
             if self.scrap_patentes:
