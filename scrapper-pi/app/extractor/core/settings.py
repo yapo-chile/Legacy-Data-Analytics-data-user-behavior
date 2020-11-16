@@ -47,7 +47,7 @@ USER_AGENT = get_random_agent()
 ROBOTSTXT_OBEY = False
 
 DEFAULT_REQUEST_HEADERS = {
-    'Referer': 'https://www.google.cl' 
+    'Referer': 'https://www.google.com' 
 }
 
 RANDOMIZE_DOWNLOAD_DELAY = True

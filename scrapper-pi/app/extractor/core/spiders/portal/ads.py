@@ -34,144 +34,94 @@ class PISpider(scrapy.Spider):
                 url='/' + operacion,
                 callback=self.parseListing, 
                 errback=self.errback,
-                cb_kwargs=dict(depth=0),
                 dont_filter=True,
             )
 
-    def parseListing(self, response, depth):
-        if response.css('.quantity-results::text').get() is None:
+    def parseListing(self, response):
+        if response.css('.ui-search-search-result__quantity-results::text').get() is None:
             logging.warning("Retrying listing: " + response.url)
             yield response.request.replace(dont_filter=True) # Retry
         else:    
-            quantity_results = int(response.css('.quantity-results::text').get().strip().split()[0].replace('.',''))
-            logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")" + "(Depth: " + str(depth) + ")")
+            quantity_results = int(response.css('.ui-search-search-result__quantity-results::text').get().strip().split()[0].replace('.',''))
+            logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")")
 
             if quantity_results > 2000: #PI muestra un maximo de 2000 avisos por listado, por lo que debemos seguir aplicando filtros.
-                yield from self.divideNConquer(response, depth, quantity_results)
+                yield from self.divideNConquer(response, quantity_results)
             else:
                 yield from self.parseInnerListing(response)
 
-    def divideNConquer(self, response, depth, qty):
-        if depth == 0:  # Navigate by inmueble (departamente, casa, terreno, etc.)
-            logging.info("Total ads: " + str(qty))
+    def divideNConquer(self, response, qty):
+        nav_menu = response.css('.ui-search-filter-dl')
+        nav_titles = response.css('.ui-search-filter-dl .ui-search-filter-dt-title::text').extract()
+        print('---- NAV MENU TITLES ----')
+        print(nav_titles)
+        levels = ['Inmueble', 'Modalidad', 'Ubicación', 'Baños', 'Superficie total']
 
-            if response.xpath('//*[@id="id_9991459-AMLC_1459_1"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                if response.xpath('//*[@id="id_9991459-AMLC_1459_1"]//label[contains(@class,"see-more-filter")]').get() is None:
-                    urls = response.xpath('//*[@id="id_9991459-AMLC_1459_1"]//h3/a/@href')
-                else:
-                    urls = response.xpath('//*[@id="id_9991459-AMLC_1459_1"]//*[contains(@class,"modal-content")]//h3/a/@href')
+        logging.info("Total ads: " + str(qty))
 
+        def findMenuAvailable(menu, levels):
+            for m in menu:
+                if m in levels:
+                    return m
+            return False
+
+        def getMenuBody(menu_to_find, nav_menu):
+            for obj in nav_menu:
+                if menu_to_find in obj.extract():
+                    return obj
+            return False
+        
+        def extractMenusFromSeeMore(response):
+            print('------- SEE MORE MENU -------------')
+            urls = response.css('.ui-search-search-modal-filter::attr(href)').extract()
+            for url in urls:
+                yield scrapy.Request(
+                    url=url.get(),
+                    callback=self.parseListing,
+                    errback=self.errback,
+                    dont_filter=True,
+                )
+
+        def getMenuSeeMore(url):
+            print(url.extract_first())
+            yield scrapy.Request(
+                url=url.extract_first(),
+                callback=extractMenusFromSeeMore,
+                errback=self.errback,
+                dont_filter=True,
+            )
+        menuAvailable = findMenuAvailable(nav_titles, levels)
+        menu = getMenuBody(menuAvailable, nav_menu)
+        print('---- MENU ----')
+        print(menu)
+        if menu:
+            if menu.xpath('//a[contains(@class,"ui-search-modal__link")]').get() is None or \
+                menuAvailable != 'Ubicación':
+                urls = menu.css('.ui-search-link::attr(href)')[:-1]
                 for url in urls:
+                    print('------ URL ------- {}'.format(url.extract()))
                     yield scrapy.Request(
-                        url=url.get(),
+                        url=url.extract(),
                         callback=self.parseListing,
                         errback=self.errback,
-                        cb_kwargs=dict(depth=1),
                         dont_filter=True,
-                    )
-        elif depth == 1: # Navigate by modalidad (usada o nueva)
-            if response.xpath('//*[@id="id_9991459-AMLC_1459_3"]//h3/a/@href').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
+                    ) 
             else:
-                for url in response.xpath('//*[@id="id_9991459-AMLC_1459_3"]//h3/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing,
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=2),
-                        dont_filter=True,
-                    )
-        elif depth == 2: # Navigate by region
-            if response.xpath('//*[@id="id_state"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                if response.xpath('//*[@id="id_state"]//label[contains(@class,"see-more-filter")]').get() is None:
-                    urls = response.xpath('//*[@id="id_state"]//h3/a/@href')
-                else:
-                    urls = response.xpath('//*[@id="id_state"]//*[contains(@class,"modal-content")]//dd/a/@href')
-
-                for url in urls:
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=3),
-                        dont_filter=True,
-                    )
-        elif depth == 3: # Navigate by city
-            if response.xpath('//*[@id="id_city"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                if response.xpath('//*[@id="id_city"]//label[contains(@class,"see-more-filter")]').get() is None:
-                    urls = response.xpath('//*[@id="id_city"]//h3/a/@href')
-                else:
-                    urls = response.xpath('//*[@id="id_city"]//*[contains(@class,"modal-content")]//div/a/@href')
-
-                for url in urls:
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=4),
-                        dont_filter=True,
-                    )
-        elif depth == 4: # Navigate by price
-            if response.xpath('//*[@id="id_price"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_price"]//dd/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=5),
-                        dont_filter=True,
-                    )
-        elif depth == 5: # Navigate by superficie total
-            if response.xpath('//*[@id="id_TOTAL_AREA"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_TOTAL_AREA"]//dd/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=6),
-                        dont_filter=True,
-                    )
-        elif depth == 6: # Navigate by baños
-            if response.xpath('//*[@id="id_FULL_BATHROOMS"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_FULL_BATHROOMS"]//dd/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=7),
-                        dont_filter=True,
-                    )
+                getMenuSeeMore(menu.css('.ui-search-modal__link::attr(href)'))
         else:
-            logging.warning("Still too big: " + response.url + " (" + str(qty) + ")" + "(" + str(depth) + ")")
+            logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
 
     def parseInnerListing(self, response):
         if self.no_scrap == False:
-            for item in response.xpath('//section[@id="results-section"]/ol/li'):
-                adLink = item.css('a.item__info-link::attr(href)').re_first(r'^([^#]+)')
-                yield scrapy.Request(
-                    url=adLink, 
-                    callback=self.parseAd,
-                    errback=self.errback,
-                )
+            for item in response.css('ol.ui-search-layout--pi li'):
+                adLink = item.css('a.ui-search-link::attr(href)') \
+                    .re_first(r'^([^#]+)')
+                if adLink:
+                    yield scrapy.Request(
+                        url=adLink,
+                        callback=self.parseAd,
+                        errback=self.errback,
+                    )
         
         next_page = response.css('li.andes-pagination__button--next a::attr(href)').get()
         if next_page is not None:
@@ -183,7 +133,6 @@ class PISpider(scrapy.Spider):
             )
         
     def parseAd(self, response):
-
         if response.xpath('//header[@class="item-title"]/h1/text()').get() is None:
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
         else:
