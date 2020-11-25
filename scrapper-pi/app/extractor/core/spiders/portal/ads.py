@@ -55,7 +55,7 @@ class PISpider(scrapy.Spider):
         nav_titles = response.css('.ui-search-filter-dl .ui-search-filter-dt-title::text').extract()
         print('---- NAV MENU TITLES ----')
         print(nav_titles)
-        levels = ['Inmueble', 'Modalidad', 'Ubicación', 'Baños', 'Superficie total']
+        levels = ['Inmueble', 'Modalidad', 'Ubicación', 'Ambientes', 'Baños', 'Superficie total']
 
         logging.info("Total ads: " + str(qty))
 
