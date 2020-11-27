@@ -20,18 +20,53 @@ class PISpider(scrapy.Spider):
         'venta',
         'arriendo',
     ]
+    venta_urls = [
+        "https://www.portalinmobiliario.com/venta/antofagasta",
+        "https://www.portalinmobiliario.com/venta/arica-y-parinacota",
+        "https://www.portalinmobiliario.com/venta/atacama",
+        "https://www.portalinmobiliario.com/venta/aysen",
+        "https://www.portalinmobiliario.com/venta/biobio",
+        "https://www.portalinmobiliario.com/venta/coquimbo",
+        "https://www.portalinmobiliario.com/venta/la-araucania",
+        "https://www.portalinmobiliario.com/venta/bernardo-ohiggins",
+        "https://www.portalinmobiliario.com/venta/los-lagos",
+        "https://www.portalinmobiliario.com/venta/de-los-rios",
+        "https://www.portalinmobiliario.com/venta/magallanes-y-antartica-chilena",
+        "https://www.portalinmobiliario.com/venta/maule",
+        "https://www.portalinmobiliario.com/venta/metropolitana",
+        "https://www.portalinmobiliario.com/venta/tarapaca",
+        "https://www.portalinmobiliario.com/venta/valparaiso",
+        "https://www.portalinmobiliario.com/venta/nuble",
+    ]
+
+    arriendo_urls = [
+        "https://www.portalinmobiliario.com/arriendo/antofagasta",
+        "https://www.portalinmobiliario.com/arriendo/arica-y-parinacota",
+        "https://www.portalinmobiliario.com/arriendo/atacama",
+        "https://www.portalinmobiliario.com/arriendo/aysen",
+        "https://www.portalinmobiliario.com/arriendo/biobio",
+        "https://www.portalinmobiliario.com/arriendo/coquimbo",
+        "https://www.portalinmobiliario.com/arriendo/la-araucania",
+        "https://www.portalinmobiliario.com/arriendo/bernardo-ohiggins",
+        "https://www.portalinmobiliario.com/arriendo/los-lagos",
+        "https://www.portalinmobiliario.com/arriendo/de-los-rios",
+        "https://www.portalinmobiliario.com/arriendo/magallanes-y-antartica-chilena",
+        "https://www.portalinmobiliario.com/arriendo/maule",
+        "https://www.portalinmobiliario.com/arriendo/metropolitana",
+        "https://www.portalinmobiliario.com/arriendo/tarapaca",
+        "https://www.portalinmobiliario.com/arriendo/valparaiso",
+        "https://www.portalinmobiliario.com/arriendo/nuble",
+    ]
+    start_urls = [
+        "{}/".format(url_base),
+    ]
     no_scrap = False #No scrapping, only crawling
 
-    def start_requests(self):
-        yield scrapy.Request(
-            url=self.url_base,
-            callback=self.startProcessing,
-        )
-
-    def startProcessing(self, response):
-        for operacion in self.operaciones:
+    def parse(self, response):
+        #cities = response.css('.ui-search-search-modal .ui-search-link::attr(href)').extract()
+        for city in self.arriendo_urls + self.venta_urls:
             yield response.follow(
-                url='/' + operacion,
+                url=city,
                 callback=self.parseListing, 
                 errback=self.errback,
                 dont_filter=True,
@@ -55,13 +90,15 @@ class PISpider(scrapy.Spider):
         nav_titles = response.css('.ui-search-filter-dl .ui-search-filter-dt-title::text').extract()
         print('---- NAV MENU TITLES ----')
         print(nav_titles)
-        levels = ['Inmueble', 'Modalidad', 'Ubicación', 'Ambientes', 'Baños', 'Superficie total']
+        levels = ['Ciudades', 'Barrios',
+                  'Inmueble', 'Modalidad',
+                  'Ambientes', 'Baños', 'Superficie total']
 
         logging.info("Total ads: " + str(qty))
 
         def findMenuAvailable(menu, levels):
-            for m in menu:
-                if m in levels:
+            for m in levels:
+                if m in menu:
                     return m
             return False
 
@@ -74,42 +111,45 @@ class PISpider(scrapy.Spider):
         def extractMenusFromSeeMore(response):
             print('------- SEE MORE MENU -------------')
             urls = response.css('.ui-search-search-modal-filter::attr(href)').extract()
-            for url in urls:
+            for url in urls[:-1]:
                 yield scrapy.Request(
                     url=url.get(),
                     callback=self.parseListing,
                     errback=self.errback,
-                    dont_filter=True,
+                    dont_filter=True
                 )
 
         def getMenuSeeMore(url):
-            print(url.extract_first())
             yield scrapy.Request(
                 url=url.extract_first(),
                 callback=extractMenusFromSeeMore,
                 errback=self.errback,
-                dont_filter=True,
+                dont_filter=True
             )
+
         menuAvailable = findMenuAvailable(nav_titles, levels)
         menu = getMenuBody(menuAvailable, nav_menu)
-        print('---- MENU ----')
-        print(menu)
-        if menu:
-            if menu.xpath('//a[contains(@class,"ui-search-modal__link")]').get() is None or \
-                menuAvailable != 'Ubicación':
-                urls = menu.css('.ui-search-link::attr(href)')[:-1]
-                for url in urls:
-                    print('------ URL ------- {}'.format(url.extract()))
-                    yield scrapy.Request(
-                        url=url.extract(),
-                        callback=self.parseListing,
-                        errback=self.errback,
-                        dont_filter=True,
-                    ) 
+        if qty > 2000:
+            if menu:
+                if 'Ver todos' in menu.css('.ui-search-link::text').extract():
+                    getMenuSeeMore(menu.css('.ui-search-modal__link::attr(href)'))
+                else:
+                    for obj in menu.css('.ui-search-link::attr(href)').extract():
+                            yield scrapy.Request(
+                                url=obj,
+                                callback=self.parseListing,
+                                errback=self.errback,
+                                dont_filter=True,
+                            )
             else:
-                getMenuSeeMore(menu.css('.ui-search-modal__link::attr(href)'))
+                logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
         else:
-            logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
+            yield scrapy.Request(
+                url=obj,
+                callback=self.parseInnerListing,
+                errback=self.errback,
+                dont_filter=True,
+            )
 
     def parseInnerListing(self, response):
         if self.no_scrap == False:
@@ -133,7 +173,7 @@ class PISpider(scrapy.Spider):
             )
         
     def parseAd(self, response):
-        if response.xpath('//header[@class="item-title"]/h1/text()').get() is None:
+        if not response.css('header.item-title h1::text'):
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
         else:
             categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a[not(span)]/text()').getall()
