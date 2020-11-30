@@ -1,5 +1,6 @@
 import scrapy
 import logging
+from scrapy.http import Request
 from datetime import datetime
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
@@ -38,8 +39,8 @@ class PISpider(scrapy.Spider):
         "https://www.portalinmobiliario.com/venta/valparaiso",
         "https://www.portalinmobiliario.com/venta/nuble",
     ]
-
     arriendo_urls = [
+        "https://www.portalinmobiliario.com/arriendo/valparaiso",
         "https://www.portalinmobiliario.com/arriendo/antofagasta",
         "https://www.portalinmobiliario.com/arriendo/arica-y-parinacota",
         "https://www.portalinmobiliario.com/arriendo/atacama",
@@ -54,7 +55,6 @@ class PISpider(scrapy.Spider):
         "https://www.portalinmobiliario.com/arriendo/maule",
         "https://www.portalinmobiliario.com/arriendo/metropolitana",
         "https://www.portalinmobiliario.com/arriendo/tarapaca",
-        "https://www.portalinmobiliario.com/arriendo/valparaiso",
         "https://www.portalinmobiliario.com/arriendo/nuble",
     ]
     start_urls = [
@@ -64,6 +64,7 @@ class PISpider(scrapy.Spider):
 
     def parse(self, response):
         #cities = response.css('.ui-search-search-modal .ui-search-link::attr(href)').extract()
+
         for city in self.arriendo_urls + self.venta_urls:
             yield response.follow(
                 url=city,
@@ -84,6 +85,24 @@ class PISpider(scrapy.Spider):
                 yield from self.divideNConquer(response, quantity_results)
             else:
                 yield from self.parseInnerListing(response)
+
+    def extractMenusFromSeeMore(self, response):
+        urls = response.css('.ui-search-search-modal-filter::attr(href)').extract()
+        for url in urls:
+            yield response.follow(
+                url=url,
+                callback=self.parseListing,
+                errback=self.errback,
+                dont_filter=True
+            )
+
+    def getMenuSeeMore(self, response):
+        yield Request(
+            url=response.css('.ui-search-modal__link::attr(href)').extract_first(),
+            callback=self.extractMenusFromSeeMore,
+            errback=self.errback,
+            dont_filter=True
+        )
 
     def divideNConquer(self, response, qty):
         nav_menu = response.css('.ui-search-filter-dl')
@@ -107,32 +126,13 @@ class PISpider(scrapy.Spider):
                 if menu_to_find in obj.extract():
                     return obj
             return False
-        
-        def extractMenusFromSeeMore(response):
-            print('------- SEE MORE MENU -------------')
-            urls = response.css('.ui-search-search-modal-filter::attr(href)').extract()
-            for url in urls[:-1]:
-                yield scrapy.Request(
-                    url=url.get(),
-                    callback=self.parseListing,
-                    errback=self.errback,
-                    dont_filter=True
-                )
-
-        def getMenuSeeMore(url):
-            yield scrapy.Request(
-                url=url.extract_first(),
-                callback=extractMenusFromSeeMore,
-                errback=self.errback,
-                dont_filter=True
-            )
 
         menuAvailable = findMenuAvailable(nav_titles, levels)
         menu = getMenuBody(menuAvailable, nav_menu)
         if qty > 2000:
             if menu:
                 if 'Ver todos' in menu.css('.ui-search-link::text').extract():
-                    getMenuSeeMore(menu.css('.ui-search-modal__link::attr(href)'))
+                    yield from self.getMenuSeeMore(menu)
                 else:
                     for obj in menu.css('.ui-search-link::attr(href)').extract():
                             yield scrapy.Request(
