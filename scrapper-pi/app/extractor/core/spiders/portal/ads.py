@@ -68,12 +68,13 @@ class PISpider(scrapy.Spider):
         for city in self.arriendo_urls + self.venta_urls:
             yield response.follow(
                 url=city,
-                callback=self.parseListing, 
+                callback=self.parseListing,
+                cb_kwargs=dict(depth=0),
                 errback=self.errback,
                 dont_filter=True,
             )
 
-    def parseListing(self, response):
+    def parseListing(self, response, depth):
         if response.css('.ui-search-search-result__quantity-results::text').get() is None:
             logging.warning("Retrying listing: " + response.url)
             yield response.request.replace(dont_filter=True) # Retry
@@ -82,29 +83,32 @@ class PISpider(scrapy.Spider):
             logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")")
 
             if quantity_results > 2000: #PI muestra un maximo de 2000 avisos por listado, por lo que debemos seguir aplicando filtros.
-                yield from self.divideNConquer(response, quantity_results)
+                depth += 1
+                yield from self.divideNConquer(response, quantity_results, depth)
             else:
                 yield from self.parseInnerListing(response)
 
-    def extractMenusFromSeeMore(self, response):
+    def extractMenusFromSeeMore(self, response, depth):
         urls = response.css('.ui-search-search-modal-filter::attr(href)').extract()
         for url in urls:
             yield response.follow(
                 url=url,
                 callback=self.parseListing,
+                cb_kwargs=dict(depth=depth),
                 errback=self.errback,
                 dont_filter=True
             )
 
-    def getMenuSeeMore(self, response):
+    def getMenuSeeMore(self, response, depth):
         yield Request(
             url=response.css('.ui-search-modal__link::attr(href)').extract_first(),
             callback=self.extractMenusFromSeeMore,
             errback=self.errback,
+            cb_kwargs=dict(depth=depth),
             dont_filter=True
         )
 
-    def divideNConquer(self, response, qty):
+    def divideNConquer(self, response, qty, depth):
         nav_menu = response.css('.ui-search-filter-dl')
         nav_titles = response.css('.ui-search-filter-dl .ui-search-filter-dt-title::text').extract()
         print('---- NAV MENU TITLES ----')
@@ -112,8 +116,10 @@ class PISpider(scrapy.Spider):
         levels = ['Ciudades', 'Barrios',
                   'Inmueble', 'Modalidad',
                   'Ambientes', 'Baños', 'Superficie total']
-
+        if depth > 4:
+            levels = levels[-4:]
         logging.info("Total ads: " + str(qty))
+        logging.info("Actual depth: " + str(depth))
 
         def findMenuAvailable(menu, levels):
             for m in levels:
@@ -130,19 +136,26 @@ class PISpider(scrapy.Spider):
         menuAvailable = findMenuAvailable(nav_titles, levels)
         menu = getMenuBody(menuAvailable, nav_menu)
         if qty > 2000:
-            if menu:
+            if menu and depth <= 6:
                 if 'Ver todos' in menu.css('.ui-search-link::text').extract():
-                    yield from self.getMenuSeeMore(menu)
+                    yield from self.getMenuSeeMore(menu, depth)
                 else:
                     for obj in menu.css('.ui-search-link::attr(href)').extract():
                             yield scrapy.Request(
                                 url=obj,
                                 callback=self.parseListing,
+                                cb_kwargs=dict(depth=depth),
                                 errback=self.errback,
                                 dont_filter=True,
                             )
-            else:
+            elif depth == 7:
                 logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
+                yield scrapy.Request(
+                    url=obj,
+                    callback=self.parseInnerListing,
+                    errback=self.errback,
+                    dont_filter=True,
+                )
         else:
             yield scrapy.Request(
                 url=obj,
