@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+import os
 import psycopg2
 from datetime import datetime
-from .conf import getConf
+from .infraestructure.conf import getConf
 
 TABLE = "ods.pi_inmo"
 DATE = datetime.now().date()
+os.environ['START_DATE'] = DATE.strftime("%Y-%m-%d")
 
 
 class PsqlPipeline(object):
