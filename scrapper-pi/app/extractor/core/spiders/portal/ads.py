@@ -1,5 +1,6 @@
 import scrapy
 import logging
+from scrapy.http import Request
 from datetime import datetime
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
@@ -20,158 +21,160 @@ class PISpider(scrapy.Spider):
         'venta',
         'arriendo',
     ]
+    venta_urls = [
+        "https://www.portalinmobiliario.com/venta/antofagasta",
+        "https://www.portalinmobiliario.com/venta/arica-y-parinacota",
+        "https://www.portalinmobiliario.com/venta/atacama",
+        "https://www.portalinmobiliario.com/venta/aysen",
+        "https://www.portalinmobiliario.com/venta/biobio",
+        "https://www.portalinmobiliario.com/venta/coquimbo",
+        "https://www.portalinmobiliario.com/venta/la-araucania",
+        "https://www.portalinmobiliario.com/venta/bernardo-ohiggins",
+        "https://www.portalinmobiliario.com/venta/los-lagos",
+        "https://www.portalinmobiliario.com/venta/de-los-rios",
+        "https://www.portalinmobiliario.com/venta/magallanes-y-antartica-chilena",
+        "https://www.portalinmobiliario.com/venta/maule",
+        "https://www.portalinmobiliario.com/venta/metropolitana",
+        "https://www.portalinmobiliario.com/venta/tarapaca",
+        "https://www.portalinmobiliario.com/venta/valparaiso",
+        "https://www.portalinmobiliario.com/venta/nuble",
+    ]
+    arriendo_urls = [
+        "https://www.portalinmobiliario.com/arriendo/valparaiso",
+        "https://www.portalinmobiliario.com/arriendo/antofagasta",
+        "https://www.portalinmobiliario.com/arriendo/arica-y-parinacota",
+        "https://www.portalinmobiliario.com/arriendo/atacama",
+        "https://www.portalinmobiliario.com/arriendo/aysen",
+        "https://www.portalinmobiliario.com/arriendo/biobio",
+        "https://www.portalinmobiliario.com/arriendo/coquimbo",
+        "https://www.portalinmobiliario.com/arriendo/la-araucania",
+        "https://www.portalinmobiliario.com/arriendo/bernardo-ohiggins",
+        "https://www.portalinmobiliario.com/arriendo/los-lagos",
+        "https://www.portalinmobiliario.com/arriendo/de-los-rios",
+        "https://www.portalinmobiliario.com/arriendo/magallanes-y-antartica-chilena",
+        "https://www.portalinmobiliario.com/arriendo/maule",
+        "https://www.portalinmobiliario.com/arriendo/metropolitana",
+        "https://www.portalinmobiliario.com/arriendo/tarapaca",
+        "https://www.portalinmobiliario.com/arriendo/nuble",
+    ]
+    start_urls = [
+        "{}/".format(url_base),
+    ]
     no_scrap = False #No scrapping, only crawling
 
-    def start_requests(self):
-        yield scrapy.Request(
-            url=self.url_base,
-            callback=self.startProcessing,
-        )
+    def parse(self, response):
+        #cities = response.css('.ui-search-search-modal .ui-search-link::attr(href)').extract()
 
-    def startProcessing(self, response):
-        for operacion in self.operaciones:
+        for city in self.arriendo_urls + self.venta_urls:
             yield response.follow(
-                url='/' + operacion,
-                callback=self.parseListing, 
-                errback=self.errback,
+                url=city,
+                callback=self.parseListing,
                 cb_kwargs=dict(depth=0),
+                errback=self.errback,
                 dont_filter=True,
             )
 
     def parseListing(self, response, depth):
-        if response.css('.quantity-results::text').get() is None:
+        if response.css('.ui-search-search-result__quantity-results::text').get() is None:
             logging.warning("Retrying listing: " + response.url)
             yield response.request.replace(dont_filter=True) # Retry
         else:    
-            quantity_results = int(response.css('.quantity-results::text').get().strip().split()[0].replace('.',''))
-            logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")" + "(Depth: " + str(depth) + ")")
+            quantity_results = int(response.css('.ui-search-search-result__quantity-results::text').get().strip().split()[0].replace('.',''))
+            logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")")
 
             if quantity_results > 2000: #PI muestra un maximo de 2000 avisos por listado, por lo que debemos seguir aplicando filtros.
-                yield from self.divideNConquer(response, depth, quantity_results)
+                depth += 1
+                yield from self.divideNConquer(response, quantity_results, depth)
             else:
                 yield from self.parseInnerListing(response)
 
-    def divideNConquer(self, response, depth, qty):
-        if depth == 0:  # Navigate by inmueble (departamente, casa, terreno, etc.)
-            logging.info("Total ads: " + str(qty))
+    def extractMenusFromSeeMore(self, response, depth):
+        urls = response.css('.ui-search-search-modal-filter::attr(href)').extract()
+        for url in urls:
+            yield response.follow(
+                url=url,
+                callback=self.parseListing,
+                cb_kwargs=dict(depth=depth),
+                errback=self.errback,
+                dont_filter=True
+            )
 
-            if response.xpath('//*[@id="id_9991459-AMLC_1459_1"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                if response.xpath('//*[@id="id_9991459-AMLC_1459_1"]//label[contains(@class,"see-more-filter")]').get() is None:
-                    urls = response.xpath('//*[@id="id_9991459-AMLC_1459_1"]//h3/a/@href')
+    def getMenuSeeMore(self, response, depth):
+        yield Request(
+            url=response.css('.ui-search-modal__link::attr(href)').extract_first(),
+            callback=self.extractMenusFromSeeMore,
+            errback=self.errback,
+            cb_kwargs=dict(depth=depth),
+            dont_filter=True
+        )
+
+    def divideNConquer(self, response, qty, depth):
+        nav_menu = response.css('.ui-search-filter-dl')
+        nav_titles = response.css('.ui-search-filter-dl .ui-search-filter-dt-title::text').extract()
+        print('---- NAV MENU TITLES ----')
+        print(nav_titles)
+        levels = ['Ciudades', 'Barrios',
+                  'Inmueble', 'Modalidad',
+                  'Ambientes', 'Baños', 'Superficie total']
+        if depth > 4:
+            levels = levels[-4:]
+        logging.info("Total ads: " + str(qty))
+        logging.info("Actual depth: " + str(depth))
+
+        def findMenuAvailable(menu, levels):
+            for m in levels:
+                if m in menu:
+                    return m
+            return False
+
+        def getMenuBody(menu_to_find, nav_menu):
+            for obj in nav_menu:
+                if menu_to_find in obj.extract():
+                    return obj
+            return False
+
+        menuAvailable = findMenuAvailable(nav_titles, levels)
+        menu = getMenuBody(menuAvailable, nav_menu)
+        if qty > 2000:
+            if menu and depth <= 6:
+                if 'Ver todos' in menu.css('.ui-search-link::text').extract():
+                    yield from self.getMenuSeeMore(menu, depth)
                 else:
-                    urls = response.xpath('//*[@id="id_9991459-AMLC_1459_1"]//*[contains(@class,"modal-content")]//h3/a/@href')
-
-                for url in urls:
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing,
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=1),
-                        dont_filter=True,
-                    )
-        elif depth == 1: # Navigate by modalidad (usada o nueva)
-            if response.xpath('//*[@id="id_9991459-AMLC_1459_3"]//h3/a/@href').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_9991459-AMLC_1459_3"]//h3/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing,
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=2),
-                        dont_filter=True,
-                    )
-        elif depth == 2: # Navigate by region
-            if response.xpath('//*[@id="id_state"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                if response.xpath('//*[@id="id_state"]//label[contains(@class,"see-more-filter")]').get() is None:
-                    urls = response.xpath('//*[@id="id_state"]//h3/a/@href')
-                else:
-                    urls = response.xpath('//*[@id="id_state"]//*[contains(@class,"modal-content")]//dd/a/@href')
-
-                for url in urls:
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=3),
-                        dont_filter=True,
-                    )
-        elif depth == 3: # Navigate by city
-            if response.xpath('//*[@id="id_city"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                if response.xpath('//*[@id="id_city"]//label[contains(@class,"see-more-filter")]').get() is None:
-                    urls = response.xpath('//*[@id="id_city"]//h3/a/@href')
-                else:
-                    urls = response.xpath('//*[@id="id_city"]//*[contains(@class,"modal-content")]//div/a/@href')
-
-                for url in urls:
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=4),
-                        dont_filter=True,
-                    )
-        elif depth == 4: # Navigate by price
-            if response.xpath('//*[@id="id_price"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_price"]//dd/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=5),
-                        dont_filter=True,
-                    )
-        elif depth == 5: # Navigate by superficie total
-            if response.xpath('//*[@id="id_TOTAL_AREA"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_TOTAL_AREA"]//dd/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=6),
-                        dont_filter=True,
-                    )
-        elif depth == 6: # Navigate by baños
-            if response.xpath('//*[@id="id_FULL_BATHROOMS"]').get() is None: # Pasamos el siguiente nivel si el filtro no existe
-                depth += 1
-                yield from self.divideNConquer(response, depth, qty)
-            else:
-                for url in response.xpath('//*[@id="id_FULL_BATHROOMS"]//dd/a/@href'):
-                    yield scrapy.Request(
-                        url=url.get(),
-                        callback=self.parseListing, 
-                        errback=self.errback,
-                        cb_kwargs=dict(depth=7),
-                        dont_filter=True,
-                    )
+                    for obj in menu.css('.ui-search-link::attr(href)').extract():
+                            yield scrapy.Request(
+                                url=obj,
+                                callback=self.parseListing,
+                                cb_kwargs=dict(depth=depth),
+                                errback=self.errback,
+                                dont_filter=True,
+                            )
+            elif depth == 7:
+                logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
+                yield scrapy.Request(
+                    url=obj,
+                    callback=self.parseInnerListing,
+                    errback=self.errback,
+                    dont_filter=True,
+                )
         else:
-            logging.warning("Still too big: " + response.url + " (" + str(qty) + ")" + "(" + str(depth) + ")")
+            yield scrapy.Request(
+                url=obj,
+                callback=self.parseInnerListing,
+                errback=self.errback,
+                dont_filter=True,
+            )
 
     def parseInnerListing(self, response):
         if self.no_scrap == False:
-            for item in response.xpath('//section[@id="results-section"]/ol/li'):
-                adLink = item.css('a.item__info-link::attr(href)').re_first(r'^([^#]+)')
-                yield scrapy.Request(
-                    url=adLink, 
-                    callback=self.parseAd,
-                    errback=self.errback,
-                )
+            for item in response.css('ol.ui-search-layout--pi li'):
+                adLink = item.css('a.ui-search-link::attr(href)') \
+                    .re_first(r'^([^#]+)')
+                if adLink:
+                    yield scrapy.Request(
+                        url=adLink,
+                        callback=self.parseAd,
+                        errback=self.errback,
+                    )
         
         next_page = response.css('li.andes-pagination__button--next a::attr(href)').get()
         if next_page is not None:
@@ -183,8 +186,7 @@ class PISpider(scrapy.Spider):
             )
         
     def parseAd(self, response):
-
-        if response.xpath('//header[@class="item-title"]/h1/text()').get() is None:
+        if not response.css('header.item-title h1::text'):
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
         else:
             categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a[not(span)]/text()').getall()

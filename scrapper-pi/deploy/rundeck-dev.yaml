@@ -2,7 +2,7 @@
   description: |-
     sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
       -e APP_DB_SECRET=/app/db-secret \
-      containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:feat_pi-spider
+      containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:fix_pi
   executionEnabled: true
   group: SCRAPPER
   loglevel: DEBUG
@@ -22,11 +22,11 @@
   sequence:
     commands:
     - script: |-
-        sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:feat_pi-spider
+        sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:fix_pi
 
         sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                         -e APP_DB_SECRET=/app/db-secret \
-                        containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:feat_pi-spider
+                        containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:fix_pi
     keepgoing: false
     strategy: node-first
   timeZone: America/Santiago
