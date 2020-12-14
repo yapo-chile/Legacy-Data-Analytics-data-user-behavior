@@ -8,13 +8,14 @@ from core.pipelines import TABLE
 class MonitorTotal():
     def __init__(self):
         self.conf = getConf()
+        self.__date = os.environ.get('START_DATE')
 
     def get_total_table(self, category) -> str:
         return """
             select count(id) as total from {table} 
             where "date"='{date}'
             and cat_2 = '{category}';
-        """.format(table=TABLE, date=os.environ.get('START_DATE'), category=category)
+        """.format(table=TABLE, date=self.__date, category=category)
 
     def totalized_data(self, category):
         conn = Database(conf=self.conf.db)
@@ -37,7 +38,10 @@ class MonitorTotal():
                             'author_name': "Rundeck",
                             'title': "Job Fallido",
                             'title_link': "http://3.94.225.3:4440/project/data_jobs/job/show/aa09a545-614a-44cd-a30f-dcf7987b9e5a",
-                            'text': "El job de Scraper de Portal Inmo tiene irregularidades en la data, tiene {} registros de {}".format(data['total'], value),
+                            'text': "El job de Scraper de Portal Inmo tiene irregularidades en la data, tiene {} registros de {}, fecha {} y categoria {}".format(int(data['total']),
+                                                                                                                                                                  value,
+                                                                                                                                                                  self.__date,
+                                                                                                                                                                  category),
                             'fields': [
                                 {
                                     'title': "Priority",
