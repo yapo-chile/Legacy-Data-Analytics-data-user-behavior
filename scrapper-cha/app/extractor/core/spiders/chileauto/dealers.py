@@ -1,6 +1,7 @@
 import scrapy
 import logging
 import copy
+import re
 
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
@@ -62,6 +63,9 @@ class ChileAutosDealerSpider(scrapy.Spider):
         yield dealerItem
         yield from self.parseInnerCarListing(response, dealerItem['id'])
 
+    def priceCleaner(self, value):
+        price = re.findall("\d+", str(value))
+        return str("".join(price))
 
     def parseInnerCarListing(self, response, id_seller):
         for carSelector in response.xpath('//div[has-class("search-listings")]/div[has-class("search-listings__items")]/div[has-class("listing-item")]'):
@@ -73,9 +77,12 @@ class ChileAutosDealerSpider(scrapy.Spider):
             l.add_value('id', car_id)
             l.add_value('url', self.url_base + urlCar)
             l.add_xpath('titulo', 'div[has-class("listing-item__header")]/a/h2/text()')
-            l.add_xpath('precio', './/div[has-class("listing-item__price")]/p/text()', re='\$ ([0-9.]+)')
-            if not l.get_output_value('precio'):
-                l.add_value('precio', 0)
+            price = response.xpath('.//div[has-class("listing-item__price")]/p/text()', re='\$ ([0-9.]+)').extract_first()
+            price = self.priceCleaner(price)
+            if not price or price.lower() == 'sin precio' :
+                l.add_value('precio', '0')
+            else:
+                l.add_value('precio', price)
             l.add_xpath('kilometros', './/ul[has-class("listing-item__features")]/li[span/text()="Kilómetros"]/text()', re='([0-9.]+) kms')
             if not l.get_output_value('kilometros'):
                 l.add_value('kilometros', 'NULL')
