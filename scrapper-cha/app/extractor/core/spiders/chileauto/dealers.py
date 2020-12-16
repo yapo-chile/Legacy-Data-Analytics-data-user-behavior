@@ -69,7 +69,8 @@ class ChileAutosDealerSpider(scrapy.Spider):
 
             l = ItemLoader(item=CarItem(), selector=carSelector)
             l.add_value('id_seller', id_seller)
-            l.add_xpath('id', 'div[has-class("listing-item__body")]/div[has-class("listing-item__carousel")]/@id', re='carousel--(CL-AD-[0-9]+)')
+            car_id = urlCar.split('/')[-1:]
+            l.add_value('id', car_id)
             l.add_value('url', self.url_base + urlCar)
             l.add_xpath('titulo', 'div[has-class("listing-item__header")]/a/h2/text()')
             l.add_xpath('precio', './/div[has-class("listing-item__price")]/p/text()', re='\$ ([0-9.]+)')
