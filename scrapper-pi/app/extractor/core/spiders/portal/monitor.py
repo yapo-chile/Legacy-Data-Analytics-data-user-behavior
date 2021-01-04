@@ -13,6 +13,9 @@ class PISpider(scrapy.Spider):
     url_base = 'https://www.portalinmobiliario.com'
     custom_settings = {
         'METAREFRESH_IGNORE_TAGS': ['noscript'], # PI utiliza un tag de meta refresh dentro de un tag noscript para bloquear scrappers que debemos ignorar.
+        'ITEM_PIPELINES': {
+            'core.pipelines.BasePipeline': 400
+        }
     }
 
     start_urls = [

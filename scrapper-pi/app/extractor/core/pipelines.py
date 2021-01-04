@@ -9,6 +9,11 @@ DATE = datetime.now().date()
 os.environ['START_DATE'] = DATE.strftime("%Y-%m-%d")
 
 
+class BasePipeline(object):
+    def process_item(self, item, spider):
+        return item
+
+
 class PsqlPipeline(object):
     def open_spider(self, spider):
         db = getConf().db
