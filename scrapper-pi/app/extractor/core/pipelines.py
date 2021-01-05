@@ -4,9 +4,9 @@ import psycopg2
 from datetime import datetime
 from .infraestructure.conf import getConf
 
-TABLE = "ods.pi_inmo"
+TABLE = "temp.pi_inmo"
 DATE = datetime.now().date()
-os.environ['START_DATE'] = DATE.strftime("%Y-%m-%d")
+os.environ['START_DATE'] = '2021-01-04'
 
 
 class BasePipeline(object):
@@ -24,7 +24,7 @@ class PsqlPipeline(object):
                      "database": db.name}
         self.connection = psycopg2.connect(**db_config)
         self.cur = self.connection.cursor()
-        self.cur.execute("Delete from {} where \"date\"='{}'".format(TABLE, DATE))
+        # self.cur.execute("Delete from {} where \"date\"='{}'".format(TABLE, DATE))
         self.connection.commit()
 
     def close_spider(self, spider):
