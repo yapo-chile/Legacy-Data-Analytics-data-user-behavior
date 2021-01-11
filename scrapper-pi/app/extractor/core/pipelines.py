@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import psycopg2
-from datetime import datetime
 from .infraestructure.conf import getConf
 
 TABLE = "ods.pi_inmo"
-DATE = datetime.now().date()
-os.environ['START_DATE'] = DATE.strftime("%Y-%m-%d")
 
 
 class BasePipeline(object):
@@ -24,7 +21,7 @@ class PsqlPipeline(object):
                      "database": db.name}
         self.connection = psycopg2.connect(**db_config)
         self.cur = self.connection.cursor()
-        self.cur.execute("Delete from {} where \"date\"='{}'".format(TABLE, DATE))
+        self.cur.execute("Delete from {} where \"date\"='{}'".format(TABLE, spider.date_start))
         self.connection.commit()
 
     def close_spider(self, spider):
@@ -42,7 +39,7 @@ class PsqlPipeline(object):
             VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
                    %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""".format(TABLE)
     
-    def pi_items(self, item):
+    def pi_items(self, item, date_start):
         return (item.get('id'),
                 item.get('codigo_propiedad'),
                 item.get('url'),
@@ -67,11 +64,11 @@ class PsqlPipeline(object):
                 item.get('direccion'),
                 item.get('constructora', ''),
                 item.get('locacion'),
-                DATE)
+                date_start)
 
     def process_item(self, item, spider):
         try:
-            self.cur.execute(self.pi_query(), self.pi_items(item))
+            self.cur.execute(self.pi_query(), self.pi_items(item, spider.date_start))
             self.connection.commit()
         except:
             print("ERROR ON ITEM: {}".format(item))   

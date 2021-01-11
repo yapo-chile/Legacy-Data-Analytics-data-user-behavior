@@ -1,4 +1,3 @@
-import os
 import requests
 from core.infraestructure.conf import getConf
 from core.infraestructure.psql import Database
@@ -6,9 +5,9 @@ from core.pipelines import TABLE
 
 
 class MonitorTotal():
-    def __init__(self):
+    def __init__(self, date_start):
         self.conf = getConf()
-        self.__date = os.environ.get('START_DATE')
+        self.__date = date_start
 
     def get_total_table(self, category) -> str:
         return """

@@ -113,7 +113,7 @@ class PISpider(scrapy.Spider):
         nav_titles = response.css('.ui-search-filter-dl .ui-search-filter-dt-title::text').extract()
         print('---- NAV MENU TITLES ----')
         print(nav_titles)
-        levels = ['Ciudades', #'Barrios',
+        levels = ['Ciudades', 'Barrios',
                   'Inmueble', 'Modalidad',
                   'Ambientes', 'Baños', 'Superficie total']
         if depth > 4:
@@ -150,6 +150,7 @@ class PISpider(scrapy.Spider):
                             )
             elif depth == 7:
                 logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
+                logging.warning("Actual URL: {}".format(obj))
                 yield scrapy.Request(
                     url=obj,
                     callback=self.parseInnerListing,
