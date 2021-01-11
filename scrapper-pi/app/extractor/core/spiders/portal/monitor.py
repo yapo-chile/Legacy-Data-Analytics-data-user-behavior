@@ -27,5 +27,5 @@ class PISpider(scrapy.Spider):
     def parse(self, response):
         quantity_results = int(response.css('.ui-search-search-result__quantity-results::text').get().strip().split()[0].replace('.',''))
         logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")")
-        monitor = MonitorTotal()
+        monitor = MonitorTotal(self.date_start)
         monitor.check(quantity_results, str(response.url.split('/')[-1]).capitalize())
