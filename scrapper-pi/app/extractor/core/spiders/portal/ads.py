@@ -150,6 +150,7 @@ class PISpider(scrapy.Spider):
                             )
             elif depth == 7:
                 logging.warning("Still too big: " + response.url + " (" + str(qty) + ")")
+                logging.warning("Actual URL: {}".format(obj))
                 yield scrapy.Request(
                     url=obj,
                     callback=self.parseInnerListing,
