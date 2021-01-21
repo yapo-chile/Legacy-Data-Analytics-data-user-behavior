@@ -17,6 +17,7 @@ class PISpider(scrapy.Spider):
             'core.pipelines.BasePipeline': 400
         }
     }
+    total_ads = 0
 
     start_urls = [
         "{}/venta".format(url_base),
@@ -26,6 +27,10 @@ class PISpider(scrapy.Spider):
 
     def parse(self, response):
         quantity_results = int(response.css('.ui-search-search-result__quantity-results::text').get().strip().split()[0].replace('.',''))
+        self.total_ads += quantity_results
         logging.debug("Visiting: " + response.url + " (Qty: " + str(quantity_results) + ")")
-        monitor = MonitorTotal(self.date_start)
+        if quantity_results == self.total_ads:
+            monitor = MonitorTotal(self.date_start)
+        else:
+            monitor = MonitorTotal(self.date_start, self.total_ads)
         monitor.check(quantity_results, str(response.url.split('/')[-1]).capitalize())
