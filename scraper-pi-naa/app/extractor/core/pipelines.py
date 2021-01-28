@@ -36,8 +36,8 @@ class PsqlPipeline(object):
             price_2_symbol, price_2_value, total_surface,
             useful_surface, bedrooms, bathrooms, agency,
             phone, adress, builder, "location", insert_date,
-            status)
-            VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+            status)                                          
+            VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
                    %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""".format(TABLE)
     
     def pi_items(self, item, date_start):
@@ -69,10 +69,12 @@ class PsqlPipeline(object):
                 'active')
 
     def process_item(self, item, spider):
-        try:
-            self.cur.execute(self.pi_query(), self.pi_items(item, spider.date_start))
-            self.connection.commit()
-        except:
+        #try:
+        print(self.pi_items(item, spider.date_start))
+        self.cur.execute(self.pi_query(), self.pi_items(item, spider.date_start))
+        
+        self.connection.commit()
+        """except:
             print("ERROR ON ITEM: {}".format(item))   
-            self.connection.rollback()
+            self.connection.rollback()"""
         return item
