@@ -69,12 +69,10 @@ class PsqlPipeline(object):
                 'active')
 
     def process_item(self, item, spider):
-        #try:
-        print(self.pi_items(item, spider.date_start))
-        self.cur.execute(self.pi_query(), self.pi_items(item, spider.date_start))
-        
-        self.connection.commit()
-        """except:
+        try:
+            self.cur.execute(self.pi_query(), self.pi_items(item, spider.date_start))
+            self.connection.commit()
+        except:
             print("ERROR ON ITEM: {}".format(item))   
-            self.connection.rollback()"""
+            self.connection.rollback()
         return item

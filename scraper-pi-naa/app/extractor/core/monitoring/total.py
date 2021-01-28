@@ -56,7 +56,7 @@ class MonitorTotal():
                     {
                         'fallback': "Required plain-text summary of the attachment.",
                         'color': "#50A926",
-                        'pretext': "Scraper de Portal Inmo",
+                        'pretext': "Scraper de Portal Inmo NAA",
                         'author_name': "Rundeck",
                         'title': "Job Terminado",
                         'title_link': "http://3.94.225.3:4440/project/data_jobs/job/show/aa09a545-614a-44cd-a30f-dcf7987b9e5a",
