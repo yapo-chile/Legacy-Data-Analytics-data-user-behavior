@@ -2,6 +2,7 @@
   description: |-
         sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                         -e APP_DB_SECRET=/app/db-secret \
+                        -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
                         containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-naa:latest
   executionEnabled: true
   group: SCRAPPER
@@ -49,6 +50,7 @@
 
         sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
                         -e APP_DB_SECRET=/app/db-secret \
+                        -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
                         containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-naa:latest
     keepgoing: false
     strategy: node-first

@@ -2,6 +2,7 @@
   description: |-
     sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
       -e APP_DB_SECRET=/app/db-secret \
+      -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
       containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-naa:etl_naa-portal
   executionEnabled: true
   group: SCRAPPER
@@ -24,9 +25,8 @@
     - script: |-
         sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-naa:etl_naa-portal
 
-        sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
-                        -e APP_DB_SECRET=/app/db-secret \
-                        containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-naa:etl_naa-portal
+        sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret -e APP_DB_SECRET=/app/db-secret \
+            -e APP_CRAWLERA_SECRET=/app/crawlera-secret containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-naa:etl_naa-portal
     keepgoing: false
     strategy: node-first
   timeZone: America/Santiago
