@@ -1,7 +1,9 @@
 - defaultTab: nodes
   description: |-
-    sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
-      -e APP_DB_SECRET=/app/db-secret \
+    sudo docker run --rm -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                        -v /home/bnbiuser/secrets/crawlera-secret:/app/crawlera-secret \
+                        -e APP_DB_SECRET=/app/db-secret \
+                        -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
       containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:fix_monitoring
   executionEnabled: true
   group: SCRAPPER
@@ -24,8 +26,10 @@
     - script: |-
         sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:fix_monitoring
 
-        sudo docker run -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
-                        -e APP_DB_SECRET=/app/db-secret \
+        sudo docker run --rm -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                            -v /home/bnbiuser/secrets/crawlera-secret:/app/crawlera-secret \
+                            -e APP_DB_SECRET=/app/db-secret \
+                            -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
                         containers.mpi-internal.com/yapo/data-user-behavior-scrapper-pi:fix_monitoring
     keepgoing: false
     strategy: node-first
