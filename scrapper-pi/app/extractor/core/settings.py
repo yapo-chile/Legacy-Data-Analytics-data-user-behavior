@@ -63,6 +63,8 @@ AUTOTHROTTLE_ENABLED = False
 AUTOTHROTTLE_START_DELAY = 5
 AUTOTHROTTLE_MAX_DELAY = 10
 
+# Enable crawlera and the middleware its position agaisnt other actived middlewares 
+# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {'scrapy_crawlera.CrawleraMiddleware': 610}
 CRAWLERA_ENABLED = True
 CRAWLERA_APIKEY = getConf().craw.api_key
