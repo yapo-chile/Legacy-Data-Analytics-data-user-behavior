@@ -39,7 +39,7 @@
       minute: '0'
       seconds: '0'
     weekday:
-      day: *
+      day: '*'
     year: '*'
   retry:
     retry: 3
