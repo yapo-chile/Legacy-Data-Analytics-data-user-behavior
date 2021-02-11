@@ -22,10 +22,10 @@ class PISpider(scrapy.Spider):
         'arriendo',
     ]
     venta_urls = [
-        "https://www.portalinmobiliario.com/venta/departamento/_PublishedToday_YES",
+        "https://www.portalinmobiliario.com/venta/_PublishedToday_YES",
     ]
     arriendo_urls = [
-        "https://www.portalinmobiliario.com/arriendo/departamento/_PublishedToday_YES",
+        "https://www.portalinmobiliario.com/arriendo/_PublishedToday_YES",
     ]
     start_urls = [
         "{}/".format(url_base),

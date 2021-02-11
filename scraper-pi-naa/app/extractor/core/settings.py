@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import random
+from .infraestructure.conf import getConf
 
 user_agent_list = [
     # Chrome
@@ -58,6 +59,12 @@ ITEM_PIPELINES = {
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = False
 AUTOTHROTTLE_START_DELAY = 5
 AUTOTHROTTLE_MAX_DELAY = 10
+
+# Enable crawlera and the middleware its position agaisnt other actived middlewares 
+# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
+DOWNLOADER_MIDDLEWARES = {'scrapy_crawlera.CrawleraMiddleware': 610}
+CRAWLERA_ENABLED = True
+CRAWLERA_APIKEY = getConf().craw.api_key
