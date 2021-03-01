@@ -8,7 +8,7 @@
   executionEnabled: true
   group: SCRAPPER
   loglevel: DEBUG
-  name: Scrapping Portalinmobiliario - Inmo NAA
+  name: Scrapping Portalinmobiliario - Inmo Cleanage
   nodeFilterEditable: false
   nodefilters:
     dispatch:
