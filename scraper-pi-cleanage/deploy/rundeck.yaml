@@ -1,0 +1,59 @@
+- defaultTab: nodes
+  description: |-
+        sudo docker run --rm -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                             -v /home/bnbiuser/secrets/crawlera-secret:/app/crawlera-secret \
+                             -e APP_DB_SECRET=/app/db-secret \
+                             -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
+                        containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-cleanage:latest
+  executionEnabled: true
+  group: SCRAPPER
+  loglevel: DEBUG
+  name: Scrapping Portalinmobiliario - Inmo NAA
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: dockerhost'
+  nodesSelectedByDefault: true
+  notification:
+    onfailure:
+      email:
+        recipients: data_team@adevinta.com
+        subject: ${job.execid} ${execution.status} ${job.name} - Fallo definitivo
+      plugin:
+        configuration:
+          slack_channel: ''
+          webhook_base_url: https://hooks.slack.com/services
+          webhook_token: T017F9KHA1Y/B01BL7C1CSY/Ai9NzdCrBUA5Ru5sa8JHYrjR
+        type: SlackNotification
+  notifyAvgDurationThreshold: null
+  scheduleEnabled: true
+  schedule:
+    month: '*'
+    time:
+      hour: '06'
+      minute: '0'
+      seconds: '0'
+    weekday:
+      day: '*'
+    year: '*'
+  retry:
+    retry: 3
+    delay: 20m
+  sequence:
+    commands:
+    - script: |-
+        sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-cleanage:latest 
+
+        sudo docker run --rm -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                             -v /home/bnbiuser/secrets/crawlera-secret:/app/crawlera-secret \
+                             -e APP_DB_SECRET=/app/db-secret \
+                             -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
+                        containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-cleanage:latest
+    keepgoing: false
+    strategy: node-first
+  timeZone: America/Santiago
