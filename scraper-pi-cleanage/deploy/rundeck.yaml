@@ -32,18 +32,18 @@
         type: SlackNotification
   notifyAvgDurationThreshold: null
   scheduleEnabled: true
+  retry:
+    delay: 20m
+    retry: '3'
   schedule:
     month: '*'
     time:
-      hour: '06'
+      hour: '*'
       minute: '0'
       seconds: '0'
     weekday:
       day: '*'
     year: '*'
-  retry:
-    retry: 3
-    delay: 20m
   sequence:
     commands:
     - script: |-
