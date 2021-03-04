@@ -1,0 +1,36 @@
+- defaultTab: nodes
+  description: |-
+    sudo docker run --rm -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                             -v /home/bnbiuser/secrets/crawlera-secret:/app/crawlera-secret \
+                             -e APP_DB_SECRET=/app/db-secret \
+                             -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
+                        containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-cleanage:feat_naa-portal-cleanage
+  executionEnabled: true
+  group: SCRAPPER
+  loglevel: DEBUG
+  name: Scrapping PortalInmobiliario - Inmo Cleanage
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: dockerhost'
+  nodesSelectedByDefault: true
+  notifyAvgDurationThreshold: null
+  scheduleEnabled: false
+  sequence:
+    commands:
+    - script: |-
+        sudo docker pull containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-cleanage:feat_naa-portal-cleanage
+
+        sudo docker run --rm -v /home/bnbiuser/secrets/dw_db:/app/db-secret \
+                             -v /home/bnbiuser/secrets/crawlera-secret:/app/crawlera-secret \
+                             -e APP_DB_SECRET=/app/db-secret \
+                             -e APP_CRAWLERA_SECRET=/app/crawlera-secret \
+                        containers.mpi-internal.com/yapo/data-user-behavior-scraper-pi-cleanage:feat_naa-portal-cleanage
+    keepgoing: false
+    strategy: node-first
+  timeZone: America/Santiago
