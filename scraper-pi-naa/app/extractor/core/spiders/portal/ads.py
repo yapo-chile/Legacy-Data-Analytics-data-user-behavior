@@ -1,7 +1,7 @@
 import scrapy
 import logging
 from scrapy.http import Request
-from datetime import datetime
+from datetime import datetime, timedelta
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import DNSLookupError
 from twisted.internet.error import TimeoutError, TCPTimedOutError
@@ -33,7 +33,6 @@ class PISpider(scrapy.Spider):
     no_scrap = False #No scrapping, only crawling
 
     def parse(self, response):
-
         for city in self.arriendo_urls + self.venta_urls:
             yield response.follow(
                 url=city,
@@ -142,7 +141,7 @@ class PISpider(scrapy.Spider):
                 if adLink:
                     yield scrapy.Request(
                         url=adLink,
-                        callback=self.parseAd,
+                        callback=self.AdRouteHandler,
                         errback=self.errback,
                     )
         
@@ -154,85 +153,175 @@ class PISpider(scrapy.Spider):
                 errback=self.errback,
                 dont_filter=True,
             )
-        
-    def parseAd(self, response):
-        if not response.css('header.item-title h1::text'):
-            logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
+
+    def AdRouteHandler(self, response):
+        if response.css('header.item-title h1::text'):
+            yield self.parseAd(response)
+        elif response.css('.ui-pdp-header__title-container h1::text'):
+            yield self.parseAdNewVersion(response)
         else:
-            categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a[not(span)]/text()').getall()
-            locations = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a/span/text()').getall()
+            logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
 
-            def clean_string(string):
-                return " ".join(string.split())
-            
-            def get_price(value):
-                if value is not None:
-                    value = float(value.replace(".", "").replace(",", "."))
-                    return value
-                return 0
-            
-            def set_default(value, default):
-                if value:
-                    return value
-                return default
+    def parseAdNewVersion(self, response):
+        categories = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[:3]
+        locations = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[3:]
+        logging.info(categories)
+        logging.info(locations)
+        def clean_string(string):
+            return " ".join(string.split())
+        
+        def get_price(value):
+            if value is not None:
+                value = float(value.replace(".", "").replace(",", "."))
+                return value
+            return 0
+        
+        def set_default(value, default):
+            if value:
+                return value
+            return default
 
-            def get_room_format(value):
-                try:
-                    return str(value[0][0])
-                except:
-                    return None
+        def get_room_format(value):
+            try:
+                return str(value[0][0])
+            except:
+                return None
 
-            def date_format(date):
-                try:
-                    datetime.strptime(date, '%Y-%m-%d')
-                    return date
-                except ValueError:
-                    date = datetime.strptime(date, '%d-%m-%Y')
-                    return date.strftime('%Y-%m-%d')
+        def date_format(date_string):
+            logging.info(date_string)
+            now = datetime.today()
+            days = [int(s) for s in date_string.split() if s.isdigit()]
+            date = now - timedelta(days=days[0])
+            return date
 
-            l = Ad()
-            l['codigo_propiedad'] = set_default(response.css('div.info-property-code p.info::text').extract_first(), '')
-            l['fecha_publicacion'] = date_format(response.css('div.info-property-date p.info::text').extract_first())
-            l['cat_1'] = clean_string(categories[0] if len(categories) > 0 else '')
-            l['cat_2'] = clean_string(categories[1] if len(categories) > 1 else '')
-            l['cat_3'] = clean_string(categories[2] if len(categories) > 2 else '')
-            l['region'] = locations[0] if len(locations) > 0 else ''
-            l['ciudad'] = locations[1] if len(locations) > 1 else ''
-            l['barrio'] = locations[2] if len(locations) > 2 else ''
-            l['titulo'] = clean_string(response.xpath('//header[@class="item-title"]/h1/text()').extract_first())
-            l['precio_1_simbolo'] = response.xpath('//span[contains(@class,"price-tag-motors")]/span[@class="price-tag-symbol"]/text()').extract_first()
-            l['precio_1_valor'] = get_price(response.xpath('//span[contains(@class,"price-tag-motors")]/span[@class="price-tag-fraction"]/text()').extract_first())
-            l['precio_2_simbolo'] = response.xpath('//div[contains(@class,"price-site-currency")]/span[@class="price-tag-symbol"]/text()').extract_first()
-            l['precio_2_valor'] = get_price(response.xpath('//div[contains(@class,"price-site-currency")]/span[@class="price-tag-fraction"]/text()').extract_first())
-            l['superficie_total'] = clean_string(
-                set_default(
-                    response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Superficie total"]/span/text()').extract_first(), ''
-                )
+        l = Ad()
+        l['codigo_propiedad'] = set_default(response.css('.ui-seller-info__status-info__subtitle::text').extract_first(), '')
+        l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
+        l['cat_1'] = clean_string(categories[0] if len(categories) > 0 else '')
+
+        def extract_minimized_bc(obj):
+            bc = obj.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/@href').extract_first()
+            return bc.split('/')[-1].capitalize()
+
+        if l['cat_1'] == '...':
+            l['cat_1'] = extract_minimized_bc(response)
+        l['cat_2'] = clean_string(categories[1] if len(categories) > 1 else '')
+        l['cat_3'] = clean_string(categories[2] if len(categories) > 2 else '')
+        l['region'] = locations[0] if len(locations) > 0 else ''
+        l['ciudad'] = locations[1] if len(locations) > 1 else ''
+        l['barrio'] = locations[2] if len(locations) > 2 else ''
+        l['titulo'] = clean_string(response.css('div.ui-pdp-header__title-container h1::text').extract_first())
+        prices = response.css('span.price-tag')
+        counter = 0
+        for price in prices:
+            counter += 1
+            l["precio_{}_simbolo".format(counter)] = price.css('.price-tag-symbol::text').extract_first()
+            l["precio_{}_valor".format(counter)] = get_price(price.css('.price-tag-fraction::text').extract_first())
+        if counter < 2:
+            l["precio_2_simbolo"] = None
+            l["precio_2_valor"] = None
+        
+        l['superficie_total'] = clean_string(
+            set_default(
+                response.xpath('//tr/th[contains(text(), "Superficie total")]/following-sibling::td/span/text()').extract_first(), ''
             )
-            l['superficie_util'] = clean_string(
-                set_default(
-                    response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Superficie útil"]/span/text()').extract_first(), ''
-                )
+        )
+        l['superficie_util'] = clean_string(
+            set_default(
+                response.xpath('//tr/th[contains(text(), "Superficie útil")]/following-sibling::td/span/text()').extract_first(), ''
             )
-            bedroom = response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Dormitorios"]/span/text()').extract_first(),
-            l['dormitorios'] = get_room_format(bedroom)
-            bathroom = response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Baños"]/span/text()').extract_first()
-            l['banos'] = get_room_format(bathroom),
-            # This could be seem as double check but sometimes it generates
-            # a tuple inside a tuple
-            if type(l['banos']) is tuple:
-                try:
-                    l['banos'] = l['banos'][0][0]
-                except:
-                    l['banos'] = None
-            l['agencia'] = set_default(response.xpath('//p[@id="real_estate_agency"]/text()').extract_first(), '')
-            l['telefonos'] = set_default(response.xpath('//span[@class="profile-info-phone-value"]/text()').extract_first(), 0)
-            l['constructora'] = set_default(response.css('div.info-project-constructs p.info::text').extract_first(), '')
-            l['direccion'] = response.css('div.seller-location .map-address::text').extract_first()
-            l['locacion'] = response.css('div.seller-location .map-location::text').extract_first()
-            l['id'] = response.css('.item-info__id-number::text').extract_first()
-            l['url'] = response.url
-            yield l
+        )
+        bedroom = response.xpath('//tr/th[contains(text(), "Dormitorios")]/following-sibling::td/span/text()').extract_first(),
+        l['dormitorios'] = get_room_format(bedroom)
+        bathroom = response.xpath('//tr/th[contains(text(), "Baños")]/following-sibling::td/span/text()').extract_first()
+        l['banos'] = get_room_format(bathroom)
+        l['agencia'] = set_default(response.xpath('//p[@id="real_estate_agency"]/text()').extract_first(), '')
+        if response.css('.ui-vip-profile-info__logo-container'):
+            l['agencia'] = response.css('.ui-vip-profile-info__info-container div h3::text').extract_first()
+        else:
+            l['agencia'] = ''
+        l['telefonos'] = set_default(response.xpath('//span[@class="profile-info-phone-value"]/text()').extract_first(), 0)
+        l['constructora'] = set_default(response.css('div.info-project-constructs p.info::text').extract_first(), '')
+        l['direccion'] = clean_string(response.css('div.ui-pdp-media__body h2::text').extract_first())
+        l['locacion'] = "{}".format(" - ".join(locations[::-1]))
+        l['id'] = set_default(response.css('p.ui-vpp-denounce__info span::text').extract_first(), '')
+        l['url'] = response.url
+        return l
+ 
+    def parseAd(self, response):
+        categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a[not(span)]/text()').getall()
+        locations = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a/span/text()').getall()
+        def clean_string(string):
+            return " ".join(string.split())
+        
+        def get_price(value):
+            if value is not None:
+                value = float(value.replace(".", "").replace(",", "."))
+                return value
+            return 0
+        
+        def set_default(value, default):
+            if value:
+                return value
+            return default
+
+        def get_room_format(value):
+            try:
+                return str(value[0][0])
+            except:
+                return None
+
+        def date_format(date):
+            try:
+                datetime.strptime(date, '%Y-%m-%d')
+                return date
+            except ValueError:
+                date = datetime.strptime(date, '%d-%m-%Y')
+                return date.strftime('%Y-%m-%d')
+
+        l = Ad()
+        l['codigo_propiedad'] = set_default(response.css('div.info-property-code p.info::text').extract_first(), '')
+        l['fecha_publicacion'] = date_format(response.css('div.info-property-date p.info::text').extract_first())
+        l['cat_1'] = clean_string(categories[0] if len(categories) > 0 else '')
+        l['cat_2'] = clean_string(categories[1] if len(categories) > 1 else '')
+        l['cat_3'] = clean_string(categories[2] if len(categories) > 2 else '')
+        l['region'] = locations[0] if len(locations) > 0 else ''
+        l['ciudad'] = locations[1] if len(locations) > 1 else ''
+        l['barrio'] = locations[2] if len(locations) > 2 else ''
+        l['titulo'] = clean_string(response.xpath('//header[@class="item-title"]/h1/text()').extract_first())
+        l['precio_1_simbolo'] = response.xpath('//span[contains(@class,"price-tag-motors")]/span[@class="price-tag-symbol"]/text()').extract_first()
+        l['precio_1_valor'] = get_price(response.xpath('//span[contains(@class,"price-tag-motors")]/span[@class="price-tag-fraction"]/text()').extract_first())
+        l['precio_2_simbolo'] = response.xpath('//div[contains(@class,"price-site-currency")]/span[@class="price-tag-symbol"]/text()').extract_first()
+        l['precio_2_valor'] = get_price(response.xpath('//div[contains(@class,"price-site-currency")]/span[@class="price-tag-fraction"]/text()').extract_first())
+        l['superficie_total'] = clean_string(
+            set_default(
+                response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Superficie total"]/span/text()').extract_first(), ''
+            )
+        )
+        l['superficie_util'] = clean_string(
+            set_default(
+                response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Superficie útil"]/span/text()').extract_first(), ''
+            )
+        )
+        bedroom = response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Dormitorios"]/span/text()').extract_first(),
+        l['dormitorios'] = get_room_format(bedroom)
+        bathroom = response.xpath('//ul[contains(@class,"specs-list")]/li[strong/text() = "Baños"]/span/text()').extract_first()
+        l['banos'] = get_room_format(bathroom)
+        # This could be seem as double check but sometimes it generates
+        # a tuple inside a tuple
+        if type(l['banos']) is tuple:
+            try:
+                l['banos'] = l['banos'][0][0]
+            except:
+                l['banos'] = None
+        l['agencia'] = set_default(response.xpath('//p[@id="real_estate_agency"]/text()').extract_first(), '')
+        l['telefonos'] = set_default(response.xpath('//span[@class="profile-info-phone-value"]/text()').extract_first(), 0)
+        l['constructora'] = set_default(response.css('div.info-project-constructs p.info::text').extract_first(), '')
+        l['direccion'] = response.css('div.seller-location .map-address::text').extract_first()
+        l['locacion'] = response.css('div.seller-location .map-location::text').extract_first()
+        l['id'] = response.css('.item-info__id-number::text').extract_first()
+        l['url'] = response.url
+        return l
 
     def errback(self, failure):
         # log all failures
