@@ -55,7 +55,7 @@ class PISpider(scrapy.Spider):
             )
         
     def parseAd(self, response, code, url):
-        if response.css('header.item-title h1::text') or response.css('.ui-pdp-header__title-container h1::text'):
+        if response.css('.item-title::text') or response.css('.ui-pdp-header__title-container h1::text'):
             logging.info("Ad is still active: " + response.request.url + " (" + response.url + ")") 
         else:
             logging.warning("Ad closed: " + response.request.url + " (" + response.url + ")")
