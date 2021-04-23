@@ -155,7 +155,7 @@ class PISpider(scrapy.Spider):
             )
 
     def AdRouteHandler(self, response):
-        if response.css('header.item-title h1::text'):
+        if response.css('.item-title::text'):
             yield self.parseAd(response)
         elif response.css('.ui-pdp-header__title-container h1::text'):
             yield self.parseAdNewVersion(response)
@@ -165,8 +165,6 @@ class PISpider(scrapy.Spider):
     def parseAdNewVersion(self, response):
         categories = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[:3]
         locations = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[3:]
-        logging.info(categories)
-        logging.info(locations)
         def clean_string(string):
             return " ".join(string.split())
         
@@ -188,7 +186,6 @@ class PISpider(scrapy.Spider):
                 return None
 
         def date_format(date_string):
-            logging.info(date_string)
             now = datetime.today()
             days = [int(s) for s in date_string.split() if s.isdigit()]
             date = now - timedelta(days=days[0])
@@ -288,7 +285,7 @@ class PISpider(scrapy.Spider):
         l['region'] = locations[0] if len(locations) > 0 else ''
         l['ciudad'] = locations[1] if len(locations) > 1 else ''
         l['barrio'] = locations[2] if len(locations) > 2 else ''
-        l['titulo'] = clean_string(response.xpath('//header[@class="item-title"]/h1/text()').extract_first())
+        l['titulo'] = clean_string(response.css('.item-title::text').extract_first())
         l['precio_1_simbolo'] = response.xpath('//span[contains(@class,"price-tag-motors")]/span[@class="price-tag-symbol"]/text()').extract_first()
         l['precio_1_valor'] = get_price(response.xpath('//span[contains(@class,"price-tag-motors")]/span[@class="price-tag-fraction"]/text()').extract_first())
         l['precio_2_simbolo'] = response.xpath('//div[contains(@class,"price-site-currency")]/span[@class="price-tag-symbol"]/text()').extract_first()
