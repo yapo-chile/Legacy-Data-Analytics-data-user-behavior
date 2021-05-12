@@ -163,7 +163,7 @@ class PISpider(scrapy.Spider):
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
 
     def parseAdNewVersion(self, response):
-        categories = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[:3]
+        categories = response.css('ul.andes-breadcrumb li')[:3]
         locations = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[3:]
         def clean_string(string):
             return " ".join(string.split())
@@ -194,16 +194,22 @@ class PISpider(scrapy.Spider):
         l = Ad()
         l['codigo_propiedad'] = set_default(response.css('.ui-seller-info__status-info__subtitle::text').extract_first(), '')
         l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
-        l['cat_1'] = clean_string(categories[0] if len(categories) > 0 else '')
 
-        def extract_minimized_bc(obj):
-            bc = obj.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/@href').extract_first()
-            return bc.split('/')[-1].capitalize()
-
-        if l['cat_1'] == '...':
-            l['cat_1'] = extract_minimized_bc(response)
-        l['cat_2'] = clean_string(categories[1] if len(categories) > 1 else '')
-        l['cat_3'] = clean_string(categories[2] if len(categories) > 2 else '')
+        cat_counter = 0
+        for cat in categories:
+            if cat.css('a::text').extract_first() == '...':
+                url = cat.css('a::attr(href)').extract_first()
+                l['cat_{}'.format(cat_counter + 1)] = url.split('/')[-1].capitalize()
+                if 'venta' in url:
+                    l['cat_2'] = 'Venta'
+                elif 'arriendo' in url:
+                    l['cat_2'] = 'Arriendo'
+                del url
+            elif len(cat.css('a::text').extract_first()) > 3:
+                l['cat_{}'.format(cat_counter + 1)] = cat.css('a::text').extract_first()
+            else:
+                l['cat_{}'.format(cat_counter + 1)] = ''
+            cat_counter += 1
         l['region'] = locations[0] if len(locations) > 0 else ''
         l['ciudad'] = locations[1] if len(locations) > 1 else ''
         l['barrio'] = locations[2] if len(locations) > 2 else ''
