@@ -193,7 +193,10 @@ class PISpider(scrapy.Spider):
 
         l = Ad()
         l['codigo_propiedad'] = set_default(response.css('.ui-seller-info__status-info__subtitle::text').extract_first(), '')
-        l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
+        if response.css('.ui-pdp-header__bottom-subtitle::text'):
+            l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
+        else:
+            l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__store::text').extract_first())
 
         cat_counter = 0
         for cat in categories:
