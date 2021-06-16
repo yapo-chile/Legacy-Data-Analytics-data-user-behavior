@@ -160,6 +160,7 @@ class PISpider(scrapy.Spider):
         elif response.css('.ui-pdp-header__title-container h1::text'):
             yield self.parseAdNewVersion(response)
         else:
+            response.css('.ui-pdp-header__title-container h1::text')
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
 
     def parseAdNewVersion(self, response):
