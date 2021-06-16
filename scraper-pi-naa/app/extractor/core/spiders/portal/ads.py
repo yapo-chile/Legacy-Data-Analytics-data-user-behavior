@@ -160,6 +160,7 @@ class PISpider(scrapy.Spider):
         elif response.css('.ui-pdp-header__title-container h1::text'):
             yield self.parseAdNewVersion(response)
         else:
+            response.css('.ui-pdp-header__title-container h1::text')
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
 
     def parseAdNewVersion(self, response):
@@ -248,7 +249,7 @@ class PISpider(scrapy.Spider):
             l['agencia'] = ''
         l['telefonos'] = set_default(response.xpath('//span[@class="profile-info-phone-value"]/text()').extract_first(), 0)
         l['constructora'] = set_default(response.css('div.info-project-constructs p.info::text').extract_first(), '')
-        l['direccion'] = clean_string(response.css('div.ui-pdp-media__body h2::text').extract_first())
+        l['direccion'] = clean_string(response.css('div.ui-vip-location div.ui-pdp-media__body p::text').extract_first())
         l['locacion'] = "{}".format(" - ".join(locations[::-1]))
         l['id'] = set_default(response.css('p.ui-vpp-denounce__info span::text').extract_first(), '')
         l['url'] = response.url
