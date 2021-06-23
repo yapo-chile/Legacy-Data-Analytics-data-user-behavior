@@ -201,16 +201,8 @@ class PISpider(scrapy.Spider):
 
         cat_counter = 0
         for cat in categories:
-            if cat.css('a::text').extract_first() == '...':
-                url = cat.css('a::attr(href)').extract_first()
-                l['cat_{}'.format(cat_counter + 1)] = url.split('/')[-1].capitalize()
-                if 'venta' in url:
-                    l['cat_2'] = 'Venta'
-                elif 'arriendo' in url:
-                    l['cat_2'] = 'Arriendo'
-                del url
-            elif len(cat.css('a::text').extract_first()) > 3:
-                l['cat_{}'.format(cat_counter + 1)] = cat.css('a::text').extract_first()
+            if len(cat.css('a::attr(title)').extract_first()) >= 1:
+                l['cat_{}'.format(cat_counter + 1)] = cat.css('a::attr(title)').extract_first()
             else:
                 l['cat_{}'.format(cat_counter + 1)] = ''
             cat_counter += 1
