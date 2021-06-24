@@ -221,12 +221,14 @@ class PISpider(scrapy.Spider):
             l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__store::text').extract_first())
 
         def get_category(name):
-            return '' if name not in CATEGORIES else CATEGORIES[name] 
+            return False if name not in CATEGORIES else CATEGORIES[name] 
 
         for cat in categories:
             name = cat.css('a::attr(title)').extract_first()
-            l[get_category(name)] = name
-            del name
+            key = get_category(name)
+            if key:
+                l[key] = name
+            del name, key
 
         l['region'] = locations[0] if len(locations) > 0 else ''
         l['ciudad'] = locations[1] if len(locations) > 1 else ''
@@ -301,12 +303,14 @@ class PISpider(scrapy.Spider):
                 return date.strftime('%Y-%m-%d')
         
         def get_category(name):
-            return '' if name not in CATEGORIES else CATEGORIES[name] 
+            return False if name not in CATEGORIES else CATEGORIES[name] 
 
         for cat in categories:
             name = cat.css('a::attr(title)').extract_first()
-            l[get_category(name)] = name
-            del name
+            key = get_category(name)
+            if key:
+                l[key] = name
+            del name, key
 
         l = Ad()
         l['codigo_propiedad'] = set_default(response.css('div.info-property-code p.info::text').extract_first(), '')
