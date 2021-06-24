@@ -221,7 +221,7 @@ class PISpider(scrapy.Spider):
             l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__store::text').extract_first())
 
         def get_category(name):
-            return 'cat_1' if name not in CATEGORIES else CATEGORIES[name] 
+            return '' if name not in CATEGORIES else CATEGORIES[name] 
 
         for cat in categories:
             name = cat.css('a::attr(title)').extract_first()
@@ -270,7 +270,7 @@ class PISpider(scrapy.Spider):
         return l
  
     def parseAd(self, response):
-        categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a[not(span)]/text()').getall()
+        categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]')[:3]
         locations = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a/span/text()').getall()
         def clean_string(string):
             return " ".join(string.split())
@@ -299,6 +299,14 @@ class PISpider(scrapy.Spider):
             except ValueError:
                 date = datetime.strptime(date, '%d-%m-%Y')
                 return date.strftime('%Y-%m-%d')
+        
+        def get_category(name):
+            return '' if name not in CATEGORIES else CATEGORIES[name] 
+
+        for cat in categories:
+            name = cat.css('a::attr(title)').extract_first()
+            l[get_category(name)] = name
+            del name
 
         l = Ad()
         l['codigo_propiedad'] = set_default(response.css('div.info-property-code p.info::text').extract_first(), '')
