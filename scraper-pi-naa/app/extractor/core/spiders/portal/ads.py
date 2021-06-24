@@ -9,6 +9,27 @@ from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Compose
 from core.items.portal.ads import Ad
 
+CATEGORIES = {
+    "Departamentos" : "cat_1",
+    "Casas" : "cat_1",
+    "Sitios" : "cat_1",
+    "Parcelas" : "cat_1",
+    "Oficinas" : "cat_1",
+    "Locales" : "cat_1",
+    "Industriales" : "cat_1",
+    "Agrícolas" : "cat_1",
+    "Terrenos" : "cat_1",
+    "Estacionamientos" : "cat_1",
+    "Bodegas" : "cat_1",
+    "Loteos" : "cat_1",
+    "Otros Inmuebles" : "cat_1",
+    "Venta" : "cat_2",
+    "Arriendo" : "cat_2",
+    "Arriendo Temporal" : "cat_2",
+    "Propiedades usadas" : "cat_3",
+    "Proyectos" : "cat_3",                
+}
+
 
 class PISpider(scrapy.Spider):
     name = "pi_naa"
@@ -199,13 +220,14 @@ class PISpider(scrapy.Spider):
         else:
             l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__store::text').extract_first())
 
-        cat_counter = 0
+        def get_category(name):
+            return 'cat_1' if name not in CATEGORIES else CATEGORIES[name] 
+
         for cat in categories:
-            if len(cat.css('a::attr(title)').extract_first()) >= 1:
-                l['cat_{}'.format(cat_counter + 1)] = cat.css('a::attr(title)').extract_first()
-            else:
-                l['cat_{}'.format(cat_counter + 1)] = ''
-            cat_counter += 1
+            name = cat.css('a::attr(title)').extract_first()
+            l[get_category(name)] = name
+            del name
+
         l['region'] = locations[0] if len(locations) > 0 else ''
         l['ciudad'] = locations[1] if len(locations) > 1 else ''
         l['barrio'] = locations[2] if len(locations) > 2 else ''
