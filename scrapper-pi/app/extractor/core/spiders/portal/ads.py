@@ -9,6 +9,27 @@ from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Compose
 from core.items.portal.ads import Ad
 
+CATEGORIES = {
+    "Departamentos" : "cat_1",
+    "Casas" : "cat_1",
+    "Sitios" : "cat_1",
+    "Parcelas" : "cat_1",
+    "Oficinas" : "cat_1",
+    "Locales" : "cat_1",
+    "Industriales" : "cat_1",
+    "Agrícolas" : "cat_1",
+    "Terrenos" : "cat_1",
+    "Estacionamientos" : "cat_1",
+    "Bodegas" : "cat_1",
+    "Loteos" : "cat_1",
+    "Otros Inmuebles" : "cat_1",
+    "Venta" : "cat_2",
+    "Arriendo" : "cat_2",
+    "Arriendo Temporal" : "cat_2",
+    "Propiedades usadas" : "cat_3",
+    "Proyectos" : "cat_3",                
+}
+
 
 class PISpider(scrapy.Spider):
     name = "pi"
@@ -196,7 +217,7 @@ class PISpider(scrapy.Spider):
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
     
     def parseAdNewVersion(self, response):
-        categories = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[:3]
+        categories = response.css('ul.andes-breadcrumb li')[:3]
         locations = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[3:]
         def clean_string(string):
             return " ".join(string.split())
@@ -226,17 +247,21 @@ class PISpider(scrapy.Spider):
 
         l = Ad()
         l['codigo_propiedad'] = set_default(response.css('.ui-seller-info__status-info__subtitle::text').extract_first(), '')
-        l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
-        l['cat_1'] = clean_string(categories[0] if len(categories) > 0 else '')
+        if response.css('.ui-pdp-header__bottom-subtitle::text'):
+            l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
+        else:
+            l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__store::text').extract_first())
 
-        def extract_minimized_bc(obj):
-            bc = obj.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/@href').extract_first()
-            return bc.split('/')[-1].capitalize()
+        def get_category(name):
+            return False if name not in CATEGORIES else CATEGORIES[name] 
 
-        if l['cat_1'] == '...':
-            l['cat_1'] = extract_minimized_bc(response)
-        l['cat_2'] = clean_string(categories[1] if len(categories) > 1 else '')
-        l['cat_3'] = clean_string(categories[2] if len(categories) > 2 else '')
+        for cat in categories:
+            name = cat.css('a::attr(title)').extract_first()
+            key = get_category(name)
+            if key:
+                l[key] = name
+            del name, key
+
         l['region'] = locations[0] if len(locations) > 0 else ''
         l['ciudad'] = locations[1] if len(locations) > 1 else ''
         l['barrio'] = locations[2] if len(locations) > 2 else ''
@@ -279,7 +304,7 @@ class PISpider(scrapy.Spider):
         return l
  
     def parseAd(self, response):
-        categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a[not(span)]/text()').getall()
+        categories = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]')[:3]
         locations = response.xpath('//*[contains(@class,"vip-navigation-breadcrumb-list")]//a/span/text()').getall()
         def clean_string(string):
             return " ".join(string.split())
@@ -308,6 +333,16 @@ class PISpider(scrapy.Spider):
             except ValueError:
                 date = datetime.strptime(date, '%d-%m-%Y')
                 return date.strftime('%Y-%m-%d')
+        
+        def get_category(name):
+            return False if name not in CATEGORIES else CATEGORIES[name] 
+
+        for cat in categories:
+            name = cat.css('a::attr(title)').extract_first()
+            key = get_category(name)
+            if key:
+                l[key] = name
+            del name, key
 
         l = Ad()
         l['codigo_propiedad'] = set_default(response.css('div.info-property-code p.info::text').extract_first(), '')
