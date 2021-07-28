@@ -38,10 +38,7 @@ class PISpider(scrapy.Spider):
     custom_settings = {
         'METAREFRESH_IGNORE_TAGS': ['noscript'], # PI utiliza un tag de meta refresh dentro de un tag noscript para bloquear scrappers que debemos ignorar.
     }
-    operaciones = [
-        'venta',
-        'arriendo',
-    ]
+
     venta_urls = [
         "https://www.portalinmobiliario.com/venta/antofagasta",
         "https://www.portalinmobiliario.com/venta/arica-y-parinacota",
@@ -337,19 +334,16 @@ class PISpider(scrapy.Spider):
         def get_category(name):
             return False if name not in CATEGORIES else CATEGORIES[name] 
 
-        for cat in categories:
-            name = cat.css('a::attr(title)').extract_first()
+        l = Ad()
+        for cat in categories.css('a::text').extract():
+            name = cat.strip().strip('\t').strip('\n')
             key = get_category(name)
             if key:
                 l[key] = name
             del name, key
 
-        l = Ad()
         l['codigo_propiedad'] = set_default(response.css('div.info-property-code p.info::text').extract_first(), '')
         l['fecha_publicacion'] = date_format(response.css('div.info-property-date p.info::text').extract_first())
-        l['cat_1'] = clean_string(categories[0] if len(categories) > 0 else '')
-        l['cat_2'] = clean_string(categories[1] if len(categories) > 1 else '')
-        l['cat_3'] = clean_string(categories[2] if len(categories) > 2 else '')
         l['region'] = locations[0] if len(locations) > 0 else ''
         l['ciudad'] = locations[1] if len(locations) > 1 else ''
         l['barrio'] = locations[2] if len(locations) > 2 else ''
