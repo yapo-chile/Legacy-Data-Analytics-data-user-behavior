@@ -214,7 +214,7 @@ class PISpider(scrapy.Spider):
             logging.warning("Failed to get ad: " + response.request.url + " (" + response.url + ")")
     
     def parseAdNewVersion(self, response):
-        categories = response.css('ul.andes-breadcrumb li')[:3]
+        categories = response.css('ol.andes-breadcrumb li')[:3]
         locations = response.xpath('//*[contains(@class,"andes-breadcrumb")]//li/a/text()').getall()[3:]
         def clean_string(string):
             return " ".join(string.split())
@@ -246,6 +246,8 @@ class PISpider(scrapy.Spider):
         l['codigo_propiedad'] = set_default(response.css('.ui-seller-info__status-info__subtitle::text').extract_first(), '')
         if response.css('.ui-pdp-header__bottom-subtitle::text'):
             l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__bottom-subtitle::text').extract_first())
+        elif response.css('.ui-pdp-seller-validated p::text'):
+            l['fecha_publicacion'] = date_format(response.css('.ui-pdp-seller-validated p::text').extract_first())
         else:
             l['fecha_publicacion'] = date_format(response.css('.ui-pdp-header__store::text').extract_first())
 
