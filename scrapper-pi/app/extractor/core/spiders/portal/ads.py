@@ -9,6 +9,7 @@ from scrapy.loader import ItemLoader
 from scrapy.loader.processors import Compose
 from core.items.portal.ads import Ad
 
+# Category list
 CATEGORIES = {
     "Departamentos" : "cat_1",
     "Casas" : "cat_1",
